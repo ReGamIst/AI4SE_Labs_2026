@@ -1,0 +1,103 @@
+{
+ "candidates": [
+  {
+   "title": "Expand report types",
+   "statement": "The system shall expand the available report types to cover all identified gaps.",
+   "type": "functional",
+   "source_quote": "Expand the available report types to cover all identified gaps",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Fine-grained permissions",
+   "statement": "The system shall implement fine-grained permissions for reporting features and report access control.",
+   "type": "functional",
+   "source_quote": "Implement fine-grained permissions and template management",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Report template management",
+   "statement": "The system shall provide template management for reports, including creating, editing, and managing report templates.",
+   "type": "functional",
+   "source_quote": "Implement fine-grained permissions and template management",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Report queue visibility and status",
+   "statement": "The system shall provide report queue visibility and status indicators so users can see queued reports and their current status.",
+   "type": "functional",
+   "source_quote": "Add report queue visibility and status indicators",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Multiple output formats",
+   "statement": "The system shall provide multiple report output formats to support different consumption and export needs.",
+   "type": "functional",
+   "source_quote": "Provide multiple output formats and scheduling options",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Report scheduling options",
+   "statement": "The system shall provide scheduling options for reports, allowing reports to be run automatically on defined schedules.",
+   "type": "functional",
+   "source_quote": "Provide multiple output formats and scheduling options",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Accessibility compliance",
+   "statement": "The system shall implement accessibility compliance to meet applicable accessibility standards.",
+   "type": "non-functional",
+   "source_quote": "Implement accessibility compliance",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Separate reporting from production",
+   "statement": "The system shall separate reporting operations from production operations to prevent reporting workloads from impacting production performance.",
+   "type": "constraint",
+   "source_quote": "Separate reporting from production operations",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Development/training environment with migration",
+   "statement": "The system shall provide a development/training environment and support migration capability between development/training and production environments.",
+   "type": "functional",
+   "source_quote": "Provide a development/training environment with migration capability",
+   "stakeholder": "PINES IT Department",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "requirements": [
+  {
+   "name": "Staff Login Options",
+   "description": "The system shall support staff authentication using individual username and password credentials or card-swipe login, such as an RFID employee badge. Card-swipe login shall be optional and shall not require card-reader hardware; username and password login shall remain available as a fallback, including for staff without cards and branches without readers. A successful card swipe shall log the identified staff member in immediately. Streamlined login options shall be available to reduce login time and the security risks associated with password sharing and terminals left logged in compared with manual login.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The draft specification marks card-swipe and username/password login as high priority, and the agreed email discussion and later meeting minutes reiterate the need for card-swipe login while preserving optional use and a fallback.",
+   "candidate_ids": [
+    "C-163",
+    "C-164",
+    "C-318",
+    "C-320",
+    "C-503",
+    "C-323",
+    "C-324",
+    "C-325",
+    "C-326",
+    "C-205"
+   ]
+  },
+  {
+   "name": "Individual Login Accountability",
+   "description": "The system shall record which staff member is logged in whenever a login occurs, for audit purposes. Every login method, including card-swipe login, shall identify the individual staff member. Card-swipe login shall not bypass individual authentication or accountability.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "The source explicitly describes individual identification as important for audit purposes and states that card-swipe login must not bypass individual authentication.",
+   "candidate_ids": [
+    "C-315",
+    "C-317"
+   ]
+  },
+  {
+   "name": "Automatic Session Protection",
+   "description": "The system shall provide automatic session protection to reduce the risk of terminals being left logged in and staff sharing passwords. This protection shall include mechanisms such as automatic session locking or logout. The source does not specify a timeout, so the system shall not assume a particular inactivity threshold from this requirement.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "A frontline security problem is explicitly raised in one email thread, but no threshold or additional source establishes a higher priority.",
+   "candidate_ids": [
+    "C-316"
+   ]
+  },
+  {
+   "name": "Role Based Login Permissions",
+   "description": "The system shall determine a staff member's permissions when the staff member logs in, regardless of the login method used. Permissions shall be based on the staff member's assigned security group or role. This shall ensure staff receive access appropriate to their assigned responsibilities.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The requirement is recorded as agreed and attributed to two stakeholders; it connects login directly to role-based access, an important operational and security need.",
+   "candidate_ids": [
+    "C-321"
+   ]
+  },
+  {
+   "name": "Password Change Reporting",
+   "description": "The system shall provide a report listing staff accounts and the date of each account's last password change. The report shall allow IT and security personnel to review password-change dates across staff accounts. The source identifies this report as currently unavailable but provides no evidence that it blocks core login use.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This is a single proposed missing report type in a reference document, with no higher-priority marker or evidence of broad stakeholder agreement.",
+   "candidate_ids": [
+    "C-387"
+   ]
+  }
+ ],
+ "discarded": []
+}

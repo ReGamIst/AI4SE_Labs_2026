@@ -1,0 +1,189 @@
+{
+ "requirements": [
+  {
+   "name": "Scheduled Transfer Reversion",
+   "description": "The system shall allow authorized staff to return transferred items to their original location automatically after a configurable period or on a specified event, such as an item's status changing to \"returned\" or \"sold\". For temporary transfers to an event or program, staff shall be able to specify an end date that triggers reversion. The system shall support scheduled processing of these time- and event-based rules, while leaving an item at its destination if it has been checked out there. Staff shall also be able to revert an item to its original location when needed.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Timed reversion is requested across several sources, including a survey, and supports temporary transfers; staff may otherwise revert locations manually.",
+   "candidate_ids": [
+    "C-042",
+    "C-043",
+    "C-044",
+    "C-045",
+    "C-060",
+    "C-062",
+    "C-063",
+    "C-192",
+    "C-424",
+    "C-571"
+   ]
+  },
+  {
+   "name": "Batch Item Transfers",
+   "description": "The system shall provide staff with a utility to transfer batches of selected items between branches and to special locations, including mobile units and outreach collections. The utility shall update each selected item's location to the destination location as part of the transfer. It shall support changing item records in batches, rather than requiring staff to update each location individually.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Batch location changes and transfer utilities are requested in multiple documents by cataloging, logistics, and library staff; manual record updates offer a workaround.",
+   "candidate_ids": [
+    "C-046",
+    "C-047",
+    "C-048",
+    "C-166",
+    "C-202",
+    "C-404",
+    "C-413",
+    "C-547"
+   ]
+  },
+  {
+   "name": "Transfer Candidate Selection",
+   "description": "The system shall allow staff to query for candidate materials to include in a transfer batch. Staff shall be able to review query results and manually select titles for the batch. This shall let users combine query-driven discovery with explicit control over which items are transferred.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Querying and manual selection are both specified for the transfer utility in the draft specification and support controlled batch preparation.",
+   "candidate_ids": [
+    "C-177",
+    "C-188"
+   ]
+  },
+  {
+   "name": "Uncataloged Shipment Processing",
+   "description": "The system shall provide a bulk distribution and processing mode for uncataloged shipments. It shall enable staff to distribute these shipments quickly while minimizing the per-item labor required at branches. This capability shall support rapid processing before items are cataloged.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This efficiency need comes from one stakeholder interview and is useful for a specific shipment workflow, but is not described as blocking other transfers.",
+   "candidate_ids": [
+    "C-406"
+   ]
+  },
+  {
+   "name": "Batch Status Conversion",
+   "description": "The system shall allow staff to change the status of multiple items in one batch. For example, staff shall be able to change 100 items from \"missing\" to \"discard/weed\". This shall reduce the effort required to process groups of items with the same status change.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single stakeholder interview requests batch status changes and gives a concrete example; individual status updates remain a workaround.",
+   "candidate_ids": [
+    "C-405"
+   ]
+  },
+  {
+   "name": "Status Conversion Report",
+   "description": "The system shall provide cataloging staff with a report to assist in converting items from one status to another. The report shall support review of items relevant to the intended status change before staff perform the conversion. This shall help staff identify the items to process.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report is requested in one draft specification and supports a specific cataloging workflow.",
+   "candidate_ids": [
+    "C-191"
+   ]
+  },
+  {
+   "name": "Transfer Audit History",
+   "description": "The system shall record transfer actions and item location changes for audit purposes, including who performed each transfer and when. It shall retain transfer history for each item, including transfer timestamps and the number of times the item has been transferred. Authorized users shall be able to review this history to support auditing and collection decisions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Transfer logging and item-level history are requested by different stakeholders in the same source; audit and accountability are important, though some history may be tracked manually.",
+   "candidate_ids": [
+    "C-049",
+    "C-066"
+   ]
+  },
+  {
+   "name": "Transfer Preview Confirmation",
+   "description": "Before executing a transfer batch, the system shall show staff a preview and request confirmation. The preview shall state the number of items to be moved and the source and destination locations. This shall give staff an opportunity to catch an incorrect selection or destination before changes are made.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single source proposes a concrete safeguard that reduces transfer errors; staff can otherwise check batches manually.",
+   "candidate_ids": [
+    "C-052"
+   ]
+  },
+  {
+   "name": "Transfer Undo",
+   "description": "The system shall allow authorized users to undo a recent transfer operation. Undo shall reverse the location changes made by that operation. This shall enable staff to recover from an accidental transfer without correcting each item individually.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Undo is requested in one source as protection against mistakes, while manual correction provides a workaround.",
+   "candidate_ids": [
+    "C-067"
+   ]
+  },
+  {
+   "name": "Printable Transit Labels",
+   "description": "The system shall generate printable transit labels for items in a transfer. Each label shall include a barcode associated with the item. Staff shall be able to print the labels for use while handling and routing transferred items.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This is a single-source operational convenience that can be supported by other labeling methods if not delivered.",
+   "candidate_ids": [
+    "C-053"
+   ]
+  },
+  {
+   "name": "Printable Transfer Pull Lists",
+   "description": "The system shall generate a printable pull list of items to be moved in a transfer batch. Staff shall be able to use the list to retrieve the items for physical transfer. This shall support the picking and logistics work that accompanies a transfer.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Pull lists are requested in two documents as a transfer mechanism, but staff can prepare retrieval lists by other means.",
+   "candidate_ids": [
+    "C-055"
+   ]
+  },
+  {
+   "name": "In-Transit Item Reporting",
+   "description": "The system shall provide an in-transit report that combines transit-to and transit-from information, including items in transit to a destination library and items in transit by sending library. The report shall identify items whose arrival date is null and whose departure date is more than a configurable number of days ago, with a default threshold of 7 days. Staff shall be able to view results per branch and for the entire system, and sort them by due date to follow up on the oldest items first. The report shall support delivery coordination and identification of items delayed or lost during transfer.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The report is explicitly called critical and is agreed or requested across multiple sources; branch and delivery staff rely on it for coordination and follow-up.",
+   "candidate_ids": [
+    "C-068",
+    "C-071",
+    "C-075",
+    "C-076",
+    "C-078",
+    "C-080",
+    "C-173",
+    "C-179",
+    "C-237",
+    "C-411",
+    "C-419",
+    "C-491"
+   ]
+  },
+  {
+   "name": "Missing And Damaged Reports",
+   "description": "The system shall provide missing and damaged item reports that staff can view per branch, including counts grouped by branch for auditing and accountability. Staff shall be able to select date ranges, such as the last 30 days or last quarter, and filter or include items by status, including \"missing\", \"lost\", and \"long overdue\". The reports shall include item condition notes, such as water damage or vandalism. They shall help staff identify titles with repeated missing or damage incidents for collection decisions, including replacing copies or moving them to another location.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Branch-level reporting is agreed as crucial for accountability and requested for inventory audits; additional filters and incident details support trending and collection decisions.",
+   "candidate_ids": [
+    "C-069",
+    "C-070",
+    "C-073",
+    "C-074",
+    "C-077",
+    "C-079"
+   ]
+  },
+  {
+   "name": "Separate Report Documentation",
+   "description": "The system documentation shall record the Missing and Damaged Items report and the In-Transit Items report as separate entries. It shall preserve their distinction even though both reports relate to item movement or condition. This shall make each report requirement identifiable and trackable in the documentation.",
+   "type": "documentation",
+   "priority": "P3",
+   "priority_rationale": "The reports working group agreed to track the two reports separately in documentation; this is a specific documentation need rather than a system operation.",
+   "candidate_ids": [
+    "C-072"
+   ]
+  },
+  {
+   "name": "Indirect Patron Report Access",
+   "description": "The system shall support patrons as a user class that may access report output indirectly through library displays or screens. Patron interactions with the system shall remain primarily through the OPAC. This shall allow libraries to share relevant report output with patrons without making reports the primary patron interface.",
+   "type": "functional",
+   "priority": "P4",
+   "priority_rationale": "This access model appears in one meeting-minutes source and is framed as a possible indirect use rather than a core operational need.",
+   "candidate_ids": [
+    "C-475"
+   ]
+  }
+ ],
+ "discarded": []
+}

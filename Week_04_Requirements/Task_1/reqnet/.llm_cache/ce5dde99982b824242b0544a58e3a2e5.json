@@ -1,0 +1,70 @@
+{
+ "system_name": "Library Management Reporting & Operations",
+ "areas": [
+  {
+   "code": "AUTH",
+   "name": "Authentication & Staff Login",
+   "description": "Staff login mechanisms (username/password, card-swipe, optional streamlined login), session handling, login audit, and role-at-login behavior."
+  },
+  {
+   "code": "ROLE",
+   "name": "Authorization, Permissions & Admin Scope Control",
+   "description": "Role-based and fine-grained access control for report and operational functions; admin capabilities for managing groups/roles, template edit restrictions, and scoped permissions."
+  },
+  {
+   "code": "UIXT",
+   "name": "Web App UI, Help & Accessibility",
+   "description": "Web-based report writer interfaces, query UI/UX, interactive help (hierarchical/cross-linked/online), hover tooltips, and accessibility/non-interference with OPAC."
+  },
+  {
+   "code": "DATAQ",
+   "name": "Query Builder, Filters & Candidate Selection Engine",
+   "description": "Relational query capabilities for selecting/reporting entities: field selection, drag-and-drop, boolean logic (AND/OR), complex criteria, LIMIT/GROUP BY, regex/picklists upload files, null inclusion options, and displaying criteria/results."
+  },
+  {
+   "code": "RPTMG",
+   "name": "Report Templates, Scheduling, Queue & Outputs",
+   "description": "Canned and template-based report creation/management, run controls (ad hoc, modifiable vs run-as-is), scheduling/recurrence, queue visibility/status/cancel, report prioritization, pagination/progress, and output formats/exports (CSV/HTML/Excel/email)."
+  },
+  {
+   "code": "ANALYT",
+   "name": "Analytical Reporting & Reporting Dimensions",
+   "description": "Core reporting analytics: grouping/aggregation levels, pivot/crosstab outputs, comparative date ranges and side-by-side views, trends, shelf-space proxy/reporting by category attributes, and demographic/inactivity/activity metrics."
+  },
+  {
+   "code": "LOCAP",
+   "name": "Location & Consortium Multi-Location Reporting",
+   "description": "Branch/system/region scope, cross-branch visibility, drill-downs, grouping branches by region/system, local-vs-system average comparisons, and centralized consolidation for multi-library operations."
+  },
+  {
+   "code": "OPMISC",
+   "name": "OP Operations: Item Transfer, Revert & Transit Management",
+   "description": "Batch transfer mechanisms and utilities (picklists/manual selection/query-driven candidate lists), audit/logging, preview/confirm, transaction safety, transit in-transit detection/thresholds/overdue rules, scheduled/conditional auto-revert, and undo for transfers including in-transit report variants."
+  },
+  {
+   "code": "PURGE",
+   "name": "Purge/Weeding & Deletion Utilities",
+   "description": "Weeding/purge candidate identification with customizable criteria, read-only previews, safeguards to prevent accidental mass deletion, scheduling, deletions with DB triggers/audit persistence, reporting/audit trails, last-copy and WorldCat-support deletion lists, and orphaned record handling."
+  },
+  {
+   "code": "ACCT",
+   "name": "Finance & Transaction Reporting (Fines/Payments/Accounting)",
+   "description": "Financial tracking and reporting: fines/charges by time/type, waived fines, snapshot/history, payments and instruments, ledger/audit trails, patron account balances, outstanding thresholds, and attachment/joining of financial transactions to records."
+  },
+  {
+   "code": "CALCDB",
+   "name": "Collections, Circulation & Capacity/Inventory Analytics",
+   "description": "Collection usage and volume analytics (acquisitions, circulation breakdowns, item counts by status/genre/format), item value and price/call-number aging, hold counts, uncataloged material tracking, and capacity/shelf-space utilization with color-coded status and central database aggregation."
+  },
+  {
+   "code": "STKID",
+   "name": "Patron Analytics & Demographic/Inactivity Reporting",
+   "description": "Patron demographics/behavior statistics, age calculation and configurable age ranges, last activity computation, inactivity thresholds, inclusion/exclusion of nulls/blanks, outstanding fines handling, inactivity/low-balance list generation, and completeness indicators for patron report outputs."
+  },
+  {
+   "code": "NFRQA",
+   "name": "Non-Functional Constraints & Platform/Deployment/Compliance",
+   "description": "Cross-cutting non-functional constraints and platform compatibility: relational backend and reporting replicas/warehouses, enterprise/centralized integration assumptions, performance under load & operational-hour processing, background processing/caching, scalability and large datasets, transaction safety/retention policies/anonymization, availability and cancellation behavior, OPAC isolation/non-interference, accessibility compliance and browser/server OS support."
+  }
+ ]
+}

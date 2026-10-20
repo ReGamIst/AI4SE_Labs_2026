@@ -1,0 +1,323 @@
+{
+ "candidates": [
+  {
+   "title": "Document reports functionality and requirements",
+   "statement": "The system shall have a documented specification that describes optimal Reports functionality for a future Evergreen release and includes a list of requirements.",
+   "type": "documentation",
+   "source_quote": "\"Document optimal Reports functionality within a future Evergreen release and develop a list of requirements.\"",
+   "stakeholder": "",
+   "priority_signals": "Motion carried unanimously",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Use Galecia King County draft as foundation",
+   "statement": "The system's requirements specification shall be based on and adapt the King County / Galecia Group draft reports Software Requirements Specification to PINES-specific needs.",
+   "type": "constraint",
+   "source_quote": "\"PINES staff decided to use that as a foundation and adapt it for our specific needs.\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Working group filters reports development",
+   "statement": "All new Reports development for PINES shall be filtered through and tested by the Reports Working Group (the group shall act as the Reports testing group).",
+   "type": "constraint",
+   "source_quote": "\"Become the Reports testing group, through which all new Reports development would be filtered.\"",
+   "stakeholder": "",
+   "priority_signals": "Motion carried unanimously",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Compile Executive Reports Interface list",
+   "statement": "The system shall include a compiled list of reports required for an Executive Reports Interface.",
+   "type": "functional",
+   "source_quote": "\"Compile a list of reports needed for an Executive Reports Interface.\"",
+   "stakeholder": "",
+   "priority_signals": "Motion carried unanimously",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Create report templates for PINES libraries",
+   "statement": "The system shall determine and create report templates needed for all PINES libraries.",
+   "type": "functional",
+   "source_quote": "\"Determine and create templates needed for all PINES libraries.\"",
+   "stakeholder": "",
+   "priority_signals": "Motion carried unanimously",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Collection and usage analysis reports",
+   "statement": "The system shall provide reports and analysis tools to analyze the library collection and its use by patrons.",
+   "type": "functional",
+   "source_quote": "\"Analyzing the Library collection and its use by patrons\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Branch capacity and distribution analysis",
+   "statement": "The system shall provide reports and analysis tools to analyze branch capacity and the optimal distribution of the collection across branches.",
+   "type": "functional",
+   "source_quote": "\"Analyzing branch capacity and optimal distribution of the collection\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Patron demographics and interests analysis",
+   "statement": "The system shall provide reports and analysis tools to analyze patron demographics and interests.",
+   "type": "functional",
+   "source_quote": "\"Analyzing demographics and interests of patrons\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Staff productivity and workflow analysis",
+   "statement": "The system shall provide reports and analysis tools to analyze staff productivity and workflow.",
+   "type": "functional",
+   "source_quote": "\"Analyzing staff productivity and workflow\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Financial transaction tracking and verification",
+   "statement": "The system shall provide reports and tools for tracking and verifying financial transactions.",
+   "type": "functional",
+   "source_quote": "\"Tracking and verifying financial transactions\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Restrict scope to management processes",
+   "statement": "The system's reports scope shall focus on Management Processes (reports and analysis tools used by managers, administrators, and staff for planning, evaluation, and oversight).",
+   "type": "constraint",
+   "source_quote": "\"the group would focus on Management Processes - that is, reports and analysis tools used by library managers, administrators, and staff\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Exclude patron-facing OPAC/circulation functions",
+   "statement": "The system shall exclude day-to-day patron-facing OPAC and circulation client functions from the Management Processes reports specification.",
+   "type": "constraint",
+   "source_quote": "\"this does NOT include day-to-day patron-facing functions (those are part of the OPAC and circulation client).\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support Patron indirect report access",
+   "statement": "The system shall support Patrons as a user class who may access report output indirectly, for example via displays/screens at libraries, while primary patron interactions remain via the OPAC.",
+   "type": "functional",
+   "source_quote": "\"Patrons interact through OPAC; they may use reports indirectly through displays/screens at libraries\"",
+   "stakeholder": "Patron",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Enable staff as report content creators",
+   "statement": "The system shall provide report creation and editing capabilities for paid library Staff, recognizing staff as primary content creators for reports.",
+   "type": "functional",
+   "source_quote": "\"Staff are our primary content creators for reports\"",
+   "stakeholder": "Staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Local configuration by Local System Administrators",
+   "statement": "The system shall allow Local System Administrators (management staff at local branches) to configure the system locally.",
+   "type": "functional",
+   "source_quote": "\"Local System Administrators: ... They configure the system locally.\"",
+   "stakeholder": "Local System Administrators",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Interfaces for Library Managers",
+   "statement": "The system shall provide interfaces and reporting features that enable Library Managers to supervise a single organizational unit and provide input to report design and implementation.",
+   "type": "functional",
+   "source_quote": "\"Library Managers: Supervise a single organizational unit and provide input to design and implementation of Library services.\"",
+   "stakeholder": "Library Managers",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support for Library Directors' planning needs",
+   "statement": "The system shall provide reporting features that support Library Directors (executive-level stakeholders) in planning and directing library services and priorities.",
+   "type": "functional",
+   "source_quote": "\"Library Directors: Members of the Library Executive Team who plan and direct Library services and priorities.\"",
+   "stakeholder": "Library Directors",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Consortium-level administration and reporting",
+   "statement": "The system shall provide Global System Administrators consortium-level capabilities to implement software changes and configurations and to generate statistical reports for PINES as a whole.",
+   "type": "functional",
+   "source_quote": "\"Global System Administrator: ... implementing software changes and configurations, and generating statistical reports for PINES as a whole.\"",
+   "stakeholder": "Global System Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Role-based access control for report functions",
+   "statement": "The system shall implement role-based access control that grants appropriate permissions for report creation, configuration, generation, and administrative tasks to the defined user classes.",
+   "type": "non-functional",
+   "source_quote": "\"They configure the system locally...generating statistical reports for PINES as a whole.\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "SRS intended audience and readability",
+   "statement": "The Software Requirements Specification (SRS) shall be written for both library managers and staff who may contribute requirements and for software project managers and developers, balancing readability for non-technical audiences with specificity for developers.",
+   "type": "documentation",
+   "source_quote": "\"intended both for library managers and staff ... and for software project managers and developers\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Iterative prototype-oriented development",
+   "statement": "The system and its UI and data structures shall be specified using an iterative, prototype-oriented methodology with multiple opportunities for end-user review of prototypes.",
+   "type": "non-functional",
+   "source_quote": "\"UI and data structures would require further specification using an iterative, prototype-oriented methodology.\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Defer detailed UI specification",
+   "statement": "Detailed user interface specifications shall be deferred until later iterative prototype work; initial requirements shall focus on functional requirements.",
+   "type": "constraint",
+   "source_quote": "\"for now the focus should be on functional requirements\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Specify only management-related requirements",
+   "statement": "The project shall specify only requirements that directly or indirectly relate to management activities and not attempt to fully specify unrelated ILS modules.",
+   "type": "constraint",
+   "source_quote": "\"The group agreed to specify only those requirements that directly or indirectly relate to management activities.\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Acquisitions and Cataloging separate specifications",
+   "statement": "Acquisitions and Cataloging modules shall be specified in separate specifications and not within this Management Processes reports specification.",
+   "type": "constraint",
+   "source_quote": "\"PINES is currently working on separate specifications for Acquisitions and Cataloging modules.\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Member interviews to gather report needs",
+   "statement": "The project shall collect report needs by having each working group member conduct at least one interview with staff at their library system, with findings due by April 15, 2009.",
+   "type": "documentation",
+   "source_quote": "\"Each member will conduct at least one interview with staff at their library system to gather report needs (due by April 15, 2009)\"",
+   "stakeholder": "",
+   "priority_signals": "Due by April 15, 2009",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Circulate King County/Galecia draft",
+   "statement": "The project shall circulate the King County / Galecia Group draft reports specification to working group members for reference.",
+   "type": "documentation",
+   "source_quote": "\"Katherine will circulate the King County / Galecia Group draft for reference\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Schedule follow-up meeting",
+   "statement": "The project shall hold a follow-up working group meeting on July 20, 2009 to review findings from member interviews and other work.",
+   "type": "constraint",
+   "source_quote": "\"A follow-up meeting is scheduled for July 20, 2009 to review findings\"",
+   "stakeholder": "",
+   "priority_signals": "Meeting scheduled for July 20, 2009",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Technical subcommittee on architectural constraints",
+   "statement": "The project shall form a technical subcommittee and hold a meeting in late June to discuss architectural constraints for Reports functionality.",
+   "type": "constraint",
+   "source_quote": "\"A technical subcommittee meeting will be held in late June to discuss architectural constraints\"",
+   "stakeholder": "",
+   "priority_signals": "Meeting in late June",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Assume reader familiarity with library terminology",
+   "statement": "The SRS shall assume readers have a general understanding of library services and processes and shall not define common library terminology.",
+   "type": "documentation",
+   "source_quote": "\"It was assumed that readers have a general understanding of Library services and processes and do not require definition of common Library terminology.\"",
+   "stakeholder": "",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

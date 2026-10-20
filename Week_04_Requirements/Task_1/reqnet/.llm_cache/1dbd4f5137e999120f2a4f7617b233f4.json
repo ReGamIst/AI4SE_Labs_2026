@@ -1,0 +1,268 @@
+{
+ "candidates": [
+  {
+   "title": "Track uncataloged inventory",
+   "statement": "The system shall allow uncataloged material to be tracked as inventory even when individual bibliographic records are not available.",
+   "type": "functional",
+   "source_quote": "we need to be able to track these as inventory even though they're not fully cataloged",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Bulk processing for uncataloged shipments",
+   "statement": "The system shall provide a bulk distribution/processing mode that enables quick distribution of uncataloged shipments with minimal per-item branch labor.",
+   "type": "functional",
+   "source_quote": "quick distribution (we need to process these fast), minimal branch labor",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Usage tracking for uncataloged items",
+   "statement": "The system shall record and report how uncataloged material is being used (usage metrics) so staff can evaluate circulation and use.",
+   "type": "functional",
+   "source_quote": "ability to identify how the material is being used",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Include uncataloged transactions in stats",
+   "statement": "The system shall count transactions for uncataloged items and include those transactions in circulation statistics and reports.",
+   "type": "functional",
+   "source_quote": "We also need to count transactions and include them in circulation statistics and reports",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Item transfer utility",
+   "statement": "The system shall provide an item transfer utility to move batches of items between branches and special locations (e.g., mobile units, outreach collections).",
+   "type": "functional",
+   "source_quote": "The item transfer utility is crucial for us",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "described as \"crucial\" by stakeholder",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Query by inactivity and location",
+   "statement": "The system shall allow queries for candidate materials using criteria such as location (e.g., children's section) and circulation inactivity (e.g., not circulated in 6 months).",
+   "type": "functional",
+   "source_quote": "Maybe we want all items in the children's section that haven't circulated in 6 months",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Save reusable queries",
+   "statement": "The system shall allow users to save queries for repeated use (for example, monthly reuse of a saved query).",
+   "type": "functional",
+   "source_quote": "save these queries for repeated use - we do this monthly",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Manual selection from query results",
+   "statement": "The system shall allow manual selection of titles/items from query results to permit targeted transfers or actions.",
+   "type": "functional",
+   "source_quote": "manually select titles from query results if we want to be more targeted",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Batch move items to new location",
+   "statement": "The system shall support batch modification of selected item records to change their location (move them to a new location).",
+   "type": "functional",
+   "source_quote": "change records of selected items to move them to a new location",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Timed revert of moved items",
+   "statement": "The system shall provide a mechanism to revert items back to their original location automatically or by schedule after a configurable period (e.g., when a mobile library returns).",
+   "type": "functional",
+   "source_quote": "mechanisms for reverting items back to their original location after a set period of time",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Missing and damaged report by branch",
+   "statement": "The system shall generate a report showing all missing and damaged items per branch to support collection health monitoring.",
+   "type": "functional",
+   "source_quote": "I need a report that shows all missing and damaged items per branch",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "In-transit items report with configurable threshold",
+   "statement": "The system shall provide an in-transit items report that shows items in transit longer than a configurable number of days, with filters per branch and per system.",
+   "type": "functional",
+   "source_quote": "The report should show items that have been in-transit for more than X days (configurable), per branch and per system",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "used to find items lost during transfers",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Merge transit-to and transit-from in report",
+   "statement": "The system shall merge transit-to and transit-from records into a single in-transit report for ease of use.",
+   "type": "functional",
+   "source_quote": "It should merge the transit-to and transit-from into one report",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Customizable weeding criteria",
+   "statement": "The system shall provide weeding reports that identify items for purging based on customizable criteria (for example, status 'missing' for more than X months or status 'discard/weed').",
+   "type": "functional",
+   "source_quote": "identify items for purging based on customizable criteria. For example: Item has been in status \"missing\" for more than X months",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "Thomas: \"Weeding reports are my most-used report type.\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Batch status conversion",
+   "statement": "The system shall allow batch conversion of item statuses so staff can change many items at once (for example, change 100 items from 'missing' to 'discard/weed').",
+   "type": "functional",
+   "source_quote": "change 100 items from \"missing\" to \"discard/weed\" in batch",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Last copy report",
+   "statement": "The system shall provide a last copy report that identifies a library system's last copies to assist catalogers in preservation and catalog editing decisions.",
+   "type": "functional",
+   "source_quote": "The last copy report is CRITICAL. This singles out a library system's last copies",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "marked as CRITICAL by stakeholder; described as critical in interviewer's notes",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Last copy support for WorldCat editing",
+   "statement": "The system shall present last-copy information in a way that assists catalogers who need to edit WorldCat entries (e.g., provide identifiers or actionable location details).",
+   "type": "functional",
+   "source_quote": "to assist catalogers who need to edit WorldCat entries",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "interviewer's notes: \"WorldCat integration are critical\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Delete volume entries with copies",
+   "statement": "The system shall provide a quick and effective method to delete volume entries together with their associated copy entries.",
+   "type": "functional",
+   "source_quote": "quick, effective method for deleting volume entries along with copy entries",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Delete orphaned bibliographic records",
+   "statement": "The system shall provide a quick and effective method to identify and delete bibliographic records that have no item records attached (orphaned records).",
+   "type": "functional",
+   "source_quote": "records with no items attached. Right now, cleaning up these orphaned records takes forever",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Track deletions for audit",
+   "statement": "The system shall count and track record deletions per location and per system and record the reason for each deletion to support auditing and reporting to directors.",
+   "type": "functional",
+   "source_quote": "count and track record deletions per location and per system. ... directors want to know how many records we've deleted and why",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "requested for auditing and director reporting",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Shelf space report comparing percentages",
+   "statement": "The system shall provide a shelf space report that, for each genre and format, compares percentage of total circulations, percentage of the collection, and percentage of total shelf space.",
+   "type": "functional",
+   "source_quote": "For each genre and format, I need to compare: - Percentage of total circulations - Percentage of the collection - Percentage of total shelf space",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "important for collection management decisions",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Material volume report with breakdowns",
+   "statement": "The system shall provide a material volume report showing volumes based on acquisitions, items on shelf, and items in circulation, with breakdowns by categories such as total items, holds, adult fiction, and board books.",
+   "type": "functional",
+   "source_quote": "report on volume based on acquisitions, items on shelf, and items in circulation, broken down by categories like total items, holds, adult fiction, board books",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Data quality reports",
+   "statement": "The system shall provide data quality reports that identify items with invalid item types, items with excessively long call numbers, and bibliographic records that have no item records.",
+   "type": "functional",
+   "source_quote": "Data quality reports - items with invalid item type, items with long call numbers, bibliographic records with no item records",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "interviewer notes emphasized data quality importance",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Last edit date excluding circulation",
+   "statement": "The system shall display the last edit date on items in reports reflecting the last bibliographic or item record edit, and shall exclude circulation events from updating that last edit date.",
+   "type": "functional",
+   "source_quote": "see the last edit date on reports, but it should be only when the item is edited and not include the last circulation",
+   "stakeholder": "Thomas Wright (Senior Cataloger)",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

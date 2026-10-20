@@ -1,0 +1,174 @@
+{
+ "requirements": [
+  {
+   "name": "Linux Or Solaris Server Support",
+   "description": "The system shall operate on a Linux or Solaris server environment. These are the server operating systems specified for deployment. The system shall not require a different server operating system to provide its supported functionality.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "The draft specification explicitly marks this platform constraint High Priority.",
+   "candidate_ids": [
+    "C-152"
+   ]
+  },
+  {
+   "name": "Management Scope Boundary",
+   "description": "The project shall specify requirements that directly or indirectly relate to management activities. It shall not attempt to fully specify unrelated ILS modules. This boundary shall keep the specification focused on the agreed management scope.",
+   "type": "constraint",
+   "priority": "P3",
+   "priority_rationale": "The boundary was agreed in meeting minutes, but it is a project-scope constraint rather than a blocker to system operation.",
+   "candidate_ids": [
+    "C-473"
+   ]
+  },
+  {
+   "name": "SRS Audience And Readability",
+   "description": "The Software Requirements Specification shall serve library managers and staff who may contribute requirements, as well as software project managers and developers. It shall be readable to non-technical readers while remaining specific enough for developers. This balance shall support both stakeholder review and implementation.",
+   "type": "documentation",
+   "priority": "P3",
+   "priority_rationale": "One meeting source identifies both audiences and the readability need; no higher-priority marker is given.",
+   "candidate_ids": [
+    "C-471"
+   ]
+  },
+  {
+   "name": "Consortium Workload Capacity",
+   "description": "The system shall support the operational workload of a library consortium with 286 locations. It shall support 17 million annual circulations and the purchasing and processing of more than 900,000 items per year. These figures define the scale the system must accommodate.",
+   "type": "non-functional",
+   "priority": "P2",
+   "priority_rationale": "The consortium workload was agreed and describes a significant operational scale, although no explicit priority marker or second source is provided.",
+   "candidate_ids": [
+    "C-505"
+   ]
+  },
+  {
+   "name": "Large Dataset Report Performance",
+   "description": "The system shall generate the inactive patrons report for large databases, including datasets of millions of patrons. A dataset of 3.5 million patrons is a stated scale example. Report generation shall not degrade interactive system performance so that other users can continue their work.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "One source raises an explicit performance concern and gives a 3.5-million-patron example; no priority marker or broader agreement is recorded.",
+   "candidate_ids": [
+    "C-126"
+   ]
+  },
+  {
+   "name": "Supported Web Browsers",
+   "description": "If the system is web-browser based, it shall be accessible through Microsoft Internet Explorer version 6.0 or later and Mozilla Firefox version 2.0 or later. The system shall support both browser families at the stated minimum versions. This enables the specified end users to access the system using the supported browsers.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "The draft specification assigns this requirement Medium Priority, which corresponds to a useful but non-critical compatibility need.",
+   "candidate_ids": [
+    "C-155"
+   ]
+  },
+  {
+   "name": "Reliable Report Outputs",
+   "description": "The system shall produce report outputs that have been tested for correctness and reliability. Testing shall verify that outputs reflect the requested report results accurately. Reliable outputs are needed so users can depend on reports in their management work.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "A single draft source states the quality need without a priority marker or measurable acceptance criteria.",
+   "candidate_ids": [
+    "C-265"
+   ]
+  },
+  {
+   "name": "Isolated Training Environment",
+   "description": "The system shall provide a training environment in which new staff can practice running reports. The training environment shall be separate from production and shall prevent practice or experimentation from affecting production data. This shall allow staff to learn report functions without risking live records.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The need appears in an interview and was subsequently agreed in meeting notes, with production-data protection emphasized.",
+   "candidate_ids": [
+    "C-450",
+    "C-541"
+   ]
+  },
+  {
+   "name": "Privacy-Preserving Transaction Retention",
+   "description": "The system shall archive transaction data and retain it for the period required by applicable state law, expressed in the source as X years. The archive shall not retain personally identifiable information about patrons. It shall therefore preserve the required transaction data while protecting patron privacy.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "The sources identify state-law retention and patron privacy as compliance requirements, including an explicit legal-constraint signal.",
+   "candidate_ids": [
+    "C-310",
+    "C-311"
+   ]
+  },
+  {
+   "name": "Transactional Batch Updates",
+   "description": "The system shall perform batch location updates within database transactions. Each batch shall preserve data safety and consistency if an update does not complete successfully. This shall reduce the risk of partially applied location changes.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "One source requests transaction safety for batch updates, with no explicit priority marker or additional agreement.",
+   "candidate_ids": [
+    "C-064"
+   ]
+  },
+  {
+   "name": "Enterprise ILS Data Integration",
+   "description": "The system shall rely on the data structures and functionality of an enterprise-level Library Automation System. This integration shall include the Acquisitions and Cataloging modules. It shall use the ILS as the source of the data needed for management processes and reporting.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "The draft specification identifies the enterprise ILS and its Acquisitions and Cataloging modules as foundational data sources, with the ILS data assumption also noted in another document.",
+   "candidate_ids": [
+    "C-203"
+   ]
+  },
+  {
+   "name": "Vendor Data Interfaces",
+   "description": "The system shall interface with vendor websites using published APIs, automated transfers of standard-format data files, or both. Supported file formats shall include the cited examples USMARC21 and EDIFACT. These interfaces shall support exchange of data with external vendors.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "One draft source requests vendor integration and gives interface options and file-format examples, without a priority marker.",
+   "candidate_ids": [
+    "C-206"
+   ]
+  },
+  {
+   "name": "Relational Database Compatibility",
+   "description": "The system shall operate within and use the relational database structure. Its architecture shall not violate or work against the relational model. This constraint shall preserve compatibility with the agreed database structure.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "The relational-model constraint was stated as an agreed architectural requirement by a systems administrator.",
+   "candidate_ids": [
+    "C-543"
+   ]
+  }
+ ],
+ "discarded": [
+  {
+   "name": "Architectural Subcommittee Meeting",
+   "candidate_ids": [
+    "C-477"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This candidate schedules a project meeting to discuss constraints rather than specifying a system obligation.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Foundation Draft Selection",
+   "candidate_ids": [
+    "C-478"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This candidate records a decision about the source document for drafting the specification, not a system requirement.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Transfer Delay Alerts",
+   "candidate_ids": [
+    "C-065"
+   ],
+   "category": "out-of-scope",
+   "reason": "This is a transfer-management feature request and does not express a non-functional, platform, deployment, or compliance constraint for this area.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Reports Working Group Approval",
+   "candidate_ids": [
+    "C-479"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This candidate defines a project development and testing process rather than a requirement of the system.",
+   "conflicts_with": []
+  }
+ ]
+}

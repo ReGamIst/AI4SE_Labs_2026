@@ -1,0 +1,118 @@
+{
+ "requirements": [
+  {
+   "name": "Sent Notice Reports",
+   "description": "The system shall provide reports for pre-overdue notices, overdue notices, and holds notices that were sent. Reporting staff shall be able to use these reports to review notice activity. The reports shall cover all three notice categories identified in the specification.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The capability is specified in one draft specification and has no explicit priority marker.",
+   "candidate_ids": [
+    "C-261"
+   ]
+  },
+  {
+   "name": "Runnable Report Templates",
+   "description": "The system shall allow staff to run a report template as-is without modifying it. The system shall also allow staff to modify a template for individual needs before running it. This shall support consistent results when templates are used unchanged while still accommodating individual reporting needs.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "C-193 explicitly marks this capability as high priority, and C-305 separately agrees that templates should be runnable as-is.",
+   "candidate_ids": [
+    "C-193",
+    "C-305"
+   ]
+  },
+  {
+   "name": "Reusable Shared Report Definitions",
+   "description": "The system shall allow users to save report definitions and queries for repeated use. Users shall be able to share saved queries with other users or save them as report templates. This shall support recurring work, including queries that staff use monthly, and enable reuse across users.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "C-058 describes repeated monthly use as crucial, while C-383 and C-061 also request saving, reuse, or sharing.",
+   "candidate_ids": [
+    "C-383",
+    "C-058",
+    "C-061"
+   ]
+  },
+  {
+   "name": "Recurring Report Scheduling",
+   "description": "The system shall allow users to schedule reports to run on a recurring basis. Report schedulers shall be able to use this capability for reports that need to run repeatedly. This shall reduce the need to initiate each recurring report manually.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The survey reports that 52% prioritized the ability to schedule recurring reports, indicating substantial user demand.",
+   "candidate_ids": [
+    "C-573"
+   ]
+  },
+  {
+   "name": "Scheduled Purging Utility",
+   "description": "The system shall allow users to schedule the purging utility to run automatically at specified times. Scheduling shall support a recurring time such as the end of each year. This shall enable collection managers to automate planned purging or cleanup operations.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The capability is requested in one email thread, with an annual end-of-year example and no stated priority marker.",
+   "candidate_ids": [
+    "C-091"
+   ]
+  },
+  {
+   "name": "Email Report Delivery",
+   "description": "The system shall allow users to enter email addresses for delivery of generated reports. The system shall send the generated reports to the entered addresses. This shall provide report recipients with an electronic delivery option.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The capability appears in one draft specification and has no stated priority marker or additional evidence of demand.",
+   "candidate_ids": [
+    "C-264"
+   ]
+  },
+  {
+   "name": "Appendix A Report Definitions",
+   "description": "The system shall support the reporting definitions described in Appendix A of the source specification. System administrators and reporting staff shall be able to use the reports defined there. The supported report definitions shall conform to the examples and requirements in that appendix.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The draft specification marks this item high priority and states that the system must support the Appendix A definitions.",
+   "candidate_ids": [
+    "C-199"
+   ]
+  },
+  {
+   "name": "Custom Local Reports",
+   "description": "The system shall support the creation and use of custom or local reports. Supported examples shall include collection development reports, program attendance tracking, and staff productivity reports, including time spent per transaction. This shall enable local library staff to report on needs beyond predefined report definitions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The survey indicates that 38% use custom reports and provides several concrete report examples, showing a meaningful user need.",
+   "candidate_ids": [
+    "C-577"
+   ]
+  },
+  {
+   "name": "Appendix B Fine-Grained Reports",
+   "description": "The system shall support the fine-grained report requirements described in Appendix B of the source specification. System administrators and reporting staff shall be able to use reports that meet those requirements. The supported reports shall conform to the specification in that appendix.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The draft specification marks this item high priority and states that the system must support the Appendix B requirements.",
+   "candidate_ids": [
+    "C-200"
+   ]
+  },
+  {
+   "name": "Three Reporting Interfaces",
+   "description": "The system shall provide three reporting interfaces: canned reports, non-canned or on-demand reports, and open-template reporting. Users shall be able to select the interface suited to their reporting task. This shall support both predefined reporting and reports created or configured on demand.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The draft specification says all three interfaces are needed, but provides no explicit high-priority marker or evidence from additional sources.",
+   "candidate_ids": [
+    "C-232"
+   ]
+  }
+ ],
+ "discarded": [
+  {
+   "name": "Reports Testing Workflow",
+   "candidate_ids": [
+    "C-512"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This describes an organizational Reports Working Group process for filtering development rather than a capability the software system shall provide.",
+   "conflicts_with": []
+  }
+ ]
+}

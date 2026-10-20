@@ -1,0 +1,202 @@
+{
+ "requirements": [
+  {
+   "name": "Aged Debt Detailed Reporting",
+   "description": "The system shall provide an enhanced Aged Debt detailed report for finance and management users. The report shall include the additional fields required for detailed aged-debt analysis. The source does not specify those fields, so they shall be defined with report stakeholders.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A reference document identifies the report as partially available and needing enhancement, but provides no field details or evidence of broader agreement.",
+   "candidate_ids": [
+    "C-331"
+   ]
+  },
+  {
+   "name": "Demographic Statistics And Privacy",
+   "description": "The system shall provide demographic statistics to support program planning and analysis of patron demographics and interests. Statistics shall include transactions by geographical region, county, city, zip code, and age range, as well as patron and circulation aggregates grouped by demographic fields. The system shall use anonymized data for these statistics by deleting identifying information to protect patron privacy.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Demographic analysis is requested across a draft specification, meeting minutes, email, and survey; the sources also explicitly call for anonymized data, but do not mark the overall capability mandatory.",
+   "candidate_ids": [
+    "C-287",
+    "C-487",
+    "C-551",
+    "C-372",
+    "C-373",
+    "C-374",
+    "C-113",
+    "C-147",
+    "C-468",
+    "C-187"
+   ]
+  },
+  {
+   "name": "Combined Demographic Activity Filters",
+   "description": "The system shall let report users combine demographic criteria with activity-based conditions in a single query. Conditions shall support examples such as juvenile patrons in zip code 30505 who have not checked anything out in six months. This shall allow users to identify targeted patron groups without running separate reports and manually combining results.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The combined-filter need was agreed in an email thread, and technical feasibility was confirmed, but it appears in one source.",
+   "candidate_ids": [
+    "C-102"
+   ]
+  },
+  {
+   "name": "Configurable Age-Based Reporting",
+   "description": "The system shall calculate a patron's age at query time from the stored birth_date field. Report users shall be able to configure age ranges for each report and use those ranges for filtering and grouping. Configurable examples include 0–5, 6–10, 11–15 and 0–6, 7–12, 13–17, 18–24, and 25–34.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Age calculation feasibility was confirmed and configurable age ranges were agreed in the same reporting discussion, though no mandatory marker or broad survey support is given.",
+   "candidate_ids": [
+    "C-103",
+    "C-104"
+   ]
+  },
+  {
+   "name": "Patron Activity Data Integration",
+   "description": "The system shall determine each patron's most recent activity date using circulation transactions and available electronic-activity data from the relevant tables. Electronic activity shall include OPAC or patron-account logins, online holds, online renewals, and digital-collection access when integrated. The system shall query OPAC patron data, including holds and circulation, and combine the sources to support reporting.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "Multiple participants agreed that inactivity must account for electronic activity as well as circulation, and implementer notes identify the combined query needed to retrieve it.",
+   "candidate_ids": [
+    "C-117",
+    "C-120",
+    "C-510"
+   ]
+  },
+  {
+   "name": "Configurable Inactive Patron Reports",
+   "description": "The system shall generate a list of patrons with no circulation or electronic activity during a configurable number of days. Users shall be able to enter any number of days and select common presets of 30, 90, 180, or 365 days; the report shall support scopes such as System, Home Library, and County. The output shall identify patrons with inactive status.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The inactive-patron report is requested in multiple sources and the threshold is agreed as configurable; a listed report is also identified as unavailable.",
+   "candidate_ids": [
+    "C-118",
+    "C-123",
+    "C-225",
+    "C-368"
+   ]
+  },
+  {
+   "name": "Inactive Patron Exclusion Criteria",
+   "description": "The system shall let users exclude selected patron categories from inactive-patron reports. Exclusion criteria shall include do-not-disturb flags, VIP status, staff membership, and opting out of communications. This shall allow users to limit report results to patrons appropriate for the intended follow-up.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "An agreed email thread gives an explicit list of exclusion categories for report users, but the request is from one source.",
+   "candidate_ids": [
+    "C-121"
+   ]
+  },
+  {
+   "name": "Inactive Report CSV Export",
+   "description": "The system shall allow users to export the inactive-patron report as a CSV file. The export shall contain the report results in a format suitable for upload to outreach systems. This shall support the stated workflow of using the report for patron outreach.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The CSV format and outreach-system use are explicitly requested by multiple stakeholders in an agreed email thread.",
+   "candidate_ids": [
+    "C-122"
+   ]
+  },
+  {
+   "name": "Inactive Patron Mailing Addresses",
+   "description": "The system shall include each inactive patron's current mailing address in the inactive-patron report. The address shall be available to outreach staff using the report to mail postcards. The report shall use the patron's current address information.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "Outreach staff explicitly request current mailing addresses for a stated postcard workflow in an agreed source.",
+   "candidate_ids": [
+    "C-124"
+   ]
+  },
+  {
+   "name": "Null Values In Report Results",
+   "description": "The system shall include records with null values for optional patron fields in report results rather than silently excluding those records. The report shall display missing values explicitly as null. This shall help users interpret results without misleading omissions caused by incomplete patron data.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The reporting working group agreed that null values should be included, with multiple participants supporting the approach to prevent misleading results.",
+   "candidate_ids": [
+    "C-107"
+   ]
+  },
+  {
+   "name": "Patron Behavior Analytics",
+   "description": "The system shall produce statistics to help users understand and predict patron behavior and use of materials. Metrics shall include average time to return an item, renewal likelihood or probability, and the percentage of check-outs that are renewals. Users shall be able to analyze the renewal percentage for a particular branch.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Similar behavior-analysis needs and example metrics appear in both a draft specification and survey results, indicating support across two sources.",
+   "candidate_ids": [
+    "C-181",
+    "C-563"
+   ]
+  },
+  {
+   "name": "Patron Reporting Data Fields",
+   "description": "The system shall store and make available the patron fields needed for reporting: zip code, county of residence, home branch, patron type, preferred language, and birth_date. These fields shall be accessible to patron reports and queries. The birth_date field shall support age calculation.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "An agreed technical response confirms these fields exist in the patron table and are straightforward to query, supporting several reporting needs.",
+   "candidate_ids": [
+    "C-108"
+   ]
+  },
+  {
+   "name": "Patron Report Catalog",
+   "description": "The system shall provide the requested patron-report set for management and report users. The set shall include Patron Count; Patron Added Count by Month; New Patron Count by Demographic Category; counts by age demographic, county, county/city/zip, home library, profile group, and survey answer; lists by survey answer, expiration date, barred status, inactive status, and wording in notes; and Voter Survey Responses County by Week. The set shall also include staff-account lists showing the date of last password change and account expiration.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The full report catalog appears in one draft specification and is proposed without a priority marker or evidence of stakeholder agreement.",
+   "candidate_ids": [
+    "C-229"
+   ]
+  },
+  {
+   "name": "Patron Characteristic Report Filters",
+   "description": "The system shall let users filter and group queries and reports by age range, zip code, county of residence, home branch, patron type, and preferred language. Patron type shall support categories such as adult, juvenile, senior, and student. This shall let users analyze report results by the patron characteristics relevant to their work.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The reporting working group agreed on these characteristics, and a stakeholder explicitly called the capability essential; patron-type categories are also identified as important.",
+   "candidate_ids": [
+    "C-109",
+    "C-111"
+   ]
+  },
+  {
+   "name": "Per-Patron Transaction Counts",
+   "description": "The system shall show the number of check-outs and placed holds for each patron in transaction reports. Users shall be able to review both counts in the report results. This shall support analysis of patron transaction activity at the individual-patron level.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The need is stated in one draft specification without an explicit priority or evidence of wider agreement.",
+   "candidate_ids": [
+    "C-230"
+   ]
+  },
+  {
+   "name": "Configurable Patron Balance Queries",
+   "description": "The system shall let staff query patron accounts whose balances exceed a specified dollar amount. Staff shall be able to configure the amount used as the threshold. The query shall return the patron accounts meeting that condition.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A configurable balance query is presented as an example in one draft specification and has no stated priority or cross-source agreement.",
+   "candidate_ids": [
+    "C-231"
+   ]
+  },
+  {
+   "name": "Patron Data Completeness Indicators",
+   "description": "The system shall show the completeness of selected patron fields in report outputs. Users shall be able to see how many records lack fields such as zip code or preferred language. This shall help users assess whether those fields are populated consistently before interpreting report results.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A report completeness indicator is proposed in one email thread, with examples but no explicit priority or broader agreement.",
+   "candidate_ids": [
+    "C-110"
+   ]
+  },
+  {
+   "name": "Outstanding Fines Inactivity Flags",
+   "description": "The system shall identify inactive patrons who have outstanding fines in inactive-patron report results. It shall flag those accounts so staff can distinguish them from other inactive patrons. This shall support handling those accounts differently during follow-up.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The request to flag inactive patrons with fines is agreed in one email thread, but the source frames it as a proposed handling distinction.",
+   "candidate_ids": [
+    "C-125"
+   ]
+  }
+ ],
+ "discarded": []
+}

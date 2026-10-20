@@ -1,0 +1,521 @@
+{
+ "approved": false,
+ "summary": "The specification has complete candidate and source traceability according to the automatic checks, but blocking issues remain: several duplicate requirements, unresolved conflicts and undefined legal or controlled artifacts, and multiple requirements whose acceptance criteria are not testable.",
+ "issues": [
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ACCT-007",
+    "REQ-STKID-016"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements provide configurable queries for patron accounts whose balances exceed a specified amount. They express the same need with different names and wording.",
+   "suggested_fix": "Retain one requirement, preferably REQ-ACCT-007, and add any required patron-reporting context to it. Remove or cross-reference REQ-STKID-016."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ANALY-014",
+    "REQ-CALCD-022"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements count holds and report the method or source used to place them, including staff desk, public computer, and remote placement.",
+   "suggested_fix": "Consolidate them into one hold-source reporting requirement and define whether it reports individual hold records, aggregate counts, or both."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ANALY-015",
+    "REQ-CALCD-003"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements require renewal events to be recorded separately from check-in events and expose separate timestamps or counts.",
+   "suggested_fix": "Retain one requirement covering the data model and reporting behavior, and remove the duplicate."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ANALY-006",
+    "REQ-LOCAP-009"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements provide comparison reports for metrics across multiple libraries or branches in a common view.",
+   "suggested_fix": "Merge the requirements and define one preferred scope term. If one is intended to cover a different comparison type, state the distinct measures and presentation explicitly."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-CALCD-019",
+    "REQ-OPMIS-013"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements provide branch-level missing and damaged item reporting. REQ-OPMIS-013 adds filters, date ranges, condition notes, and collection-decision use cases, but subsumes the core need in REQ-CALCD-019.",
+   "suggested_fix": "Consolidate the requirements, retaining the more complete behavior in REQ-OPMIS-013 and assigning one priority."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-CALCD-021",
+    "REQ-PURGE-007"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements provide a last-copy report identifying last copies at library and system or consortium scope for cataloging and preservation decisions.",
+   "suggested_fix": "Merge them and clarify whether the report covers current last copies only or also supports pre-deletion workflows."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-DATAQ-015",
+    "REQ-OPMIS-003"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements support querying candidate materials for transfer and manually selecting records or titles for a transfer batch.",
+   "suggested_fix": "Make REQ-DATAQ-015 the shared candidate-query capability and have REQ-OPMIS-003 reference it, or merge both into the transfer workflow."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-DATAQ-017",
+    "REQ-OPMIS-003"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements allow users to review query results and manually select records or titles for transfer or another targeted action.",
+   "suggested_fix": "Define one reusable result-selection requirement and reference it from transfer and other targeted-action workflows."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-DATAQ-020",
+    "REQ-RPTMG-038"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements allow users to save queries or report definitions for repeated use, including recurring monthly work.",
+   "suggested_fix": "Consolidate them and specify whether sharing, permissions, versioning, and conversion between saved queries and report templates are required."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-RPTMG-029",
+    "REQ-RPTMG-031"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-RPTMG-031 already requires hourly scheduling, while REQ-RPTMG-029 repeats the hourly scheduling capability.",
+   "suggested_fix": "Remove REQ-RPTMG-029 or retain it only if it defines a distinct hourly scheduling behavior not covered by REQ-RPTMG-031."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-RPTMG-005",
+    "REQ-OPMIS-006"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements provide a report to assist staff with converting item statuses in batches.",
+   "suggested_fix": "Merge them and place the resulting requirement in one area."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-RPTMG-026",
+    "REQ-RPTMG-025"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-RPTMG-026 requires CSV and Excel export generally and explicitly includes Shelf Space Report export, while REQ-RPTMG-025 separately requires CSV export of capacity data.",
+   "suggested_fix": "Keep REQ-RPTMG-026 as the general export requirement and add capacity data as an explicit covered output, or explain why capacity export has separate behavior."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-RPTMG-014",
+    "REQ-RPTMG-017",
+    "REQ-RPTMG-037"
+   ],
+   "candidate_ids": [],
+   "description": "These requirements overlap on creating, cloning, modifying, and running report templates. Their boundaries between template administration, cloning, and run-specific modification are not clear.",
+   "suggested_fix": "Decompose the capability into explicit template lifecycle operations and retain one requirement per operation, with consistent permissions and terminology."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-UIXT-006",
+    "REQ-RPTMG-045"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements specify the same three reporting interfaces: predefined or canned reports, on-demand reports, and open-template reporting.",
+   "suggested_fix": "Retain one requirement, preferably REQ-RPTMG-045 because it includes acceptance testing, and remove or cross-reference REQ-UIXT-006."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-AUTH-004",
+    "REQ-ROLE-001"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements require permissions to be determined from assigned roles or security groups at login and to govern access to system functions.",
+   "suggested_fix": "Make REQ-ROLE-001 the authoritative role-based access-control requirement and have REQ-AUTH-004 specify only login-time permission loading if that behavior is separately needed."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-DATAQ-005",
+    "REQ-NFRQA-012",
+    "REQ-NFRQA-018",
+    "REQ-NFRQA-020"
+   ],
+   "candidate_ids": [],
+   "description": "These requirements repeat substantially overlapping constraints concerning normalized reporting data, read-only replicas or historical stores, synchronization, freshness timestamps, and prohibition or approval of denormalized copies.",
+   "suggested_fix": "Create one authoritative reporting-architecture constraint. Remove contradictory alternatives and reference it from functional historical-reporting requirements."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-NFRQA-004",
+    "REQ-NFRQA-029"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements specify support for Internet Explorer 6 or later and Firefox 2 or later when the system is browser-based.",
+   "suggested_fix": "Retain one browser-compatibility requirement and remove the duplicate."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-NFRQA-014",
+    "REQ-NFRQA-024"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements require operation on Linux or Solaris servers. REQ-NFRQA-014 additionally specifies Red Hat Enterprise Linux 5 and Solaris 10 on SPARC.",
+   "suggested_fix": "Merge them, retaining the more specific platform constraints if they remain valid."
+  },
+  {
+   "kind": "conflict",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-NFRQA-020"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-NFRQA-020 says the system shall not require a denormalized copy, but then permits a proposed denormalized store subject to approval. This leaves unclear whether denormalization is prohibited or conditionally allowed.",
+   "suggested_fix": "Choose one rule: prohibit denormalized reporting stores entirely, or permit them only under explicit documented approval and define the approval authority and acceptance conditions."
+  },
+  {
+   "kind": "conflict",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ACCT-002",
+    "REQ-ACCT-011",
+    "REQ-NFRQA-032"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-NFRQA-032 requires retention for a period expressed as an unresolved 'X years', while REQ-ACCT-011 specifies a required seven-year audit period where applicable and configurable retention rules. The legal retention period is therefore not defined consistently.",
+   "suggested_fix": "Replace 'X years' with the approved legal or policy period, identify which data categories it applies to, and reconcile it explicitly with the seven-year rule and legal holds."
+  },
+  {
+   "kind": "quality",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-STKID-001"
+   ],
+   "candidate_ids": [],
+   "description": "The Aged Debt report is required to include additional fields, but the fields are explicitly left for later definition. The requirement cannot be implemented or acceptance-tested as written.",
+   "suggested_fix": "Add a controlled field list and acceptance criteria, or reduce the requirement to a documented stakeholder decision rather than a current software requirement."
+  },
+  {
+   "kind": "quality",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-RPTMG-042",
+    "REQ-UIXT-007",
+    "REQ-RPTMG-033"
+   ],
+   "candidate_ids": [],
+   "description": "These requirements depend on an approved versioned report catalog or gap register that is not included in the specification. Terms such as 'every report definition', 'approved register', and 'applicable form version' do not identify a testable baseline.",
+   "suggested_fix": "Include the controlled artifact identifiers and versions, or attach the catalogs and form definitions to the specification. Acceptance testing must reference a fixed baseline."
+  },
+  {
+   "kind": "quality",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-OPMIS-016"
+   ],
+   "candidate_ids": [],
+   "description": "The requirement refers to a 'defined transfer issue' and a 'configured transfer-delay condition' without defining either the issue types, thresholds, configuration, recipients, or notification timing.",
+   "suggested_fix": "Define the supported issue conditions, delay thresholds, recipient configuration, delivery channel, retry behavior, and acceptance tests."
+  },
+  {
+   "kind": "quality",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-CALCD-011",
+    "REQ-ANALY-016",
+    "REQ-ANALY-008",
+    "REQ-CALCD-009"
+   ],
+   "candidate_ids": [],
+   "description": "These requirements use vague terms such as 'getting full', 'user-friendly', 'help identify', 'support review', and 'assessing capacity' without measurable behavior or defined thresholds.",
+   "suggested_fix": "Define capacity thresholds, supported user actions, report fields, measurable usability criteria, and concrete acceptance examples."
+  },
+  {
+   "kind": "priority",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-CALCD-007",
+    "REQ-CALCD-008",
+    "REQ-RPTMG-032"
+   ],
+   "candidate_ids": [],
+   "description": "These requirements are marked P1 even though their cited evidence is primarily a single draft or email source and the descriptions do not identify a legal, technical, or consistently demanded constraint. This is inconsistent with the supplied priority scale.",
+   "suggested_fix": "Reassess these as P2 or P3 unless additional evidence demonstrates that they are mandatory, legally required, technically constraining, or demanded by many stakeholders."
+  },
+  {
+   "kind": "blacklist",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-NFRQA-035",
+    "REQ-DATAQ-024"
+   ],
+   "candidate_ids": [
+    "C-542",
+    "C-513"
+   ],
+   "description": "DIS-002 discards vendor data integration as out of scope, but retained requirements REQ-NFRQA-035 and REQ-DATAQ-024 require vendor interfaces and vendor-provided EDI data. The discard rationale is inconsistent with the retained scope.",
+   "suggested_fix": "Either remove or narrow the retained vendor-integration requirements, or revise DIS-002 to state that only candidate-specific query behavior was discarded while approved system-level vendor interfaces remain in scope."
+  },
+  {
+   "kind": "terminology",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ANALY-010",
+    "REQ-DATAQ-022",
+    "REQ-NFRQA-001",
+    "REQ-PURGE-002",
+    "REQ-RPTMG-022",
+    "REQ-STKID-006",
+    "REQ-UIXT-004"
+   ],
+   "candidate_ids": [],
+   "description": "The same broad actor is variously called 'user', 'staff member', and 'report user'. The existing glossary makes 'staff member' and 'report user' alternatives to 'user', but the requirements need to distinguish all authorized users from the report-specific subset.",
+   "suggested_fix": "Use 'authorized staff user' as the general actor term and reserve 'report administrator' or 'report author' for explicit permission subsets. Define 'report user' only when the narrower reporting role is intended."
+  },
+  {
+   "kind": "terminology",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ACCT-006",
+    "REQ-CALCD-011",
+    "REQ-LOCAP-004",
+    "REQ-OPMIS-012",
+    "REQ-PURGE-008",
+    "REQ-RPTMG-028"
+   ],
+   "candidate_ids": [],
+   "description": "The specification uses 'library', 'branch', 'facility', and 'location' inconsistently. In some requirements these appear to be equivalent reporting scopes, while in others they may represent distinct physical, administrative, or item-location concepts.",
+   "suggested_fix": "Define the hierarchy and use separate terms only for distinct concepts: 'library system' for the administrative system, 'library' for an organizational or physical unit, and 'item location' for the item's current location. Replace ambiguous uses of branch, facility, and location accordingly."
+  },
+  {
+   "kind": "terminology",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-CALCD-021",
+    "REQ-PURGE-004",
+    "REQ-PURGE-007",
+    "REQ-RPTMG-032"
+   ],
+   "candidate_ids": [],
+   "description": "The same cataloged physical unit is called an 'item', 'copy', 'volume', and sometimes 'material'. The differences between bibliographic records, volume records, and item records are not consistently reflected in the requirements.",
+   "suggested_fix": "Use 'item' for the circulating or owned copy, 'bibliographic record' for the title-level record, and 'volume record' only if it is a distinct system entity. Remove 'copy' and 'volume' where they are only synonyms."
+  },
+  {
+   "kind": "terminology",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-ANALY-001",
+    "REQ-DATAQ-004",
+    "REQ-OPMIS-001",
+    "REQ-RPTMG-007"
+   ],
+   "candidate_ids": [],
+   "description": "Operational occurrences are variously called 'transaction', 'activity', 'event', and 'operation'. This can change the apparent scope of reporting and audit requirements.",
+   "suggested_fix": "Use 'transaction' for recorded checkout, check-in, renewal, hold, payment, or registration records. Use 'operation' only for a user-initiated batch action, and use 'event' only for a system state change that is not a transaction."
+  },
+  {
+   "kind": "traceability",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-ACCT-001",
+    "REQ-NFRQA-002",
+    "REQ-NFRQA-032"
+   ],
+   "candidate_ids": [],
+   "description": "Although these requirements have document sources, the cited sources do not identify the exact accounting standard, state-law provision, or retention period needed to verify the obligation. This is source traceability at too coarse a level for compliance requirements.",
+   "suggested_fix": "Add page, section, paragraph, or quoted-source references and identify the governing law, standard, or approved policy version."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "patron",
+   "definition": "A library customer whose account, demographic information, holds, circulation activity, or financial activity may be represented in the system.",
+   "avoid": [
+    "borrower",
+    "customer",
+    "client",
+    "community user"
+   ]
+  },
+  {
+   "term": "authorized staff user",
+   "definition": "A staff member or other authorized worker who is permitted to log in, operate the system, or use reports according to assigned permissions.",
+   "avoid": [
+    "user",
+    "staff member",
+    "operator",
+    "employee user"
+   ]
+  },
+  {
+   "term": "report user",
+   "definition": "An authorized staff user who runs, designs, schedules, reviews, or administers reports; use this term only when the narrower reporting role is intended.",
+   "avoid": [
+    "report consumer",
+    "report operator"
+   ]
+  },
+  {
+   "term": "library",
+   "definition": "An organizational or physical library unit that owns, houses, or manages items and can be used as a reporting scope.",
+   "avoid": [
+    "branch",
+    "facility"
+   ]
+  },
+  {
+   "term": "item location",
+   "definition": "The current physical or organizational location assigned to an item, which may differ from the owning library or destination of a transfer.",
+   "avoid": [
+    "location",
+    "branch location",
+    "facility location"
+   ]
+  },
+  {
+   "term": "library system",
+   "definition": "An administrative collection of one or more libraries that share operational data, policies, and reporting.",
+   "avoid": [
+    "local system",
+    "system",
+    "organization"
+   ]
+  },
+  {
+   "term": "consortium",
+   "definition": "The broader group of participating library systems governed or operated together.",
+   "avoid": [
+    "network",
+    "enterprise"
+   ]
+  },
+  {
+   "term": "item",
+   "definition": "An owned or circulating physical or electronic copy that can have a location, status, circulation history, value, or transfer history.",
+   "avoid": [
+    "copy",
+    "material",
+    "volume"
+   ]
+  },
+  {
+   "term": "bibliographic record",
+   "definition": "A catalog record describing a title or work and its bibliographic metadata, distinct from the individual items attached to it.",
+   "avoid": [
+    "title record",
+    "catalog record",
+    "bibliographic item"
+   ]
+  },
+  {
+   "term": "transaction",
+   "definition": "A recorded operational or financial occurrence such as a checkout, check-in, renewal, hold placement, payment, or registration.",
+   "avoid": [
+    "activity",
+    "event",
+    "operation"
+   ]
+  },
+  {
+   "term": "hold",
+   "definition": "A patron request for an item or title, including its placement method, status, fulfillment, and pickup state.",
+   "avoid": [
+    "request",
+    "reservation",
+    "hold request"
+   ]
+  },
+  {
+   "term": "query",
+   "definition": "A set of selectable fields, filters, joins, grouping rules, and Boolean conditions used to retrieve or analyze records.",
+   "avoid": [
+    "search",
+    "report definition",
+    "filter"
+   ]
+  },
+  {
+   "term": "report",
+   "definition": "A generated presentation or export of queried, aggregated, or predefined system data.",
+   "avoid": [
+    "output",
+    "listing",
+    "analysis"
+   ]
+  },
+  {
+   "term": "report template",
+   "definition": "A saved report definition containing fields, criteria, formatting, permissions, and optionally scheduling or delivery settings.",
+   "avoid": [
+    "canned report",
+    "report definition",
+    "saved query"
+   ]
+  },
+  {
+   "term": "uncataloged material",
+   "definition": "Library material tracked for inventory or circulation without a complete bibliographic record.",
+   "avoid": [
+    "non-cataloged material",
+    "uncataloged shipment",
+    "bulk material"
+   ]
+  },
+  {
+   "term": "weeding",
+   "definition": "The collection-management process of identifying items for review, withdrawal, discard, or purge; it does not itself imply deletion.",
+   "avoid": [
+    "cleanup",
+    "purge"
+   ]
+  },
+  {
+   "term": "purge",
+   "definition": "An authorized operation that permanently deletes selected records or related records from the system.",
+   "avoid": [
+    "removal",
+    "deletion when the broader audit or policy concept is intended"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "requirements": [
+  {
+   "name": "Accounting And Audit Compliance",
+   "description": "The system shall ensure that financial reports and archived financial data comply with standard accounting practices and applicable state, county, and municipal auditing requirements. It shall support finance staff and auditors in producing and retaining information needed for those audits. This compliance is necessary to meet the stated accounting and audit obligations.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "The source explicitly says reports and archiving must comply with accounting and governmental auditing requirements.",
+   "candidate_ids": [
+    "C-207"
+   ]
+  },
+  {
+   "name": "Aggregate Transaction Retention",
+   "description": "The system shall retain monthly and annual aggregate transaction information indefinitely. Finance staff and auditors shall be able to access these aggregates for historical reporting and analysis. Indefinite retention preserves long-term financial records without requiring reconstruction from individual transactions.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "Indefinite retention is explicitly requested in the draft specification, though it appears in only one source.",
+   "candidate_ids": [
+    "C-208"
+   ]
+  },
+  {
+   "name": "Financial Record Associations",
+   "description": "The system shall associate fines, charges, waivers, and ecommerce transactions with the relevant patron and item records. These associations shall be available to finance and reporting staff when reviewing financial activity. Linking transactions to both record types supports accurate account review and reporting.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "The need appears in both the draft specification and a later agreed source, with finance and reporting staff identified as stakeholders.",
+   "candidate_ids": [
+    "C-209",
+    "C-270"
+   ]
+  },
+  {
+   "name": "Auditable Payment Ledger",
+   "description": "The system shall maintain an auditable ledger of patron payments that identifies each payment and the specific charge or charges to which it was applied. Finance staff and auditors shall be able to use the ledger and related tools or reports to track and verify financial transactions. The ledger shall provide traceability needed to reconcile accounts.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The agreed finance and auditor requirement explicitly marks payment traceability as critical for reconciliation; a related draft also requests transaction tracking and verification.",
+   "candidate_ids": [
+    "C-271",
+    "C-219",
+    "C-137",
+    "C-463"
+   ]
+  },
+  {
+   "name": "Bills And Debt Reports",
+   "description": "The system shall provide bills reports for staff and finance users. The reports shall include bills currently owed by patrons, detailed payments received, detailed forgive, work, and goods payments received, detailed voids, and aged debt. These reports shall support monitoring outstanding bills and reviewing payment and void activity.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The specified report set supports routine finance work, but it is requested in one draft source and has no explicit high-priority marker.",
+   "candidate_ids": [
+    "C-212"
+   ]
+  },
+  {
+   "name": "Financial Summary And Branch Reports",
+   "description": "The system shall provide financial reports suitable for finance staff, branch staff, and library directors. Staff shall be able to report patron account balances by individual patron, home library, and system; fines and charges by time period, including last 12 months, year-to-date, and last month, and by charge type, including overdue, damaged-item, and lost-item charges. Reports shall show fines waived by time period and branch, and payments by time period, payment instrument (such as cash, credit card, check, or ecommerce), and collection channel (such as staff desk, self-check, or OPAC). The system shall track waived fines and payments by library and provide branch-level visibility of payments collected at each location for end-of-month and other reporting.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The reporting needs are described across draft and later agreed sources, with finance, branch, and director stakeholders identified; the reports support routine reconciliation and budget monitoring.",
+   "candidate_ids": [
+    "C-220",
+    "C-274",
+    "C-275",
+    "C-278",
+    "C-279",
+    "C-280",
+    "C-233",
+    "C-272",
+    "C-490"
+   ]
+  },
+  {
+   "name": "Balance Threshold Queries",
+   "description": "The system shall allow staff to query and retrieve patron accounts whose balances exceed a staff-specified threshold amount. The threshold shall be configurable for each query rather than fixed to a single value. This capability shall help front desk and finance staff identify accounts requiring attention without manually searching account records.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The agreed source says this was repeatedly requested and that manual retrieval currently takes too long, indicating an important daily-work need with a manual workaround.",
+   "candidate_ids": [
+    "C-281"
+   ]
+  },
+  {
+   "name": "Historical Bill Snapshots",
+   "description": "The system shall provide a snapshot bills report that shows bill states as they existed at earlier points in time. Finance and reporting users shall be able to review historical snapshots rather than only current bill states. This supports investigation and comparison of past financial positions.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The capability is listed as an unmet need in one reference document, without an explicit high-priority marker or broader stakeholder agreement.",
+   "candidate_ids": [
+    "C-386"
+   ]
+  },
+  {
+   "name": "Financial Data Joining",
+   "description": "The system shall allow reporting users to join financial data associated with patron records to financial data associated with item records. The joined data shall be usable to combine or correlate those sources in financial reports. This supports reporting across the patron and item dimensions of financial activity.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The later source records an agreed need from finance and reporting staff to join the two financial data sources for reporting.",
+   "candidate_ids": [
+    "C-277"
+   ]
+  },
+  {
+   "name": "Immediate Financial Updates",
+   "description": "The system shall reflect financial transactions, including front-desk payments, in account balances and reports immediately or near real time. Front desk and finance staff shall be able to rely on the displayed information as current after a transaction is recorded. This reduces delays when reviewing balances and preparing reports.",
+   "type": "non-functional",
+   "priority": "P2",
+   "priority_rationale": "The need was agreed by front desk and finance staff, who specifically report that delayed updates impede their work.",
+   "candidate_ids": [
+    "C-276"
+   ]
+  },
+  {
+   "name": "Financial Data Retention Policy",
+   "description": "The system shall enforce configurable retention periods for financial data according to applicable law and organizational policy. It shall retain each specified data category for its required period, including financial data required to be retained for seven years for audit purposes. Authorized compliance, finance, and audit staff shall be able to rely on these retention rules when reviewing records.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "The agreed source identifies legally or policy-required retention, including a seven-year audit period, and explicitly requires the system to enforce it.",
+   "candidate_ids": [
+    "C-273",
+    "C-235"
+   ]
+  },
+  {
+   "name": "Editable Financial Information",
+   "description": "The system shall allow authorized staff to update financial information through a straightforward workflow. The update capability shall support routine maintenance of financial records by staff responsible for them. This requirement addresses the stated need for financial information to be updated easily.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Ease of updating is requested in one draft source without a specific workflow, urgency marker, or evidence of broader agreement.",
+   "candidate_ids": [
+    "C-218"
+   ]
+  }
+ ],
+ "discarded": []
+}

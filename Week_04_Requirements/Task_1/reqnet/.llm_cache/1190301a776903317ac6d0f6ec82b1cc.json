@@ -1,0 +1,125 @@
+{
+ "candidates": [
+  {
+   "title": "Identify purge candidates with customizable criteria",
+   "statement": "The system shall provide a way to identify item records to purge based on customizable criteria (for example: item status 'missing' for more than X months; item status 'discard/weed').",
+   "type": "functional",
+   "source_quote": "I need to identify item records to purge based on customizable criteria.",
+   "stakeholder": "Maria (requester), cataloging staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support status/time/activity criteria and combination",
+   "statement": "The system shall support status-based criteria (e.g., missing, discard/weed, damaged), time-based criteria (e.g., in a status for X months/years), and activity-based criteria (e.g., last circulated X days/months/years), and allow combining those criteria (e.g., AND combinations).",
+   "type": "functional",
+   "source_quote": "I want the customizable criteria for purging to include: - Status-based criteria ... - Time-based criteria ... - Activity-based criteria ... Can we combine these?",
+   "stakeholder": "Dana, Jennifer, cataloging staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Batch status conversion report and action",
+   "statement": "The system shall provide a report and batch operation that allows converting the status of multiple items at once (for example, change 100 items from 'missing' to 'discard/weed').",
+   "type": "functional",
+   "source_quote": "I need a report to help convert items from one status to another in batch. Like changing 100 items from \"missing\" to \"discard/weed\" at once.",
+   "stakeholder": "Cataloging staff",
+   "priority_signals": "\"This is huge... The batch status conversion alone would save us hours\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Last copy report with scope-aware flagging",
+   "statement": "The system shall provide a \"last copy report\" that determines for each item whether it is the only copy within a specified scope and flags it, supporting both per-library and per-system (consortium) scopes.",
+   "type": "functional",
+   "source_quote": "CRITICAL: We need a \"last copy report\" that identifies our library system's last copies.",
+   "stakeholder": "Catalogers, system administrators",
+   "priority_signals": "CRITICAL; multiple participants requested per-library and per-system views",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Last copy report to assist WorldCat updates",
+   "statement": "The system shall provide data in the last copy report in a format that assists catalogers in identifying items that may require updates to external catalogs (for example, WorldCat) before deletion.",
+   "type": "functional",
+   "source_quote": "This helps catalogers update WorldCat entries so we don't accidentally delete the only copy in the consortium.",
+   "stakeholder": "Catalogers",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Delete volumes with copies and orphaned records",
+   "statement": "The system shall provide a utility to delete volume entries together with their associated copy entries, and to delete bibliographic/other records that have no items attached (orphaned records).",
+   "type": "functional",
+   "source_quote": "We also need a quick way to delete volume entries along with copy entries, and delete records with no items attached.",
+   "stakeholder": "Collection managers, cataloging staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Read-only preview of purge candidates",
+   "statement": "The system shall display reports of purge candidates in a read-only preview mode so users can review candidates without performing deletions directly from the report.",
+   "type": "functional",
+   "source_quote": "Reports show candidates for purging (read-only)",
+   "stakeholder": "Cataloging staff, managers",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Confirmation step before deletions",
+   "statement": "The system shall require a separate explicit confirmation step before performing any deletion operations identified by purge reports.",
+   "type": "functional",
+   "source_quote": "A separate confirmation step for actual deletions",
+   "stakeholder": "Cataloging staff, administrators",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Audit trail for purge actions",
+   "statement": "The system shall maintain an audit trail for all purge-related actions that records who performed the action, what was deleted/changed, and when it occurred.",
+   "type": "non-functional",
+   "source_quote": "Audit trail for all purges",
+   "stakeholder": "Administrators, auditors",
+   "priority_signals": "\"We need to track who purged what and when.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Scheduling of purging utility",
+   "statement": "The system shall allow the purging utility (reports or cleanup operations) to be scheduled to run automatically at specified times (for example, annually at the end of the year).",
+   "type": "functional",
+   "source_quote": "can the purging utility be scheduled? Like, run automatically at the end of each year?",
+   "stakeholder": "Collection managers",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Safeguards to prevent mass accidental deletion",
+   "statement": "The system shall include safeguards to prevent accidental mass deletion of collections (for example: limits/warnings on large batches, role-based restrictions, read-only previews, mandatory confirmations, and audit logging).",
+   "type": "non-functional",
+   "source_quote": "we need to be careful here. \"Customizable criteria\" is great, but we need to make sure the system is safe - we don't want someone accidentally deleting their entire collection.",
+   "stakeholder": "Technical staff, administrators",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

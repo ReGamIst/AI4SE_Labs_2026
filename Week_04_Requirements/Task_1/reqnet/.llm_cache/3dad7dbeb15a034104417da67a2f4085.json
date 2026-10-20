@@ -1,0 +1,290 @@
+{
+ "candidates": [
+  {
+   "title": "Batch item transfer utility",
+   "statement": "The system shall provide a utility for transferring batches of items between branches.",
+   "type": "functional",
+   "source_quote": "I need a utility for transferring batches of items between branches.",
+   "stakeholder": "Maria Rodriguez / library staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Query builder for candidate selection",
+   "statement": "The system shall provide a query builder to select candidate materials for transfer.",
+   "type": "functional",
+   "source_quote": "Query for candidate materials",
+   "stakeholder": "cataloging staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Reuse report query tool integration",
+   "statement": "The system shall allow reuse or integration of the existing report query tool for candidate selection.",
+   "type": "functional",
+   "source_quote": "we can reuse the report query tool for this",
+   "stakeholder": "technical staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Save queries for repeated use",
+   "statement": "The system shall allow users to save queries for repeated use.",
+   "type": "functional",
+   "source_quote": "Save queries for repeated use",
+   "stakeholder": "Thomas / cataloging staff",
+   "priority_signals": "The \"save queries for repeated use\" is crucial. We do this monthly",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Share saved queries/templates",
+   "statement": "The system shall allow saved queries to be shared among users or saved as report templates.",
+   "type": "functional",
+   "source_quote": "Save/share queries - similar to report templates.",
+   "stakeholder": "technical staff / cataloging staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Manual selection from query results",
+   "statement": "The system shall allow users to manually select individual titles from query results (e.g., checkboxes) to include in a transfer.",
+   "type": "functional",
+   "source_quote": "Manually select titles from query results",
+   "stakeholder": "Jennifer / cataloging staff",
+   "priority_signals": "I also want to be able to MANUALLY SELECT from query results.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Batch update location field",
+   "statement": "The system shall perform batch updates to change the location field on selected item records to the destination location.",
+   "type": "functional",
+   "source_quote": "Batch update of location field - straightforward database update",
+   "stakeholder": "technical staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Change records to move items",
+   "statement": "The system shall change the records of selected items to move them to a new location.",
+   "type": "functional",
+   "source_quote": "Change records of selected items to new location",
+   "stakeholder": "Maria / cataloging staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Transaction safety for batch updates",
+   "statement": "The system shall perform batch location updates within database transactions to ensure safety and consistency.",
+   "type": "non-functional",
+   "source_quote": "transaction safety",
+   "stakeholder": "technical staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Process updates in smaller batches",
+   "statement": "The system shall process large batch updates in smaller chunks to avoid locking the database and to handle large collections efficiently.",
+   "type": "non-functional",
+   "source_quote": "process in smaller batches to avoid locking the database",
+   "stakeholder": "technical staff",
+   "priority_signals": "With 9.6 million items, batch updates need to be efficient.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Pull list generation",
+   "statement": "The system shall generate printable pull lists listing items to be moved for physical retrieval.",
+   "type": "functional",
+   "source_quote": "Pull list generation - create a printable list of items to be moved.",
+   "stakeholder": "logistics / staff who pick items",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Printable transit labels / barcodes",
+   "statement": "The system shall generate printable transit labels (including barcodes) for items being transferred.",
+   "type": "functional",
+   "source_quote": "can we generate transit labels? Like, printable barcodes for the items being transferred?",
+   "stakeholder": "George / operations staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Auto-revert after set period",
+   "statement": "The system shall revert transferred items to their original location automatically after a configurable period of time.",
+   "type": "functional",
+   "source_quote": "Revert items to original location after a set period of time",
+   "stakeholder": "Thomas / program coordinators",
+   "priority_signals": "The \"revert items to original location after a set period of time\" is important for temporary transfers.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Auto-revert based on status or events",
+   "statement": "The system shall support automatic reversion of transferred items based on other criteria such as changes in item status or defined events.",
+   "type": "functional",
+   "source_quote": "revert items to original location after a set period of time and/or based on other criteria",
+   "stakeholder": "Thomas / George",
+   "priority_signals": "Can we also revert \"based on other criteria\"?",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Auto-revert when status 'sold'",
+   "statement": "The system shall be able to revert or otherwise handle transferred items automatically when an item's status changes to \"sold\".",
+   "type": "functional",
+   "source_quote": "if the item's status changes to \"sold\" at the book sale, automatically revert it?",
+   "stakeholder": "Thomas / book sale coordinators",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Auto-revert when status 'returned'",
+   "statement": "The system shall be able to revert transferred items when an item's status changes to \"returned\".",
+   "type": "functional",
+   "source_quote": "Revert when item status changes to \"returned\" (event-based)",
+   "stakeholder": "George / operations staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Suppress revert when checked out",
+   "statement": "The system shall not revert an item automatically if it has been checked out at the destination; checked-out items should remain at the destination.",
+   "type": "functional",
+   "source_quote": "when they're checked out there, they should stay. But if they just sit there unused, they come back.",
+   "stakeholder": "George / mobile library staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Scheduled task for auto-revert",
+   "statement": "The system shall implement an auto-revert mechanism via a scheduled task that checks transferred items and reverts them based on time or status criteria.",
+   "type": "functional",
+   "source_quote": "Auto-revert mechanism - a scheduled task that checks transferred items and reverts them",
+   "stakeholder": "technical staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Preview before making changes",
+   "statement": "The system shall provide a preview before executing transfers, showing a confirmation message with the number of items and source and destination locations.",
+   "type": "functional",
+   "source_quote": "\"If you run this now, 25 items will be moved from Dalton-Whitman to Mobile Library Unit 3. Confirm?\"",
+   "stakeholder": "Susan / managers",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Undo function for transfers",
+   "statement": "The system shall provide an undo function allowing recent transfer operations to be reverted by authorized users.",
+   "type": "functional",
+   "source_quote": "And we need an undo function! What if someone clicks the wrong button?",
+   "stakeholder": "Susan / managers",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Permission control for transfers",
+   "statement": "The system shall limit the ability to initiate item transfers to authorized roles such as managers, administrators, or transfer coordinators.",
+   "type": "constraint",
+   "source_quote": "Not every staff member should be able to transfer items between branches. This should be limited to certain roles (managers, administrators, transfer coordinators).",
+   "stakeholder": "Susan / HR/security",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Transfer history tracking",
+   "statement": "The system shall track and store transfer history for each item, including count and timestamps, so users can view how many times and when an item has been transferred.",
+   "type": "data",
+   "source_quote": "Can we track transfer history? Like, \"this item has been transferred 5 times in the past year.\"",
+   "stakeholder": "Latoya / collection managers",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Temporary transfers for events",
+   "statement": "The system shall allow transferring items to a temporary location for a specific event or program and specify an end date to revert them after the event.",
+   "type": "functional",
+   "source_quote": "transfer items to a temporary location for a specific event or program ... then revert them after the event.",
+   "stakeholder": "Latoya / outreach coordinators",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Transfer delay / issue alerts",
+   "statement": "The system shall provide alerts or notifications to specified users when a transfer is delayed or encounters issues.",
+   "type": "functional",
+   "source_quote": "set up alerts? If an item transfer is delayed or has issues, notify me.",
+   "stakeholder": "Jennifer / transfer coordinators",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Logging and audit of transfers",
+   "statement": "The system shall log all transfer actions and changes for audit purposes, recording who performed the transfer and when.",
+   "type": "functional",
+   "source_quote": "Logging - track all transfers for audit purposes.",
+   "stakeholder": "Robert / administrators",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Scalability for large collections",
+   "statement": "The system shall scale to efficiently handle batch transfer operations in environments with millions of items without causing excessive database locking or performance degradation.",
+   "type": "non-functional",
+   "source_quote": "With 9.6 million items, batch updates need to be efficient.",
+   "stakeholder": "technical staff",
+   "priority_signals": "With 9.6 million items, batch updates need to be efficient.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

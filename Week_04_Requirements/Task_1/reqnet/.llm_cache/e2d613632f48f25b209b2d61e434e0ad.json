@@ -1,0 +1,294 @@
+{
+ "requirements": [
+  {
+   "name": "Collection Usage Analysis",
+   "description": "The system shall provide collection managers and librarians with reports and analysis tools for examining the library collection and how patrons use it. The analysis shall support collection-management decisions by making collection holdings and patron use available for review. It shall allow users to analyze collection usage without requiring a specific report format.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The need appears in two sources, but neither identifies a priority marker or a specific operational blocker.",
+   "candidate_ids": [
+    "C-455",
+    "C-132"
+   ]
+  },
+  {
+   "name": "Circulation Activity Reporting",
+   "description": "The system shall provide activity reports showing counts of check-outs, check-ins, holds placed, and holds filled. It shall also report transaction types including fines collected and patron registrations, as well as check-in counts by method, including book drop, terminal, and self-service. The system shall report check-out and renewal types separately, including staff checkout, self checkout, staff renewal, self checkout renewal, online renewal, and OPAC renewal, so staff and management can understand circulation activity and service use.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Activity reporting is requested in a draft specification and survey results, with specific breakdowns requested by library staff; a manual reporting workaround is possible.",
+   "candidate_ids": [
+    "C-156",
+    "C-545",
+    "C-549",
+    "C-559"
+   ]
+  },
+  {
+   "name": "Distinct Renewal Recording",
+   "description": "The system shall record renewals distinctly from check-ins. Check-in date and time values shall not include renewal transactions. This separation shall allow circulation staff to interpret check-in and renewal statistics accurately.",
+   "type": "data",
+   "priority": "P3",
+   "priority_rationale": "The requirement is a specific data-quality request from one survey source, with no explicit high-priority marker.",
+   "candidate_ids": [
+    "C-554"
+   ]
+  },
+  {
+   "name": "Circulation Count Breakdowns",
+   "description": "The system shall provide circulation count reports grouped by patron age demographic, circulation modifier, Dewey classification, and MARC field values. Users shall be able to select the relevant breakdown when reviewing circulation counts. These reports shall support collection and circulation analysis using the classification and record data identified in the sources.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Four distinct report types are listed as missing or partially available in one reference source, but no priority marker or broad stakeholder agreement is stated.",
+   "candidate_ids": [
+    "C-342",
+    "C-344",
+    "C-340",
+    "C-341"
+   ]
+  },
+  {
+   "name": "Claims Returned Reporting",
+   "description": "The system shall provide a Claims Returned report listing items that patrons have claimed to have returned. Circulation staff shall be able to use the report to identify and review those items. The report shall make claims-returned information available as a distinct report type.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This report is listed as unavailable in one reference source, with no stated priority marker or supporting source.",
+   "candidate_ids": [
+    "C-345"
+   ]
+  },
+  {
+   "name": "Collection Age By Call Number",
+   "description": "The system shall provide a report showing the age of the collection aggregated by call number ranges. Collection managers shall be able to use the report to assess the age profile of holdings across those ranges. The report shall use collection item data to calculate the grouped results.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report is listed as missing in one reference source and has no explicit priority marker.",
+   "candidate_ids": [
+    "C-330"
+   ]
+  },
+  {
+   "name": "Volume Category Breakdowns",
+   "description": "The system shall allow users to break down collection volume by categories including total items, holds, adult fiction, and board books. It shall support grouping by category attributes such as fiction or non-fiction and format, and shall allow each library to customize the categories used. The report shall show hold counts per category so collection managers can examine volume using categories relevant to their library.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The category breakdown is agreed and explicitly described as a key requirement, with examples requested for board reporting and customization needed by a library.",
+   "candidate_ids": [
+    "C-001",
+    "C-003",
+    "C-005",
+    "C-006"
+   ]
+  },
+  {
+   "name": "Collection Volume History",
+   "description": "The system shall provide a collection volume report for a specified library and date or point in time, including historical counts rather than only current values. The report shall distinguish new acquisitions, items on the shelf, and items out in circulation, and shall include checked-out items in the total volume. It shall use the item acquisition date for acquisition and time-range reporting, show changes over time, and allow recent-addition intervals such as the last 30, 60, or 90 days. Users shall be able to report on acquisitions, shelf items, and circulating items with category breakdowns including total items, holds, adult fiction, and board books.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The point-in-time and component counts are explicitly identified as key requirements for board and assessment reporting, and the detailed volume need appears across multiple sources.",
+   "candidate_ids": [
+    "C-007",
+    "C-008",
+    "C-009",
+    "C-010",
+    "C-011",
+    "C-012",
+    "C-013",
+    "C-014",
+    "C-178",
+    "C-418"
+   ]
+  },
+  {
+   "name": "Branch Capacity Analysis",
+   "description": "The system shall provide an interface and analysis capabilities for viewing capacity across all branches and assessing collection distribution. It shall aggregate capacity data across branches by querying the centralized database. Branch managers and collection planners shall be able to use inventory and capacity reports in their daily work to review branch capacity and distribution needs.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Branch capacity analysis is requested in the draft specification and technical email, and meeting minutes state that inventory and capacity reports are used daily.",
+   "candidate_ids": [
+    "C-015",
+    "C-129",
+    "C-161",
+    "C-492"
+   ]
+  },
+  {
+   "name": "Configurable Capacity Metrics",
+   "description": "The system shall allow authorized users to define and configure the metrics used to represent capacity. Supported metric choices shall include item count versus shelf space, physical item count versus a configured limit, and circulation volume versus processing capacity. The system shall use the selected metric when presenting capacity information so that branches can apply a consistent, meaningful definition of capacity.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A working-group discussion identifies capacity metrics as an input needed for the interface, but the request remains questioned and has no explicit priority marker.",
+   "candidate_ids": [
+    "C-017"
+   ]
+  },
+  {
+   "name": "Color-Coded Capacity Status",
+   "description": "The system shall display branch capacity status using color coding. It shall support green for under capacity, yellow for getting full, and red for at or over capacity. Facility and collection staff shall be able to recognize capacity status quickly from the interface.",
+   "type": "functional",
+   "priority": "P4",
+   "priority_rationale": "Color coding is proposed as a usability enhancement in one source, with no evidence that it is required for core operation.",
+   "candidate_ids": [
+    "C-016"
+   ]
+  },
+  {
+   "name": "Shelf Space Utilization Analysis",
+   "description": "The system shall provide shelf-space utilization reports for each genre and format, comparing the percentage of total circulations, the percentage of the collection, and the percentage of total shelf space. Reports shall be runnable for an individual library and for the library system. The system shall estimate shelf space by genre and format using item dimensions when available and item count as a proxy when dimensions are unavailable, so planners can assess the percentage of shelf space occupied.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The comparison is requested in multiple sources, including an agreed working-group summary and a stakeholder interview, and is described as important for collection management.",
+   "candidate_ids": [
+    "C-028",
+    "C-035",
+    "C-039",
+    "C-197",
+    "C-040",
+    "C-423",
+    "C-502"
+   ]
+  },
+  {
+   "name": "Uncataloged Material Inventory",
+   "description": "The system shall allow staff to track uncataloged material as inventory even when individual bibliographic records are unavailable. It shall support material such as paperback books and children's board books, and shall support quick distribution with minimal branch labor. This inventory capability shall allow branch staff and collection managers to control and locate uncataloged material.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The need is described in both a draft specification and a stakeholder interview, with concrete operational needs for distribution and inventory tracking.",
+   "candidate_ids": [
+    "C-176",
+    "C-426"
+   ]
+  },
+  {
+   "name": "Uncataloged Material Usage",
+   "description": "The system shall count transactions involving uncataloged material and include those counts in circulation statistics and reports. It shall record and report how uncataloged material is used so staff can evaluate its circulation and use. The system shall support this reporting even when the material is not fully cataloged.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Transaction counting is requested in both a draft specification and a stakeholder interview, and the interview also requests usage information.",
+   "candidate_ids": [
+    "C-168",
+    "C-412",
+    "C-427"
+   ]
+  },
+  {
+   "name": "Collection Value Reporting",
+   "description": "The system shall generate reports of monetary item value using the purchase price field in item records, querying and aggregating that field as needed. Users shall be able to report value for the entire collection or a selected portion, with filters including item status, material type, and collection membership; examples include long-overdue items and children's DVDs. The system shall also report collection value aggregated by call number ranges to support collection and finance analysis.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Value reporting is requested in a draft specification and an agreed finance/staff email, which identifies purchase price data already present in item records.",
+   "candidate_ids": [
+    "C-238",
+    "C-269",
+    "C-282",
+    "C-283",
+    "C-376"
+   ]
+  },
+  {
+   "name": "Items By Creation Date",
+   "description": "The system shall provide a report listing items created within a specified creation-date range. Inventory managers shall be able to use the report to identify items added during the selected period. The report shall allow the user to specify the date range used to select items.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This report is listed as unavailable in one reference source and has no explicit priority marker.",
+   "candidate_ids": [
+    "C-365"
+   ]
+  },
+  {
+   "name": "Items By Fines Stopped",
+   "description": "The system shall provide a report listing items grouped by the reason fines were stopped. Circulation and finance staff shall be able to review the items and their associated reasons. The report shall make the fines-stopped reason available as a grouping criterion.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This report is listed as unavailable in one reference source, with no additional evidence of priority.",
+   "candidate_ids": [
+    "C-366"
+   ]
+  },
+  {
+   "name": "Item Use Count Reporting",
+   "description": "The system shall maintain and report total use counts for items. It shall also provide use counts by date range, including fiscal-year and monthly counts. Collection analysts shall be able to identify items matching a specified total use count.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Use counts and filtering by a specified count are requested in a draft specification and a reference report list, without explicit priority markers.",
+   "candidate_ids": [
+    "C-266",
+    "C-367"
+   ]
+  },
+  {
+   "name": "Missing And Damaged Items",
+   "description": "The system shall generate reports of missing and damaged items at the branch level. The reports shall identify the affected items for each branch so branch staff and managers can monitor collection health. Users shall be able to review missing and damaged items as reportable conditions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The same branch-level reporting need appears in a stakeholder interview and meeting minutes, with both branch staff and managers identified as users.",
+   "candidate_ids": [
+    "C-420",
+    "C-494"
+   ]
+  },
+  {
+   "name": "Overdue Items With Contact",
+   "description": "The system shall provide a report of items that are more than a user-specified number of days overdue. The report shall include patron contact information for each item. Circulation staff shall be able to use the report to identify overdue items requiring follow-up.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report is listed as unavailable in one reference source; the overdue threshold is specified as configurable but no priority marker is provided.",
+   "candidate_ids": [
+    "C-371"
+   ]
+  },
+  {
+   "name": "Last Copy Reporting",
+   "description": "The system shall provide an enhanced Last Copy Report identifying a library system's last copies. The report shall present identifiers or actionable location details that assist catalogers with preservation decisions, catalog editing, and WorldCat entry updates. It shall support collection managers and catalogers in identifying and acting on last-copy records.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "A stakeholder explicitly marks the last-copy report critical, and the interview notes also identify WorldCat-related support as critical; another source says the existing report needs enhancement.",
+   "candidate_ids": [
+    "C-414",
+    "C-362",
+    "C-415"
+   ]
+  },
+  {
+   "name": "Hold Request Source Counts",
+   "description": "The system shall count hold requests and record how each hold was placed. Supported source categories shall include a staff desk, a public computer inside the library, and a remote location. Circulation staff shall be able to use these counts to understand hold-request activity by source.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The request is detailed in one draft specification and has no explicit priority marker or corroborating source.",
+   "candidate_ids": [
+    "C-221"
+   ]
+  },
+  {
+   "name": "Stale Holds Reporting",
+   "description": "The system shall provide a report of stale holds that have not progressed. Circulation staff shall be able to identify these holds from the report. The report shall make stale holds available as a distinct reporting category.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Stale holds are listed as an unavailable report type in one reference source, with no stated priority marker.",
+   "candidate_ids": [
+    "C-388"
+   ]
+  },
+  {
+   "name": "Unfilled Holds Reporting",
+   "description": "The system shall provide a report of unfilled holds. Circulation staff shall be able to review hold requests that have not been filled. The report shall make unfilled holds available as a distinct reporting category.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Unfilled holds are listed as an unavailable report type in one reference source, with no stated priority marker.",
+   "candidate_ids": [
+    "C-390"
+   ]
+  },
+  {
+   "name": "Last Circulation Date",
+   "description": "The system shall indicate the last circulation date on item reports. Collection and circulation staff shall be able to use this date when reviewing individual items. The report shall display the date associated with the item's most recent circulation.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This is a single survey request with no explicit priority marker or evidence of broad agreement.",
+   "candidate_ids": [
+    "C-575"
+   ]
+  }
+ ],
+ "discarded": []
+}

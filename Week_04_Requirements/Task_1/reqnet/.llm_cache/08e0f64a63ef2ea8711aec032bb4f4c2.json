@@ -1,0 +1,202 @@
+{
+ "requirements": [
+  {
+   "name": "Inactive Patron Branch Reporting",
+   "description": "The system shall aggregate inactive-patron counts by home library for viewing at the system level. Users shall be able to drill down from those counts to branch-level lists so they can assign cleanup tasks to specific branches. The system shall allow the inactive-patron list to be generated or configured at organizational levels such as System, Home Library, and County, as well as other levels as needed.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Requested by multiple library stakeholders and agreed; the reporting supports branch-level cleanup, with other manual coordination possible as a workaround.",
+   "candidate_ids": [
+    "C-115",
+    "C-119"
+   ]
+  },
+  {
+   "name": "Bibliographic Additions By Library",
+   "description": "The system shall provide a report counting bibliographic records added by each user, grouped by library. Users shall be able to use the report to review record additions across library locations. The report shall present the counts in a form suitable for cataloging managers.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This missing report was identified in one reference document for cataloging managers, with no evidence of broader demand or a blocking need.",
+   "candidate_ids": [
+    "C-335"
+   ]
+  },
+  {
+   "name": "Bibliographic Edit Counts",
+   "description": "The system shall provide a count of bibliographic records edited within a user-specified period. Cataloging staff shall be able to use the count to review editing activity over that period. The report shall identify the selected period alongside the resulting count.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This missing report was identified in one reference document; no broader stakeholder agreement or priority marker is provided.",
+   "candidate_ids": [
+    "C-336"
+   ]
+  },
+  {
+   "name": "Branch Capacity Distribution Analysis",
+   "description": "The system shall provide reports and analysis tools for examining capacity at individual branches. The tools shall support analysis of how the collection is distributed across branches and where its distribution may be optimized. This analysis shall help users assess branch capacity alongside collection distribution.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The need appears in one set of meeting minutes without a stated priority or evidence of broader agreement.",
+   "candidate_ids": [
+    "C-453"
+   ]
+  },
+  {
+   "name": "Centralized Multi-Location Operations",
+   "description": "The system shall consolidate management processes at a central location. It shall accept input from multiple library locations and provide services to those locations. The centralized operation shall provide a single source of truth for multi-location management.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "Centralized operation is repeated across four documents, including agreed meeting records, and establishes the architecture for serving multiple locations.",
+   "candidate_ids": [
+    "C-517",
+    "C-483",
+    "C-165",
+    "C-130"
+   ]
+  },
+  {
+   "name": "Circulation Counts By Patron County",
+   "description": "The system shall provide circulation count reports grouped by circulation location and broken down by patron county. Regional managers shall be able to review circulation counts across locations using this county breakdown. The report shall retain the circulation location and patron county as distinct grouping dimensions.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report is listed as missing in one reference document for regional managers, with no further evidence of urgency or agreement.",
+   "candidate_ids": [
+    "C-343"
+   ]
+  },
+  {
+   "name": "Consolidated Material Volume Report",
+   "description": "The system shall provide a consolidated material volume report that aggregates counts into a single report. Users shall be able to obtain the report without manually gathering the data from multiple screens. The report shall support users preparing monthly board reports.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The request is agreed and addresses a recurring manual task for a monthly board report, but the evidence is limited to one document and a workaround exists.",
+   "candidate_ids": [
+    "C-002"
+   ]
+  },
+  {
+   "name": "Consortium Administration And Reporting",
+   "description": "The system shall provide Global System Administrators with consortium-level capabilities to implement software changes and configurations. They shall be able to generate statistical reports for the consortium as a whole. The system shall make these capabilities available for administration and reporting across the full consortium.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The capability is identified for a specific administrator role in one set of meeting minutes, without a priority marker or additional supporting sources.",
+   "candidate_ids": [
+    "C-457"
+   ]
+  },
+  {
+   "name": "Cross-Branch Comparison Reports",
+   "description": "The system shall provide reports that allow directors and managers to compare metrics across branches. Users shall be able to review results for multiple branches in a common report. The reports shall support cross-branch comparison without requiring users to assemble the results manually.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The need is recorded in one set of meeting minutes for directors and managers, with no stated priority or further evidence of agreement.",
+   "candidate_ids": [
+    "C-484"
+   ]
+  },
+  {
+   "name": "Branch Capacity Overview",
+   "description": "The system shall provide a high-level overview showing capacity information for all branches in a system. The overview shall display key capacity metrics for each branch, including current load and capacity percentage where available, as well as other selected metrics. Users shall be able to review the branches and their metrics together to support capacity and resource decisions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The overview is agreed and supported by several candidate statements from the working group and branch stakeholders, including a need to see all branches at once.",
+   "candidate_ids": [
+    "C-019",
+    "C-023",
+    "C-025"
+   ]
+  },
+  {
+   "name": "Local System Average Comparison",
+   "description": "The system shall display a local library's Shelf Space Report results alongside the system average. Branch managers shall be able to compare local results with the system-level value. The comparison shall support review of the local library's situation in the context of the wider system.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Branch managers explicitly requested the comparison, and the source states its value for understanding local performance against the system average.",
+   "candidate_ids": [
+    "C-034"
+   ]
+  },
+  {
+   "name": "Branch Capacity Drilldown",
+   "description": "The system shall allow users to drill down from the high-level capacity overview into an individual branch's detailed capacity view. The detailed view shall provide branch-level information corresponding to the overview. This shall allow users to move from system-wide review to inspection of a specific branch.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Drilldown is agreed in the working-group summary and complements the requested overview; users could otherwise seek branch detail separately.",
+   "candidate_ids": [
+    "C-020"
+   ]
+  },
+  {
+   "name": "Location Data Completeness And Currency",
+   "description": "The system shall ensure that data consolidated from all locations is complete and current. It shall support users in relying on cross-location reports with data that reflects the locations represented. The system shall address completeness and freshness across locations as part of consolidated reporting.",
+   "type": "non-functional",
+   "priority": "P2",
+   "priority_rationale": "Meeting notes identify completeness and currency across locations as a specific challenge to consolidated operation, though no measurable threshold or explicit priority is provided.",
+   "candidate_ids": [
+    "C-520"
+   ]
+  },
+  {
+   "name": "Library Location Report Filter",
+   "description": "The system shall allow users to filter the material volume report by library location. When a library is selected, the report shall count only items whose location matches that library. This shall allow users to report on items at a given library at a point in time.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The filter is agreed in the source summary and supports a specific library-level reporting need, with manual extraction as a possible workaround.",
+   "candidate_ids": [
+    "C-004"
+   ]
+  },
+  {
+   "name": "Branch Grouping And Filtering",
+   "description": "The system shall allow users to group branches by system or region in the overview. Users shall also be able to sort and filter branches by region, library type, and current load. These options shall help users navigate and compare locations in an overview containing many branches.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Grouping and sorting or filtering were requested in agreed working-group material, with the source noting 286 locations and the resulting visual crowding.",
+   "candidate_ids": [
+    "C-022",
+    "C-024"
+   ]
+  },
+  {
+   "name": "Library Manager Reporting Interfaces",
+   "description": "The system shall provide Library Managers with interfaces and reporting features for supervising a single organizational unit. It shall support their contribution to the design and implementation of reports. The interfaces shall serve managers in their role overseeing a local unit.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The capability is described for Library Managers in one set of meeting minutes and has no explicit priority marker or corroborating source.",
+   "candidate_ids": [
+    "C-464"
+   ]
+  },
+  {
+   "name": "Local Administrator Configuration",
+   "description": "The system shall allow Local System Administrators at local branches to configure the system locally. This capability shall support local management staff in carrying out their assigned configuration role. Local configuration shall be available within the system's multi-location operation.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The local configuration role is identified in one set of meeting minutes without an explicit priority or evidence of broader demand.",
+   "candidate_ids": [
+    "C-466"
+   ]
+  },
+  {
+   "name": "Shelf Space Report Scope",
+   "description": "The system shall allow users to run the Shelf Space Report for an individual library or for the entire system. Users shall be able to select the desired scope when generating the report. The two scopes shall support local review by branch managers and system-wide review by administrators and directors.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The requirement is agreed and supported by requests from multiple stakeholders, including directors who review the data quarterly and need both views.",
+   "candidate_ids": [
+    "C-038"
+   ]
+  },
+  {
+   "name": "Transaction Totals By Organizational Scope",
+   "description": "The system shall provide reports of total transactions aggregated per patron, per library, per group of libraries, per system, and per county. Users shall be able to review totals at the scope appropriate to their reporting needs. The report shall preserve these aggregation levels as distinct options.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The need is recorded as agreed survey input from library staff, but the source provides no response counts or explicit priority evidence.",
+   "candidate_ids": [
+    "C-578"
+   ]
+  }
+ ],
+ "discarded": []
+}

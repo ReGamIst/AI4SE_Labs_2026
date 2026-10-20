@@ -1,0 +1,153 @@
+{
+ "requirements": [
+  {
+   "name": "Role-Based Access Control",
+   "description": "The system shall control user rights and privileges through configurable roles and security groups. Administrators shall be able to assign access to individuals, workgroups, and arbitrary staff groups. Role-based permissions shall govern access to report functions and other authorized system functions so that users receive access appropriate to their responsibilities.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Role-based access control is explicitly marked high priority and essential, and is supported across multiple stakeholder sources.",
+   "candidate_ids": [
+    "C-314",
+    "C-434",
+    "C-151",
+    "C-535",
+    "C-470",
+    "C-447",
+    "C-327"
+   ]
+  },
+  {
+   "name": "Role And Group Administration",
+   "description": "The system shall allow administrators to create, modify, and delete roles and security groups and to manage their membership. Administrators shall be able to change a user's permissions by changing the user's role assignment, with the user's permissions updated automatically to match that role. The system shall provide an easy-to-administer interface for managing report permissions and roles, avoiding the need to edit permissions individually for routine role changes.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Multiple stakeholders and sources request role and group management and emphasize easy administration; role changes provide a practical way to manage permissions.",
+   "candidate_ids": [
+    "C-313",
+    "C-518",
+    "C-319",
+    "C-304",
+    "C-291",
+    "C-183",
+    "C-448"
+   ]
+  },
+  {
+   "name": "Fine-Grained Report Permissions",
+   "description": "The system shall provide fine-grained permissions that control which users can create, clone, modify, run, schedule, and view reports. Permissions shall be configurable for specific reports and shall also control who may add canned reports. These controls shall allow administrators to grant report capabilities according to users' roles and responsibilities.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Fine-grained report permissions are marked high priority, appear across several sources, and were prioritized by 76% of survey respondents.",
+   "candidate_ids": [
+    "C-239",
+    "C-398",
+    "C-172",
+    "C-353",
+    "C-555"
+   ]
+  },
+  {
+   "name": "Query Tool Access Control",
+   "description": "The system shall allow administrators to control which users can access the query tool. Administrators shall be able to grant or deny access according to users' roles and responsibilities. This control shall prevent users from accessing query functionality unless authorized.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Administrator control of query-tool access was agreed and included in a consolidated summary, though it is supported by one source.",
+   "candidate_ids": [
+    "C-286"
+   ]
+  },
+  {
+   "name": "Database Table And Field Permissions",
+   "description": "The system shall allow administrators to control staff access to database tables and fields used in queries. Administrators shall be able to restrict which data structures and fields each authorized user can access. This shall limit query access to the data appropriate for a user's responsibilities.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The source explicitly marks control of table and field access as high priority, making it a stated security requirement.",
+   "candidate_ids": [
+    "C-157"
+   ]
+  },
+  {
+   "name": "Template Edit Restrictions",
+   "description": "The system shall allow administrators to restrict which template filters and display fields staff can alter. Restrictions shall be configurable to prevent front-line staff from changing a template to display deleted items. These controls shall help preserve dependable and accurate report output.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Template editing restrictions are marked high priority in the draft and reaffirmed in an agreed source; the sources identify dependable and accurate output as the purpose.",
+   "candidate_ids": [
+    "C-158",
+    "C-292",
+    "C-186",
+    "C-201"
+   ]
+  },
+  {
+   "name": "Report Folder Run Permissions",
+   "description": "The system shall allow administrators to create shared folders for reports and assign permissions to specific staff for running reports stored in those folders. Administrators shall be able to allow or deny run access to particular reports through these folder permissions. This shall support controlled sharing of reports with the appropriate users.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Shared-folder report permissions are marked high priority in the draft and repeated in agreed sources, including survey results.",
+   "candidate_ids": [
+    "C-196",
+    "C-308",
+    "C-574"
+   ]
+  },
+  {
+   "name": "Scoped Ad Hoc Dataset Access",
+   "description": "The system shall allow administrators to allow or deny staff the ability to run ad hoc reports on specific sets of data. Administrators shall be able to use shared folders to control access to those data sets. These controls shall limit ad hoc reporting to staff authorized for the relevant data.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Control of ad hoc reporting on specific data sets is marked high priority, and a later agreed source also identifies shared folders as an access-control mechanism.",
+   "candidate_ids": [
+    "C-167",
+    "C-307"
+   ]
+  },
+  {
+   "name": "Predefined Role Capability Profiles",
+   "description": "The system shall support role profiles for Global Admin, Local Admin, Library Manager, Staff, and Patron. Global Admin shall have full system access, including software changes and configuration and statistical reporting for the entire system or consortium; Local Admin shall be able to configure local settings and run branch-level or system reports. Library Manager shall be able to run approved reports and make limited template modifications, while Staff shall run reports within assigned permissions and Patron access shall be indirect through OPAC displays. The system shall also support profiles such as front-desk staff with basic reports and limited filters, department heads with template creation and modification, and system administrators with full report and permission access.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "An agreed meeting provides a specific set of role access levels, and stakeholder sources also provide consistent administrative capabilities and concrete role examples.",
+   "candidate_ids": [
+    "C-433",
+    "C-138",
+    "C-435",
+    "C-141",
+    "C-531",
+    "C-322",
+    "C-443"
+   ]
+  },
+  {
+   "name": "Cross-Branch Capacity Access",
+   "description": "The system shall allow branch managers and other authorized roles to view capacity information for all branches, not only their own branch. Access to this information shall be governed by the user's permissions. This shall support operational decisions such as reallocating items or resources across branches.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This is a specific operational need requested in one source, with no evidence of broader stakeholder agreement or an explicit high-priority marker.",
+   "candidate_ids": [
+    "C-018"
+   ]
+  },
+  {
+   "name": "Transfer Role Authorization",
+   "description": "The system shall restrict the ability to initiate item transfers between branches to authorized roles. Authorized roles shall include managers, administrators, or transfer coordinators as configured by the organization. This shall prevent staff without an appropriate operational responsibility from initiating transfers.",
+   "type": "constraint",
+   "priority": "P3",
+   "priority_rationale": "A single source requests role-based limits on transfers; the need is concrete but has no explicit high-priority marker or broader evidence of agreement.",
+   "candidate_ids": [
+    "C-051"
+   ]
+  },
+  {
+   "name": "Mass Deletion Safeguards",
+   "description": "The system shall provide safeguards against accidental mass deletion of collections. Safeguards shall include configurable limits or warnings for large batches, read-only previews, mandatory confirmations, role-based restrictions, and audit logging. These controls shall help administrators and technical staff prevent unintended loss of collection data.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "An agreed source identifies a consequential safety concern and proposes concrete safeguards, but the requirement appears in only one source.",
+   "candidate_ids": [
+    "C-090"
+   ]
+  }
+ ],
+ "discarded": []
+}

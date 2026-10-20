@@ -1,0 +1,147 @@
+{
+ "candidates": [
+  {
+   "title": "Reports by patron characteristics",
+   "statement": "The system shall allow queries and reports to be limited or grouped by patron characteristics including age range, zip code, county of residence, home branch, patron type, and preferred language.",
+   "type": "functional",
+   "source_quote": "The system should allow queries and reports to be limited or grouped by various patron characteristics, including: - Age range - Zip code - County of residence - Home branch - Patron type - Preferred language",
+   "stakeholder": "PINES reports working group (Maria, Katherine, Jenny, Susan, Latoya)",
+   "priority_signals": "Katherine: Requirement consolidated; Jenny: \"Yes, this is essential!\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Filtering by patron characteristics (LIMIT)",
+   "statement": "The system shall allow reports to be filtered (LIMIT) by patron characteristics including age range, zip code, county of residence, home branch, patron type, and preferred language.",
+   "type": "functional",
+   "source_quote": "Limit: Show me only patrons in zip code 30501",
+   "stakeholder": "Susan Sexton-Cooley and library staff running reports",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Grouping by patron characteristics (GROUP BY)",
+   "statement": "The system shall allow reports to group (aggregate) results by patron characteristics including age range, zip code, county of residence, home branch, patron type, and preferred language.",
+   "type": "functional",
+   "source_quote": "Group By: Show me checkout counts grouped by age range",
+   "stakeholder": "Susan Sexton-Cooley, Jennifer Durham",
+   "priority_signals": "Jenny requested grouping for program planning (essential).",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Configurable age ranges",
+   "statement": "The system shall allow the age ranges (age brackets) used for filtering and grouping to be configurable per report (for example 0-5, 6-10, 11-15 or 0-6, 7-12, 13-17, etc.).",
+   "type": "functional",
+   "source_quote": "The age ranges need to be configurable too. Like, 0-5, 6-10, 11-15, etc. Or 0-6, 7-12, 13-17, 18-24, 25-34... Whatever makes sense for the report.",
+   "stakeholder": "Susan Sexton-Cooley and reports authors",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Compute age from birth_date",
+   "statement": "The system shall compute a patron's age range at query time using the patron's stored birth_date field.",
+   "type": "functional",
+   "source_quote": "The \"age range\" is calculated from the birth_date field, which means we need to compute it at query time.",
+   "stakeholder": "Robert Chen (technical), reports authors",
+   "priority_signals": "Robert: technical feasibility confirmed.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support AND/OR filter logic",
+   "statement": "The system shall allow combining multiple filters using AND and OR logical operators when limiting query/report results.",
+   "type": "functional",
+   "source_quote": "We can support both AND and OR logic.",
+   "stakeholder": "Robert Chen, reports users",
+   "priority_signals": "Robert: \"Combining filters is also doable\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Include null values in reports",
+   "statement": "The system shall include records with null (missing) values for optional patron fields in report results and display nulls explicitly rather than silently excluding those records.",
+   "type": "functional",
+   "source_quote": "We should include them in the report (with null values) rather than excluding them, because excluding data silently can lead to misleading results.",
+   "stakeholder": "Robert Chen, Katherine Gregory, reports working group",
+   "priority_signals": "Katherine summary: \"Null values should be included in results\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "User choice to include or exclude nulls",
+   "statement": "The system shall provide an option allowing the user to choose whether to include or exclude records with missing (null) values from report results.",
+   "type": "functional",
+   "source_quote": "Should the report show nulls for missing data, or exclude those records?",
+   "stakeholder": "Dana Peeler and reports authors",
+   "priority_signals": "",
+   "status": "questioned",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Combine demographic and activity filters",
+   "statement": "The system shall allow combining demographic filters with activity-based conditions (for example: \"Juvenile patrons in zip code 30505 who haven't checked anything out in 6 months\").",
+   "type": "functional",
+   "source_quote": "Can we combine demographic filters? Like \"show me all Juvenile patrons in zip code 30505 who haven't checked anything out in 6 months\"?",
+   "stakeholder": "Latoya Davidson and reports users",
+   "priority_signals": "Latoya requested combined demographic+activity filters; Robert: combining filters is doable.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support aggregation metrics grouped by demographics",
+   "statement": "The system shall support aggregation metrics (such as circulation counts and patron counts) and allow those metrics to be grouped by demographic fields (for example circulation by age range or patron count by home branch).",
+   "type": "functional",
+   "source_quote": "Can we also GROUP BY these fields? Like, show me circulation by age range, or patron count by home branch?",
+   "stakeholder": "Jennifer Durham and reports authors",
+   "priority_signals": "Jenny: needed for program planning (essential).",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Patron data fields available for reporting",
+   "statement": "The system shall store and make available in the patron table the following fields for reporting: zip code, county of residence, home branch, patron type, preferred language, and birth_date (for age calculation).",
+   "type": "data",
+   "source_quote": "All the fields mentioned (age range, zip code, county, home branch, patron type, preferred language) exist in the patron table.",
+   "stakeholder": "Robert Chen (technical), reports implementers",
+   "priority_signals": "Robert: \"From a technical standpoint, these queries are straightforward.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Patron type categories",
+   "statement": "The system shall support patron type categories (for example adult, juvenile, senior, student) and allow patron type to be used as a filter and grouping field in reports.",
+   "type": "data",
+   "source_quote": "\"Also, \\\"patron type\\\" is important - adult, juvenile, senior, student, etc.\"",
+   "stakeholder": "Latoya Davidson, reports authors",
+   "priority_signals": "Latoya: patron type important; affects privileges.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Report data completeness indicators",
+   "statement": "The system shall provide visibility into data availability/completeness for selected patron fields (for example indicate or report how many records lack zip code or preferred language), so users can assess whether fields are consistently populated.",
+   "type": "functional",
+   "source_quote": "I think we should also consider what data is available. Some of these fields might not be consistently populated.",
+   "stakeholder": "Dana Peeler and reports authors",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "candidates": [
+  {
+   "title": "Support streamlined login methods",
+   "statement": "The system shall support streamlined staff login methods (for example, card-swipe) as an available login option.",
+   "type": "functional",
+   "source_quote": "We've seen other library systems implement card-swipe login for their ILS terminals.",
+   "stakeholder": "Dana Peeler; Katherine Gregory",
+   "priority_signals": "Raised as a front-line improvement; included in Katherine's summary to add to requirements list.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support username/password login",
+   "statement": "The system shall support traditional individual username and password login as a login method.",
+   "type": "functional",
+   "source_quote": "we also need to support the traditional username/password method - not all staff may have ID cards",
+   "stakeholder": "Dana Peeler; Katherine Gregory",
+   "priority_signals": "Called out as necessary fallback; included in Katherine's summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Streamlined login optional",
+   "statement": "The system shall make streamlined staff login methods optional and shall not require use of streamlined methods.",
+   "type": "constraint",
+   "source_quote": "The streamlined method should be optional but available.",
+   "stakeholder": "Susan Sexton-Cooley; Katherine Gregory",
+   "priority_signals": "Susan: \"the system should not REQUIRE the streamlined login\"; Katherine included 'supports (but does not require)'.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Do not require card-reader hardware",
+   "statement": "The system shall operate without requiring card-reader hardware so branches without card-reader infrastructure can use the system.",
+   "type": "constraint",
+   "source_quote": "Some of our smaller branches may not have the infrastructure for card readers.",
+   "stakeholder": "Susan Sexton-Cooley",
+   "priority_signals": "Explicit concern about smaller branches lacking infrastructure; stated as a requirement not to require streamlined login.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Card-swipe must identify individual",
+   "statement": "The system shall ensure that any card-swipe streamlined login method identifies the individual staff member and shall not bypass individual authentication.",
+   "type": "functional",
+   "source_quote": "the system must track WHICH staff member is logged in for audit purposes...it shouldn't bypass individual authentication entirely.",
+   "stakeholder": "Susan Sexton-Cooley",
+   "priority_signals": "\"this is important\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Immediate streamlined login",
+   "statement": "The system shall allow streamlined login methods (e.g., card-swipe) to log a staff member in immediately upon successful use.",
+   "type": "non-functional",
+   "source_quote": "The staff member simply swipes their employee ID badge and is logged in immediately.",
+   "stakeholder": "Dana Peeler",
+   "priority_signals": "Described as much faster in practice; front-line time saving rationale.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Streamlined login improves security",
+   "statement": "The system shall provide streamlined login options that reduce security risks associated with password sharing and terminals left logged in compared with manual login.",
+   "type": "non-functional",
+   "source_quote": "This is much faster and more secure.",
+   "stakeholder": "Dana Peeler",
+   "priority_signals": "Rationale includes preventing password sharing and leaving terminals logged in.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Audit log of staff logins",
+   "statement": "The system shall record, for audit purposes, which staff member is logged in when any login occurs.",
+   "type": "data",
+   "source_quote": "The system must track WHICH staff member is logged in for audit purposes.",
+   "stakeholder": "Susan Sexton-Cooley",
+   "priority_signals": "\"this is important\"; requested for audit purposes",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Permissions determined by role at login",
+   "statement": "The system shall determine a staff member's permissions at login according to the staff member's assigned security group or role.",
+   "type": "functional",
+   "source_quote": "when a staff member logs in (by any method), their permissions should be determined by their assigned security group/role.",
+   "stakeholder": "Susan Sexton-Cooley; Katherine Gregory",
+   "priority_signals": "Raised as requirement linking login to permissions; included in discussion of role-based access.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "User rights via security groups/roles",
+   "statement": "The system shall control user rights and privileges through configurable security groups and/or roles.",
+   "type": "functional",
+   "source_quote": "User rights and privileges controlled through security groups/roles.",
+   "stakeholder": "George Tuttle; Katherine Gregory",
+   "priority_signals": "Listed in Katherine's summary; multiple people requested role-based access.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Administrators manage groups and roles",
+   "statement": "The system shall allow administrators to create, modify, and delete security groups and roles and to manage their membership.",
+   "type": "functional",
+   "source_quote": "Administrators should be able to create and manage these groups.",
+   "stakeholder": "Susan Sexton-Cooley; George Tuttle; Katherine Gregory",
+   "priority_signals": "Requested by multiple stakeholders; implied in Katherine's 'easy administration' summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Easy role administration",
+   "statement": "The system shall make administration of roles and permissions easy so that changing someone's permissions is accomplished by changing their role assignment rather than editing individual permissions.",
+   "type": "functional",
+   "source_quote": "changing someone's permissions should be a simple matter of changing their role assignment, not modifying individual permissions.",
+   "stakeholder": "George Tuttle; Katherine Gregory",
+   "priority_signals": "Explicit usability/administration requirement; included in Katherine's summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Assign roles to individuals and groups",
+   "statement": "The system shall allow assignment of roles and access controls to individuals, workgroups, and arbitrary staff groups.",
+   "type": "functional",
+   "source_quote": "This would allow access control for individuals, workgroups, and arbitrary staff groups.",
+   "stakeholder": "George Tuttle; Katherine Gregory",
+   "priority_signals": "Listed in Katherine's summary as a key requirement.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Predefined role capability examples",
+   "statement": "The system shall support roles that provide distinct example capabilities such as: front desk staff can run basic reports with limited filters; department heads can create and modify templates; system administrators have full access to reports and permissions.",
+   "type": "functional",
+   "source_quote": "Front desk staff (can run basic reports, limited filters)...Department heads (can create and modify templates)...System administrators (full access)",
+   "stakeholder": "George Tuttle",
+   "priority_signals": "Provided as concrete role examples by Piedmont Regional Library.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Automatic session lock or logout",
+   "statement": "The system shall provide mechanisms (for example automatic session lock or logout) to prevent terminals being left logged in and to reduce password sharing security risks.",
+   "type": "non-functional",
+   "source_quote": "staff get in a hurry and sometimes share passwords or leave terminals logged in.",
+   "stakeholder": "Dana Peeler",
+   "priority_signals": "Raised as a frontline security problem to be addressed.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

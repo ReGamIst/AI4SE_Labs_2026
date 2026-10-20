@@ -1,0 +1,399 @@
+{
+ "requirements": [
+  {
+   "name": "Report Recipient Address Book",
+   "description": "The system shall provide an address book in which report schedulers can store and select regularly used email addresses. Users shall be able to select recipients from the address book when configuring report delivery. This shall reduce repeated entry of recipient addresses.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Requested in two sources, but one describes it as desirable and no blocking need is indicated.",
+   "candidate_ids": [
+    "C-329",
+    "C-240"
+   ]
+  },
+  {
+   "name": "Report Job Prioritization",
+   "description": "The system shall allow authorized administrators to prioritize specific report jobs or report types in the processing queue. Prioritized reports shall move ahead of other queued reports, including resource-consuming ad hoc queries, so that important reports such as a director's board report can run sooner. The system shall display report priority and provide controls for changing it.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "An agreed source calls prioritization crucial, and multiple sources request the ability to move important reports ahead in the queue.",
+   "candidate_ids": [
+    "C-285",
+    "C-380",
+    "C-259",
+    "C-299"
+   ]
+  },
+  {
+   "name": "Background Report Processing",
+   "description": "The system shall process report generation in the background and manage report jobs through a queue. Report processing shall not slow the circulation client during use, including during peak hours. This shall allow staff to continue circulation work while reports are generated.",
+   "type": "non-functional",
+   "priority": "P2",
+   "priority_rationale": "The need was agreed by IT and circulation stakeholders to avoid report processing affecting core work; no explicit high-priority marker is supplied.",
+   "candidate_ids": [
+    "C-481"
+   ]
+  },
+  {
+   "name": "Batch Report Execution",
+   "description": "The system shall allow users to select multiple saved or canned reports and run them in one operation. When requested, the system shall present the results together in a single document. This shall reduce the effort of running and reviewing related reports individually.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Requested in two sources as a useful capability, with no high-priority marker or evidence that it blocks core use.",
+   "candidate_ids": [
+    "C-334",
+    "C-210"
+   ]
+  },
+  {
+   "name": "Batch Conversion Report",
+   "description": "The system shall provide a report to assist staff with batch conversion of item statuses. The report shall present information relevant to that conversion so staff can use it in the batch-conversion process. This is a specific reporting need identified in the draft specification.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single draft specification requests this specific report, with no additional priority evidence.",
+   "candidate_ids": [
+    "C-241"
+   ]
+  },
+  {
+   "name": "Bibliographic Record Reports",
+   "description": "The system shall provide bibliographic record reports for total records, edited records, and records added by user and library. It shall also provide reports for bibliographic records with no attached volumes and records missing specified MARC fields. These reports shall help staff identify and review bibliographic record counts and data issues.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report set is specified in one draft source without an explicit priority marker.",
+   "candidate_ids": [
+    "C-211"
+   ]
+  },
+  {
+   "name": "Check-In Type Counts",
+   "description": "The system shall provide individual and cumulative check-in counts by check-in type. Supported types shall include book-drop, terminal, user, and self-service check-ins. This shall allow staff to review check-in activity by its method or source.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Requested in one draft specification, with no evidence of a blocking need or high-priority marker.",
+   "candidate_ids": [
+    "C-215"
+   ]
+  },
+  {
+   "name": "Check-Out Type Counts",
+   "description": "The system shall provide individual and cumulative counts for staff check-outs, self check-outs, staff renewals, self check-out renewals, online renewals, and OPAC renewals. Staff shall be able to review activity separately by these transaction types. This shall support analysis of circulation activity across service methods.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Requested in one draft specification, with no evidence of a blocking need or high-priority marker.",
+   "candidate_ids": [
+    "C-216"
+   ]
+  },
+  {
+   "name": "Circulation Report Catalog",
+   "description": "The system shall provide circulation reports for check-ins, check-outs, renewals, non-cataloged circulation, total circulation, and items overdue by a specified number of days. Reports shall support breakdowns by circulation modifier, Cat1, Cat2, Dewey, shelving location, MARC, and circulation location. Circulation-location reports shall support breakdowns by patron county and home library, and reports shall also support age-demographic breakdowns.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Circulation reporting is detailed in the draft specification and was selected by 78% of survey respondents as a standard report type.",
+   "candidate_ids": [
+    "C-217"
+   ]
+  },
+  {
+   "name": "Standard Report Categories",
+   "description": "The system shall provide standard report categories for circulation, items, patrons, finances, and holds, as well as custom and on-demand reports. Examples shall include circulation check-outs, check-ins, and renewals; item inventory, weeding, and missing-item reports; patron demographics and inactive accounts; and fines and payments. This shall give library staff access to commonly requested report types.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "A survey identifies broad staff demand, including 78% for circulation, 65% for item, and 52% for patron reports.",
+   "candidate_ids": [
+    "C-565"
+   ]
+  },
+  {
+   "name": "Report Cancellation",
+   "description": "The system shall allow users or administrators to cancel a scheduled report or a report that is currently running. During processing, the system shall check for cancellation signals and stop the report when cancellation is requested. This shall give users control over unwanted or no-longer-needed report jobs.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Four sources request cancellation of scheduled or running reports, and a meeting source confirms the required cancellation checks are technically feasible.",
+   "candidate_ids": [
+    "C-339",
+    "C-242",
+    "C-546",
+    "C-516"
+   ]
+  },
+  {
+   "name": "Relative Date Ranges",
+   "description": "The system shall allow users to run canned reports using relative date ranges. Supported ranges shall include yesterday, last week, last month, and last year. This shall make recurring time-period selections easier to apply consistently.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single draft specification requests the listed date-range options without an explicit priority marker.",
+   "candidate_ids": [
+    "C-213"
+   ]
+  },
+  {
+   "name": "Prewritten Report Templates",
+   "description": "The system shall include a set of prewritten report templates delivered with the product. Users shall be able to select these templates as starting points for reporting. This shall provide ready-to-use reports without requiring every report to be created from scratch.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single draft source requests delivered templates, with no explicit priority evidence.",
+   "candidate_ids": [
+    "C-214"
+   ]
+  },
+  {
+   "name": "Report Template Management",
+   "description": "The system shall allow administrators to create and manage report templates and make them available to staff. Template management shall support creating, editing, versioning, and reusing templates. Administrators shall be able to provide templates that staff can run as-is or modify for a report run.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Template creation is marked high priority in one source, has 81% survey support, and is requested across multiple sources.",
+   "candidate_ids": [
+    "C-550",
+    "C-169",
+    "C-303",
+    "C-382",
+    "C-402"
+   ]
+  },
+  {
+   "name": "PINES Library Templates",
+   "description": "The system shall support identifying, creating, and delivering the report templates needed by PINES libraries. The templates shall be available for use across those libraries. This shall address the template needs agreed for the PINES library community.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Two meeting sources affirm the need for templates across PINES libraries, including a unanimously carried motion.",
+   "candidate_ids": [
+    "C-458",
+    "C-511"
+   ]
+  },
+  {
+   "name": "Template Run Modification",
+   "description": "The system shall allow staff to modify a report template for an individual run without changing the original template. Run-specific modifications shall not compromise the original template or its results. This shall let staff adapt a report while preserving a consistent reusable template.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "The requirement was agreed by staff and administrators, with consistency identified as the reason for preserving the original template.",
+   "candidate_ids": [
+    "C-293"
+   ]
+  },
+  {
+   "name": "Clone Report Templates",
+   "description": "The system shall allow users to clone an existing report or template to create a new variant. The cloned report shall be available for further modification without requiring users to recreate its starting configuration. This shall support reuse of existing report definitions.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "An agreed email source identifies cloning as a distinct useful capability, but there is no evidence it is essential to core use.",
+   "candidate_ids": [
+    "C-289"
+   ]
+  },
+  {
+   "name": "Environment Configuration Migration",
+   "description": "The system shall support development and training environments and provide a mechanism to migrate configurations to a production environment. Migration shall support exporting and importing report templates, permission settings, saved queries, and other configurations. This shall allow administrators to transfer and apply configurations between environments.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "Two meeting sources agree on environment migration and identify specific configuration types that need export and import.",
+   "candidate_ids": [
+    "C-488",
+    "C-529"
+   ]
+  },
+  {
+   "name": "Report Criteria Display",
+   "description": "The system shall display the selection criteria used to generate a report alongside its results. The displayed information shall include the selected date criteria and the report name, positioned at the top or bottom of the results. This shall help report consumers understand the scope and origin of the results.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Two sources request showing criteria with results, including the date selection and report name.",
+   "candidate_ids": [
+    "C-349",
+    "C-251"
+   ]
+  },
+  {
+   "name": "Canned Report Display Editing",
+   "description": "The system shall allow users to edit display options for canned reports. Users shall be able to add or remove displayed fields, such as shelving location, and change the order and format of displayed columns. This shall allow report authors and administrators to tailor report presentation to users' needs.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Two sources request editable canned-report displays, including field selection and column presentation options.",
+   "candidate_ids": [
+    "C-351",
+    "C-245"
+   ]
+  },
+  {
+   "name": "Recurring Report Editing",
+   "description": "The system shall allow users to edit recurring reports. Users shall be able to add or remove report selections and change email recipient addresses. This shall let users maintain recurring report configurations as their needs change.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single draft specification requests editing recurring reports, with no separate priority evidence.",
+   "candidate_ids": [
+    "C-246"
+   ]
+  },
+  {
+   "name": "Email Report Delivery",
+   "description": "The system shall support delivery of report outputs by email to designated recipients. Users shall be able to specify one or more recipients for report delivery. This shall allow report consumers to receive results without downloading them manually from the web interface.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Email delivery is requested in two sources and received 45% support in the survey, indicating meaningful but not majority demand.",
+   "candidate_ids": [
+    "C-352",
+    "C-552"
+   ]
+  },
+  {
+   "name": "Excel Export Deduplication",
+   "description": "The system shall provide Excel exports without excessive duplicate rows or provide an option to deduplicate exported rows. Users shall be able to obtain a spreadsheet with redundant rows removed when needed. This shall address the stated difficulty of using exported data in Excel.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single survey response identifies duplicate rows as a problem, with no broader priority evidence.",
+   "candidate_ids": [
+    "C-553"
+   ]
+  },
+  {
+   "name": "Executive Report Interface",
+   "description": "The system shall provide an Executive Reports Interface containing a compiled list of reports needed for executive use. The interface shall make those reports accessible to executive stakeholders. This shall support executive access to the reports identified for their use.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "An agreed meeting source identifies the interface and report list as a relevant need, but does not specify high-priority functionality.",
+   "candidate_ids": [
+    "C-508"
+   ]
+  },
+  {
+   "name": "CSV Capacity Data Export",
+   "description": "The system shall allow users to export capacity data and views to CSV files. Directors and other users shall be able to use the exported data in spreadsheet applications. This shall avoid requiring users to recreate capacity data manually.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "An agreed email source requests CSV export for directors, without additional priority markers or evidence of widespread demand.",
+   "candidate_ids": [
+    "C-021"
+   ]
+  },
+  {
+   "name": "Report Output Formats",
+   "description": "The system shall export report outputs in CSV, Excel, and HTML formats. Users shall be able to select an appropriate format for viewing or working with report data. Shelf Space Report data shall also be exportable in spreadsheet-friendly formats such as CSV or Excel to avoid manual spreadsheet recreation.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "CSV, Excel, and HTML are explicitly described as required, and survey support for multiple formats is 61%; several sources request the capability.",
+   "candidate_ids": [
+    "C-522",
+    "C-036",
+    "C-369",
+    "C-399",
+    "C-562",
+    "C-258"
+   ]
+  },
+  {
+   "name": "Hold Type Subtotals",
+   "description": "The system shall subtotal holds by hold type in reports. Supported types shall include active, frozen, and frozen-until holds. This shall allow staff to review hold totals separately by type.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single draft specification requests these specific subtotals, with no explicit priority marker.",
+   "candidate_ids": [
+    "C-222"
+   ]
+  },
+  {
+   "name": "Holds Report Catalog",
+   "description": "The system shall provide holds reports for Holds Purchase Alerts, items sent for holds, items received for holds, unfilled holds, annual numbers of holds placed, and stale holds waiting too long for pickup. It shall provide IntraPINES loan reports for all systems and facilities and broken down by system and facility. These reports shall support hold-related operations and acquisitions or collection-development review.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The holds report set is detailed in one draft source, and a separate source specifically identifies the Holds Purchase Alert as missing.",
+   "candidate_ids": [
+    "C-356",
+    "C-223"
+   ]
+  },
+  {
+   "name": "Hourly Report Scheduling",
+   "description": "The system shall allow users to schedule reports to run on an hourly interval. Hourly runs shall be available alongside the system's other scheduling options. This shall support users who need reports generated more frequently than daily.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Hourly scheduling is identified as a missing option in one source, without evidence of a broader or blocking need.",
+   "candidate_ids": [
+    "C-357"
+   ]
+  },
+  {
+   "name": "In-House Use Reports",
+   "description": "The system shall provide reports for non-cataloged in-house use counts by month and cataloged in-house use counts. Staff shall be able to review these in-house use measures in report form. This shall support analysis of library materials used on site.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "A single draft specification requests these reports and provides no explicit priority marker.",
+   "candidate_ids": [
+    "C-224"
+   ]
+  },
+  {
+   "name": "Scheduled Report Frequencies",
+   "description": "The system shall allow users to run a report as soon as possible or schedule it to run hourly, daily, weekly, monthly, or yearly. Users shall be able to choose the frequency when configuring a report run. This shall support both immediate and recurring report generation.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Scheduling options are requested in more than one source, and one source lists the full set of required frequencies.",
+   "candidate_ids": [
+    "C-260",
+    "C-401"
+   ]
+  },
+  {
+   "name": "Periodic Operational Reports",
+   "description": "The system shall support periodic reports for bibliographic records with holds and without item records; items not checked out in a specified number of days; item-level holds; invalid item types; and missing items. It shall also support reports for in-transit items with outstanding holds or in transit beyond a specified number of days, last-copy items, items with long call numbers, and patrons with invalid home libraries. These reports shall help reporting staff identify records and items that require operational attention.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The source marks this report requirement high priority and provides a detailed set of periodic report examples.",
+   "candidate_ids": [
+    "C-182"
+   ]
+  },
+  {
+   "name": "Board And External Reports",
+   "description": "The system shall provide predefined reports for library boards and other external consumers. These reports shall include basic statistics required by the Georgia Annual Report and the Application for State Aid. Board and executive users shall be able to use the predefined reports for these reporting needs.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "A source marks board and external reports high priority, and the reports include statistics tied to formal state reporting; multiple sources request predefined board or executive reports.",
+   "candidate_ids": [
+    "C-296",
+    "C-185",
+    "C-499"
+   ]
+  },
+  {
+   "name": "On-Demand Reports",
+   "description": "The system shall provide preset reports that users can run on demand for maintenance reporting and collections development. These reports shall use preselected criteria to support repeatable report runs. This shall let staff request relevant reports when needed rather than waiting for a scheduled run.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "On-demand reporting is described in a draft source and is included as a standard report category in survey results, but survey support for custom/on-demand reports is 29%.",
+   "candidate_ids": [
+    "C-227"
+   ]
+  },
+  {
+   "name": "Report Queue Visibility",
+   "description": "The system shall allow users to see their submitted report's position in the processing queue and how many reports are ahead of it. The system shall display report status as waiting, running, completed, or failed, together with the report submission timestamp. This shall help users understand progress and reduce requests to IT for status information.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Queue visibility is requested across multiple sources, is marked high priority in one source, and received 68% survey support; status information is also reported to reduce help-desk calls.",
+   "candidate_ids": [
+    "C-294",
+    "C-300",
+    "C-190",
+    "C-381",
+    "C-501",
+    "C-570",
+    "C-400",
+    "C-301",
+    "C-302"
+   ]
+  }
+ ],
+ "discarded": [
+  {
+   "name": "Reports Mission Statement",
+   "candidate_ids": [
+    "C-507"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This candidate states a planning mission to document future reports functionality and develop a requirements list, rather than specifying behavior the system shall provide.",
+   "conflicts_with": []
+  }
+ ]
+}

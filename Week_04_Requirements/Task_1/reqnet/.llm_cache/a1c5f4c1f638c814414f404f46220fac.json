@@ -1,0 +1,158 @@
+{
+ "candidates": [
+  {
+   "title": "Shelf Space Comparison Report",
+   "statement": "The system shall provide a Shelf Space Report that, for each genre and format of material, compares the percentage of total circulations, the percentage of the collection, and the percentage of total shelf space.",
+   "type": "functional",
+   "source_quote": "The system should provide, for each genre and format of material, the ability to compare: - The percentage of total circulations - The percentage of the collection - The percentage of total shelf space",
+   "stakeholder": "pines-reports-working-group / branch managers",
+   "priority_signals": "Included in summary by Katherine; multiple participants requested it (Thomas: \"game-changing\").",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Run Report Per Library or System",
+   "statement": "The system shall allow the Shelf Space Report to be run at selectable scopes: per individual library (branch) and for the entire system.",
+   "type": "functional",
+   "source_quote": "The report should be able to run per library and per system.",
+   "stakeholder": "branch managers, system administrators",
+   "priority_signals": "Katherine summary; Susan and Jennifer explicitly requested per-library and per-system views; Jennifer: \"Our directors review this data quarterly and need both views.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Breakdown By Genre and Format",
+   "statement": "The system shall break down report results by genre and by format of material (show metrics for each genre and each format).",
+   "type": "functional",
+   "source_quote": "for each genre and format of material, compare:",
+   "stakeholder": "catalogers, branch managers",
+   "priority_signals": "Repeated request across thread and included in Katherine's summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Compute Item Counts Per Genre/Format",
+   "statement": "The system shall compute the count of items per genre and per format to derive the percentage of the collection.",
+   "type": "data",
+   "source_quote": "Count items per genre/format (this is the \"percentage of collection\")",
+   "stakeholder": "data/reporting implementers",
+   "priority_signals": "Listed by Robert as required data to produce the report.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Compute Total Circulations Per Genre/Format",
+   "statement": "The system shall compute the sum of checkouts (total circulations) per genre and per format to derive the percentage of total circulations.",
+   "type": "data",
+   "source_quote": "Sum checkouts per genre/format (this is the \"percentage of circulations\")",
+   "stakeholder": "data/reporting implementers",
+   "priority_signals": "Listed by Robert; core to the requested comparison.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Estimate Shelf Space Per Genre/Format",
+   "statement": "The system shall estimate shelf space used per genre and per format so the report can present percentage of total shelf space occupied.",
+   "type": "functional",
+   "source_quote": "Estimate shelf space per genre/format (this is the \"percentage of shelf space\")",
+   "stakeholder": "catalogers, branch managers",
+   "priority_signals": "Robert will investigate how to estimate shelf space from existing data (action item).",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Shelf Space Estimation From Item Dimensions",
+   "statement": "The system shall estimate shelf space using item dimensions from existing item data when dimensions are available.",
+   "type": "functional",
+   "source_quote": "We'd need to estimate based on item dimensions or use item count as a proxy.",
+   "stakeholder": "data/reporting implementers",
+   "priority_signals": "Robert flagged dimensions as a preferred method; action item to investigate.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Allow Item Count As Shelf Space Proxy",
+   "statement": "The system shall allow using item count as a proxy for shelf space estimation when item dimensions are not available.",
+   "type": "functional",
+   "source_quote": "We'd need to estimate based on item dimensions or use item count as a proxy.",
+   "stakeholder": "data/reporting implementers",
+   "priority_signals": "Robert identified this as a fallback approach.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Filter Report By Date Range",
+   "statement": "The system shall allow users to filter the Shelf Space Report by an arbitrary date range (for example, to view Q1 or Q2 results).",
+   "type": "functional",
+   "source_quote": "Can we also filter by date range? Like, what was the shelf space utilization in Q1 vs. Q2?",
+   "stakeholder": "branch managers, collection planners",
+   "priority_signals": "Latoya requested date-range filtering and noted seasons matter.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Compare Different Date Ranges",
+   "statement": "The system shall support comparing report results across different date ranges (e.g., Q1 vs Q2) to show changes over time.",
+   "type": "functional",
+   "source_quote": "Like, what was the shelf space utilization in Q1 vs. Q2?",
+   "stakeholder": "collection planners, managers",
+   "priority_signals": "Latoya explicitly asked for Q1 vs Q2 comparisons.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Comparison View Side-by-Side",
+   "statement": "The system shall provide a comparison view that displays each library's breakdown side-by-side to facilitate spotting outliers across libraries.",
+   "type": "functional",
+   "source_quote": "include a \"comparison\" view that shows each library's breakdown side by side? That would make it easy to spot outliers.",
+   "stakeholder": "directors, branch managers",
+   "priority_signals": "Requested by Jennifer; intended for directors who review data quarterly.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Display Local Library With System Average",
+   "statement": "The system shall display a local library's Shelf Space Report results alongside the system average so branch managers can compare local to system-level metrics.",
+   "type": "functional",
+   "source_quote": "branch managers can see their local situation AND see how they compare to the system average.",
+   "stakeholder": "branch managers",
+   "priority_signals": "Explicit reason given by Susan for per-library and per-system views.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support Grouping/Aggregation Levels",
+   "statement": "The system shall support configurable grouping/aggregation levels (e.g., GROUP BY genre, format, library, or system) when generating the Shelf Space Report.",
+   "type": "functional",
+   "source_quote": "We can also add the per-library and per-system breakdown. That's just adding GROUP BY clauses to the right levels.",
+   "stakeholder": "report developers, DBAs",
+   "priority_signals": "Robert noted GROUP BY as the implementation approach.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Export Report For Spreadsheet Use",
+   "statement": "The system shall allow exporting the Shelf Space Report data in spreadsheet-friendly formats (e.g., CSV or Excel) so users do not have to pull reports manually and recreate spreadsheets.",
+   "type": "functional",
+   "source_quote": "Currently I pull reports manually and make spreadsheets. It's tedious.",
+   "stakeholder": "catalogers, analysts (Thomas)",
+   "priority_signals": "Thomas described current manual workflow and burden.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

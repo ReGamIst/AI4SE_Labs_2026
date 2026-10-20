@@ -1,0 +1,484 @@
+{
+ "assignments": [
+  {
+   "candidate_id": "C-001",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-002",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-003",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-004",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-005",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-006",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-007",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-008",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-009",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-010",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-011",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-012",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-013",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-014",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-015",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-016",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-017",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-018",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-019",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-020",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-021",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-022",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-023",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-024",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-025",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-026",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-027",
+   "area_code": "UIXT"
+  },
+  {
+   "candidate_id": "C-028",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-029",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-030",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-031",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-032",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-033",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-034",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-035",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-036",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-037",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-038",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-039",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-040",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-041",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-042",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-043",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-044",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-045",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-046",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-047",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-048",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-049",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-050",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-051",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-052",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-053",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-054",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-055",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-056",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-057",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-058",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-059",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-060",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-061",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-062",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-063",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-064",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-065",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-066",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-067",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-068",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-069",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-070",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-071",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-072",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-073",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-074",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-075",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-076",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-077",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-078",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-079",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-080",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-081",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-082",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-083",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-084",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-085",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-086",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-087",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-088",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-089",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-090",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-091",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-092",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-093",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-094",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-095",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-096",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-097",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-098",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-099",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-100",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-101",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-102",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-103",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-104",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-105",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-106",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-107",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-108",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-109",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-110",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-111",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-112",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-113",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-114",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-115",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-116",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-117",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-118",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-119",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-120",
+   "area_code": "STKID"
+  }
+ ]
+}

@@ -1,0 +1,829 @@
+{
+ "models": {
+  "extractor": "gpt-5-mini",
+  "organizer": "gpt-5.4-nano",
+  "consolidator": "gpt-6-luna",
+  "reviewer": "gpt-5.6-luna",
+  "reviser": "gpt-6-luna"
+ },
+ "max_review_rounds": 3,
+ "usage": {
+  "gpt-5-mini": {
+   "calls": 25,
+   "cache_hits": 25,
+   "prompt_tokens": 0,
+   "completion_tokens": 0
+  },
+  "gpt-5.4-nano": {
+   "calls": 6,
+   "cache_hits": 6,
+   "prompt_tokens": 0,
+   "completion_tokens": 0
+  },
+  "gpt-6-luna": {
+   "calls": 17,
+   "cache_hits": 15,
+   "prompt_tokens": 48154,
+   "completion_tokens": 14943
+  },
+  "gpt-5.6-luna": {
+   "calls": 3,
+   "cache_hits": 1,
+   "prompt_tokens": 75631,
+   "completion_tokens": 11167
+  }
+ },
+ "history": [
+  {
+   "step": "load",
+   "documents": 20,
+   "chunks": 25
+  },
+  {
+   "step": "normalize",
+   "raw": 594,
+   "candidates": 580,
+   "folded": 14
+  },
+  {
+   "step": "organize",
+   "areas": {
+    "AUTH": 15,
+    "ROLE": 40,
+    "UIXT": 24,
+    "DATAQ": 60,
+    "RPTMG": 84,
+    "ANALY": 41,
+    "LOCAP": 26,
+    "OPMIS": 49,
+    "PURGE": 28,
+    "ACCT": 25,
+    "CALCD": 64,
+    "STKID": 35,
+    "NFRQA": 89
+   },
+   "fallback_assignments": 0
+  },
+  {
+   "step": "integrate",
+   "requirements": 250,
+   "discarded": 17
+  },
+  {
+   "step": "check",
+   "round": 0,
+   "requirements": 250,
+   "discarded": 17,
+   "candidates": 580,
+   "covered_candidates": 580,
+   "uncovered": 0,
+   "near_dups": 6
+  },
+  {
+   "step": "review",
+   "round": 1,
+   "approved": false,
+   "issues": 30,
+   "blocking": 28,
+   "kinds": [
+    "blacklist",
+    "conflict",
+    "coverage",
+    "duplicate",
+    "priority",
+    "quality",
+    "terminology",
+    "traceability"
+   ],
+   "summary": "The specification has complete source traceability and no uncovered candidates, but it contains several duplicate requirements, inconsistent priorities, terminology inconsistencies, unresolved retention and scope issues, and multiple vague or non-testable statements."
+  },
+  {
+   "step": "apply_revision",
+   "round": 1,
+   "applied": 46,
+   "by_op": {
+    "attach": 1,
+    "merge": 13,
+    "restore": 1,
+    "update": 31
+   },
+   "rejected": []
+  },
+  {
+   "step": "check",
+   "round": 1,
+   "requirements": 238,
+   "discarded": 16,
+   "candidates": 580,
+   "covered_candidates": 580,
+   "uncovered": 0,
+   "near_dups": 0
+  },
+  {
+   "step": "review",
+   "round": 2,
+   "approved": false,
+   "issues": 31,
+   "blocking": 27,
+   "kinds": [
+    "blacklist",
+    "conflict",
+    "duplicate",
+    "priority",
+    "quality",
+    "terminology",
+    "traceability"
+   ],
+   "summary": "The specification has complete candidate and source traceability according to the automatic checks, but blocking issues remain: several duplicate requirements, unresolved conflicts and undefined legal or controlled artifacts, and multiple requirements whose acceptance criteria are not testable."
+  },
+  {
+   "step": "apply_revision",
+   "round": 2,
+   "applied": 51,
+   "by_op": {
+    "discard": 2,
+    "merge": 16,
+    "update": 33
+   },
+   "rejected": []
+  },
+  {
+   "step": "check",
+   "round": 2,
+   "requirements": 218,
+   "discarded": 18,
+   "candidates": 580,
+   "covered_candidates": 580,
+   "uncovered": 0,
+   "near_dups": 0
+  },
+  {
+   "step": "review",
+   "round": 3,
+   "approved": false,
+   "issues": 10,
+   "blocking": 6,
+   "kinds": [
+    "blacklist",
+    "conflict",
+    "duplicate",
+    "priority",
+    "quality",
+    "terminology"
+   ],
+   "summary": "Blocking issues remain: one explicit retention conflict, several overlapping or duplicate requirements, and one retained entry that explicitly states it is not a current software requirement. Traceability and uncovered-candidate checks are otherwise satisfactory."
+  }
+ ],
+ "final_review": {
+  "approved": false,
+  "summary": "Blocking issues remain: one explicit retention conflict, several overlapping or duplicate requirements, and one retained entry that explicitly states it is not a current software requirement. Traceability and uncovered-candidate checks are otherwise satisfactory.",
+  "issues": [
+   {
+    "kind": "conflict",
+    "severity": "blocking",
+    "requirement_ids": [
+     "REQ-ACCT-005",
+     "REQ-ACCT-003",
+     "REQ-ANALY-006"
+    ],
+    "candidate_ids": [],
+    "description": "REQ-ACCT-005 and REQ-ACCT-003 state that de-identified aggregates follow approved policy and legal requirements and do not imply indefinite retention. REQ-ANALY-006 instead refers to a separate 'indefinite-retention rule' for de-identified monthly and annual aggregates. These retention obligations contradict one another.",
+    "suggested_fix": "Remove the indefinite-retention statement from REQ-ANALY-009 and reference REQ-ACCT-002 and REQ-ACCT-011 as the sole retention rules, or explicitly approve and reconcile a distinct indefinite-retention policy."
+   },
+   {
+    "kind": "duplicate",
+    "severity": "blocking",
+    "requirement_ids": [
+     "REQ-NFRQA-006",
+     "REQ-NFRQA-005"
+    ],
+    "candidate_ids": [],
+    "description": "REQ-NFRQA-006 and REQ-NFRQA-005 both require a privacy-preserving transaction archive, prohibit or constrain personally identifiable patron information, require an approved legal or policy baseline, and address retention. The differences are mostly wording and source attribution, not separate system needs.",
+    "suggested_fix": "Merge them into one privacy-preserving transaction archive requirement. Preserve the more precise retention cross-reference in REQ-NFRQA-032 and retain all applicable sources."
+   },
+   {
+    "kind": "duplicate",
+    "severity": "blocking",
+    "requirement_ids": [
+     "REQ-NFRQA-007",
+     "REQ-NFRQA-018"
+    ],
+    "candidate_ids": [],
+    "description": "Both requirements require the system to use and remain compatible with a relational database structure. REQ-NFRQA-007 is the more complete version because it identifies PostgreSQL and the current environment; REQ-NFRQA-018 adds no distinct testable need.",
+    "suggested_fix": "Remove REQ-NFRQA-036 or merge its source into REQ-NFRQA-016."
+   },
+   {
+    "kind": "duplicate",
+    "severity": "blocking",
+    "requirement_ids": [
+     "REQ-NFRQA-004",
+     "REQ-NFRQA-003"
+    ],
+    "candidate_ids": [],
+    "description": "Both requirements address preventing reporting workloads from degrading OPAC and circulation performance during operating hours. REQ-NFRQA-003 supplies the measurable two-second 95th-percentile target and workload test, while REQ-NFRQA-004 repeats the same need in qualitative terms.",
+    "suggested_fix": "Combine the qualitative non-interference statement with the measurable performance criteria in REQ-NFRQA-015, or make REQ-NFRQA-009 cover a separate explicitly defined performance or availability property."
+   },
+   {
+    "kind": "duplicate",
+    "severity": "minor",
+    "requirement_ids": [
+     "REQ-RPTMG-019",
+     "REQ-RPTMG-014"
+    ],
+    "candidate_ids": [],
+    "description": "REQ-RPTMG-019 requires scheduling reports hourly, daily, weekly, monthly, and yearly, while REQ-RPTMG-014 separately requires recurring report scheduling. REQ-RPTMG-014 adds no distinct behavior beyond the scheduling capability already specified in REQ-RPTMG-019.",
+    "suggested_fix": "Merge REQ-RPTMG-039 into REQ-RPTMG-031, or limit REQ-RPTMG-039 to a clearly distinct capability such as calendar exceptions, end dates, or recurrence management."
+   },
+   {
+    "kind": "blacklist",
+    "severity": "blocking",
+    "requirement_ids": [
+     "REQ-STKID-013"
+    ],
+    "candidate_ids": [],
+    "description": "REQ-STKID-013 explicitly states that it is a stakeholder decision rather than a current software requirement and makes no implementation or acceptance claim. It is therefore incorrectly retained in the requirements set.",
+    "suggested_fix": "Move REQ-STKID-001 to a decisions, assumptions, or open-issues register, or discard it as a non-requirement. Add the eventual approved aged-debt field decision as a new requirement only after the decision is made."
+   },
+   {
+    "kind": "quality",
+    "severity": "blocking",
+    "requirement_ids": [
+     "REQ-CALCD-011",
+     "REQ-LOCAP-001",
+     "REQ-UIXT-008"
+    ],
+    "candidate_ids": [],
+    "description": "These requirements contain broad, difficult-to-test obligations. REQ-CALCD-011 refers to unspecified 'analysis tools' and collection usage without identifying measures or supported operations. REQ-LOCAP-001 uses undefined terms such as 'central location,' 'provide services,' and 'single source of truth.' REQ-UIXT-008 requires an 'intuitive' and 'understandable' interface without measurable usability criteria.",
+    "suggested_fix": "Define the supported measures, operations, organizational boundaries, and acceptance tests. Replace subjective terms with observable criteria such as task completion, navigation steps, supported user roles, response time, or usability-test thresholds."
+   },
+   {
+    "kind": "quality",
+    "severity": "minor",
+    "requirement_ids": [
+     "REQ-NFRQA-010",
+     "REQ-ANALY-008"
+    ],
+    "candidate_ids": [],
+    "description": "REQ-NFRQA-010 mixes system requirements with external deployment assumptions and uses undefined terms such as 'reliable network connectivity,' 'enterprise infrastructure,' and 'redundant servers.' REQ-ANALY-008 requires reports to show whether branches are 'growing or shrinking' without defining the measure, comparison baseline, or calculation.",
+    "suggested_fix": "Move external assumptions to an assumptions section and define measurable availability, network, and redundancy constraints if they are binding. For REQ-ANALY-017, specify the metric, time intervals, comparison method, and acceptance examples."
+   },
+   {
+    "kind": "terminology",
+    "severity": "minor",
+    "requirement_ids": [
+     "REQ-ACCT-008",
+     "REQ-ACCT-010",
+     "REQ-ANALY-011",
+     "REQ-ANALY-017",
+     "REQ-ANALY-001",
+     "REQ-ANALY-003",
+     "REQ-ANALY-004",
+     "REQ-ANALY-015",
+     "REQ-ANALY-002"
+    ],
+    "candidate_ids": [],
+    "description": "The specification alternates between 'system,' 'library system,' and 'consortium,' and the unqualified 'system' can be confused with either a library system or the entire consortium. The automatic terminology finding is not a valid patron/client correction in REQ-NFRQA-001 and REQ-NFRQA-015 because 'client' there denotes client software, not a library customer; however, organizational-scope terminology still needs clarification.",
+    "suggested_fix": "Use 'library system' for the administrative collection of libraries, 'consortium' for the broader participating group, and 'reporting system' or 'software system' for the product. Qualify every occurrence of 'system' where scope affects behavior or results."
+   },
+   {
+    "kind": "priority",
+    "severity": "minor",
+    "requirement_ids": [
+     "REQ-ANALY-001",
+     "REQ-STKID-005"
+    ],
+    "candidate_ids": [],
+    "description": "Both requirements cover privacy-protected demographic reporting. REQ-ANALY-001 rates anonymization as P1, while REQ-STKID-005 rates the same de-identification and non-exposure obligation as P2. The analytical feature may be P2, but the shared privacy constraint should not appear to have a lower priority in the later requirement.",
+    "suggested_fix": "Separate the P1 privacy constraint from the P2 demographic-reporting capability, or explicitly state that REQ-STKID-002 inherits the P1 privacy obligation from REQ-ANALY-003."
+   }
+  ],
+  "glossary": [
+   {
+    "term": "patron",
+    "definition": "A library customer whose account, demographic information, holds, circulation activity, or financial activity may be represented in the system.",
+    "avoid": [
+     "borrower",
+     "customer",
+     "client",
+     "community user"
+    ]
+   },
+   {
+    "term": "authorized staff user",
+    "definition": "A staff member or other authorized worker permitted to log in, operate the system, or use reports according to assigned permissions.",
+    "avoid": [
+     "user",
+     "staff member",
+     "operator",
+     "employee user"
+    ]
+   },
+   {
+    "term": "report user",
+    "definition": "An authorized staff user who runs, designs, schedules, reviews, or administers reports.",
+    "avoid": [
+     "report consumer",
+     "report operator"
+    ]
+   },
+   {
+    "term": "library",
+    "definition": "An organizational or physical library unit that owns, houses, or manages items and can be used as a reporting scope.",
+    "avoid": [
+     "branch",
+     "facility"
+    ]
+   },
+   {
+    "term": "library system",
+    "definition": "An administrative collection of one or more libraries that share operational data, policies, and reporting.",
+    "avoid": [
+     "local system",
+     "system",
+     "organization"
+    ]
+   },
+   {
+    "term": "consortium",
+    "definition": "The broader group of participating library systems governed or operated together.",
+    "avoid": [
+     "network",
+     "enterprise"
+    ]
+   },
+   {
+    "term": "item",
+    "definition": "An owned or circulating physical or electronic copy that can have a location, status, circulation history, value, or transfer history.",
+    "avoid": [
+     "copy",
+     "material",
+     "volume"
+    ]
+   },
+   {
+    "term": "item location",
+    "definition": "The current physical or organizational location assigned to an item, which may differ from its owning library or transfer destination.",
+    "avoid": [
+     "location",
+     "branch location",
+     "facility location"
+    ]
+   },
+   {
+    "term": "transaction",
+    "definition": "A recorded operational or financial occurrence such as a checkout, check-in, renewal, hold placement, payment, or registration.",
+    "avoid": [
+     "activity",
+     "event",
+     "operation"
+    ]
+   },
+   {
+    "term": "hold",
+    "definition": "A patron request for an item or title, including its placement method, status, fulfillment, and pickup state.",
+    "avoid": [
+     "request",
+     "reservation",
+     "hold request"
+    ]
+   },
+   {
+    "term": "query",
+    "definition": "A set of selectable fields, filters, joins, grouping rules, and Boolean conditions used to retrieve or analyze records.",
+    "avoid": [
+     "search",
+     "report definition",
+     "filter"
+    ]
+   },
+   {
+    "term": "report",
+    "definition": "A generated presentation or export of queried, aggregated, or predefined system data.",
+    "avoid": [
+     "output",
+     "listing",
+     "analysis"
+    ]
+   },
+   {
+    "term": "report template",
+    "definition": "A saved report definition containing fields, criteria, formatting, permissions, and optionally scheduling or delivery settings.",
+    "avoid": [
+     "canned report",
+     "report definition",
+     "saved query"
+    ]
+   },
+   {
+    "term": "reporting system",
+    "definition": "The software product specified by this document, distinct from the enterprise Library Automation System and from a library system or consortium.",
+    "avoid": [
+     "system",
+     "enterprise",
+     "client"
+    ]
+   },
+   {
+    "term": "uncataloged material",
+    "definition": "Library material tracked for inventory or circulation without a complete bibliographic record.",
+    "avoid": [
+     "non-cataloged material",
+     "uncataloged shipment",
+     "bulk material"
+    ]
+   },
+   {
+    "term": "weeding",
+    "definition": "The collection-management process of identifying items for review, withdrawal, discard, or purge; it does not itself imply deletion.",
+    "avoid": [
+     "cleanup",
+     "purge"
+    ]
+   },
+   {
+    "term": "purge",
+    "definition": "An authorized operation that permanently deletes selected records or related records from the system.",
+    "avoid": [
+     "removal",
+     "deletion when the broader audit or policy concept is intended"
+    ]
+   },
+   {
+    "term": "client application",
+    "definition": "A browser-based or Windows-compatible software interface used to access the reporting system; this term does not mean a library patron.",
+    "avoid": [
+     "client when referring to a patron",
+     "patron-facing client unless the software interface is intended"
+    ]
+   }
+  ]
+ },
+ "final_findings": {
+  "uncovered_candidates": [],
+  "requirements_without_sources": [],
+  "near_duplicate_pairs": [],
+  "too_short_descriptions": [],
+  "too_long_names": [],
+  "terminology_violations": [
+   {
+    "use": "patron",
+    "instead_of": "client",
+    "requirements": [
+     "REQ-NFRQA-004",
+     "REQ-NFRQA-021"
+    ]
+   },
+   {
+    "use": "authorized staff user",
+    "instead_of": "user",
+    "requirements": [
+     "REQ-ACCT-007",
+     "REQ-ANALY-010",
+     "REQ-CALCD-016",
+     "REQ-CALCD-020",
+     "REQ-CALCD-023",
+     "REQ-DATAQ-017",
+     "REQ-DATAQ-022",
+     "REQ-LOCAP-002",
+     "REQ-NFRQA-001",
+     "REQ-NFRQA-003",
+     "REQ-OPMIS-016",
+     "REQ-PURGE-002",
+     "REQ-ROLE-001",
+     "REQ-ROLE-002",
+     "REQ-ROLE-005",
+     "REQ-ROLE-010",
+     "REQ-RPTMG-006",
+     "REQ-RPTMG-007",
+     "REQ-RPTMG-017",
+     "REQ-RPTMG-022"
+    ]
+   },
+   {
+    "use": "authorized staff user",
+    "instead_of": "staff member",
+    "requirements": [
+     "REQ-ACCT-012",
+     "REQ-ANALY-016",
+     "REQ-AUTH-001",
+     "REQ-AUTH-002",
+     "REQ-DATAQ-008"
+    ]
+   },
+   {
+    "use": "library",
+    "instead_of": "branch",
+    "requirements": [
+     "REQ-ANALY-007",
+     "REQ-CALCD-013",
+     "REQ-DATAQ-007",
+     "REQ-LOCAP-001",
+     "REQ-LOCAP-011",
+     "REQ-LOCAP-012",
+     "REQ-LOCAP-018",
+     "REQ-ROLE-009",
+     "REQ-ROLE-010",
+     "REQ-STKID-011",
+     "REQ-STKID-012"
+    ]
+   },
+   {
+    "use": "item location",
+    "instead_of": "location",
+    "requirements": [
+     "REQ-ANALY-007",
+     "REQ-DATAQ-015",
+     "REQ-LOCAP-005",
+     "REQ-LOCAP-006",
+     "REQ-LOCAP-014",
+     "REQ-LOCAP-017",
+     "REQ-NFRQA-033",
+     "REQ-OPMIS-001",
+     "REQ-OPMIS-002",
+     "REQ-OPMIS-007",
+     "REQ-OPMIS-009",
+     "REQ-PURGE-001",
+     "REQ-PURGE-002",
+     "REQ-PURGE-010",
+     "REQ-RPTMG-009",
+     "REQ-RPTMG-020",
+     "REQ-UIXT-009"
+    ]
+   },
+   {
+    "use": "library system",
+    "instead_of": "local system",
+    "requirements": [
+     "REQ-LOCAP-011",
+     "REQ-LOCAP-017"
+    ]
+   },
+   {
+    "use": "library system",
+    "instead_of": "system",
+    "requirements": [
+     "REQ-ACCT-001",
+     "REQ-ACCT-002",
+     "REQ-ACCT-003",
+     "REQ-ACCT-004",
+     "REQ-ACCT-005",
+     "REQ-ACCT-006",
+     "REQ-ACCT-007",
+     "REQ-ACCT-008",
+     "REQ-ACCT-009",
+     "REQ-ACCT-010",
+     "REQ-ACCT-011",
+     "REQ-ACCT-012",
+     "REQ-ANALY-001",
+     "REQ-ANALY-002",
+     "REQ-ANALY-003",
+     "REQ-ANALY-004",
+     "REQ-ANALY-005",
+     "REQ-ANALY-006",
+     "REQ-ANALY-007",
+     "REQ-ANALY-008"
+    ]
+   },
+   {
+    "use": "library system",
+    "instead_of": "organization",
+    "requirements": [
+     "REQ-ROLE-011"
+    ]
+   },
+   {
+    "use": "consortium",
+    "instead_of": "network",
+    "requirements": [
+     "REQ-NFRQA-010",
+     "REQ-NFRQA-015"
+    ]
+   },
+   {
+    "use": "consortium",
+    "instead_of": "enterprise",
+    "requirements": [
+     "REQ-NFRQA-010",
+     "REQ-NFRQA-013",
+     "REQ-NFRQA-014"
+    ]
+   },
+   {
+    "use": "item",
+    "instead_of": "copy",
+    "requirements": [
+     "REQ-DATAQ-005",
+     "REQ-PURGE-004",
+     "REQ-PURGE-010",
+     "REQ-RPTMG-032"
+    ]
+   },
+   {
+    "use": "item",
+    "instead_of": "material",
+    "requirements": [
+     "REQ-ANALY-001",
+     "REQ-ANALY-004",
+     "REQ-CALCD-013",
+     "REQ-CALCD-014",
+     "REQ-CALCD-015",
+     "REQ-LOCAP-007",
+     "REQ-LOCAP-014"
+    ]
+   },
+   {
+    "use": "item",
+    "instead_of": "volume",
+    "requirements": [
+     "REQ-CALCD-007",
+     "REQ-CALCD-008",
+     "REQ-CALCD-010",
+     "REQ-LOCAP-007",
+     "REQ-LOCAP-014",
+     "REQ-PURGE-004"
+    ]
+   },
+   {
+    "use": "transaction",
+    "instead_of": "activity",
+    "requirements": [
+     "REQ-ACCT-003",
+     "REQ-ACCT-005",
+     "REQ-ACCT-009",
+     "REQ-ANALY-007",
+     "REQ-ANALY-011",
+     "REQ-CALCD-002",
+     "REQ-DATAQ-004",
+     "REQ-DATAQ-007",
+     "REQ-DATAQ-016",
+     "REQ-NFRQA-008",
+     "REQ-NFRQA-009",
+     "REQ-NFRQA-022",
+     "REQ-PURGE-001",
+     "REQ-PURGE-002",
+     "REQ-RPTMG-007",
+     "REQ-RPTMG-008",
+     "REQ-RPTMG-036",
+     "REQ-STKID-003",
+     "REQ-STKID-005",
+     "REQ-STKID-006"
+    ]
+   },
+   {
+    "use": "transaction",
+    "instead_of": "event",
+    "requirements": [
+     "REQ-OPMIS-001"
+    ]
+   },
+   {
+    "use": "transaction",
+    "instead_of": "operation",
+    "requirements": [
+     "REQ-LOCAP-005",
+     "REQ-LOCAP-017",
+     "REQ-NFRQA-010",
+     "REQ-OPMIS-006",
+     "REQ-OPMIS-009",
+     "REQ-OPMIS-016",
+     "REQ-PURGE-005",
+     "REQ-PURGE-009",
+     "REQ-RPTMG-004"
+    ]
+   },
+   {
+    "use": "hold",
+    "instead_of": "request",
+    "requirements": [
+     "REQ-OPMIS-008",
+     "REQ-RPTMG-034"
+    ]
+   },
+   {
+    "use": "query",
+    "instead_of": "report definition",
+    "requirements": [
+     "REQ-RPTMG-042"
+    ]
+   },
+   {
+    "use": "query",
+    "instead_of": "filter",
+    "requirements": [
+     "REQ-ANALY-005",
+     "REQ-ANALY-007",
+     "REQ-DATAQ-001",
+     "REQ-DATAQ-008",
+     "REQ-DATAQ-009",
+     "REQ-DATAQ-010",
+     "REQ-DATAQ-019",
+     "REQ-LOCAP-014",
+     "REQ-LOCAP-015",
+     "REQ-OPMIS-013",
+     "REQ-PURGE-002",
+     "REQ-STKID-014"
+    ]
+   },
+   {
+    "use": "report",
+    "instead_of": "output",
+    "requirements": [
+     "REQ-ANALY-005",
+     "REQ-ANALY-012",
+     "REQ-NFRQA-001",
+     "REQ-NFRQA-030",
+     "REQ-OPMIS-015",
+     "REQ-ROLE-006",
+     "REQ-RPTMG-033",
+     "REQ-RPTMG-042",
+     "REQ-STKID-001",
+     "REQ-STKID-006",
+     "REQ-UIXT-002",
+     "REQ-UIXT-007"
+    ]
+   },
+   {
+    "use": "report",
+    "instead_of": "listing",
+    "requirements": [
+     "REQ-AUTH-005",
+     "REQ-CALCD-005",
+     "REQ-CALCD-016",
+     "REQ-CALCD-017",
+     "REQ-PURGE-008"
+    ]
+   },
+   {
+    "use": "report",
+    "instead_of": "analysis",
+    "requirements": [
+     "REQ-ANALY-005",
+     "REQ-ANALY-007",
+     "REQ-ANALY-016",
+     "REQ-ANALY-018",
+     "REQ-ANALY-019",
+     "REQ-CALCD-001",
+     "REQ-CALCD-004",
+     "REQ-CALCD-009",
+     "REQ-CALCD-012",
+     "REQ-CALCD-015",
+     "REQ-LOCAP-004",
+     "REQ-NFRQA-021",
+     "REQ-RPTMG-008",
+     "REQ-RPTMG-030",
+     "REQ-STKID-002",
+     "REQ-STKID-015"
+    ]
+   },
+   {
+    "use": "report template",
+    "instead_of": "canned report",
+    "requirements": [
+     "REQ-RPTMG-020"
+    ]
+   },
+   {
+    "use": "report template",
+    "instead_of": "report definition",
+    "requirements": [
+     "REQ-RPTMG-042"
+    ]
+   },
+   {
+    "use": "uncataloged material",
+    "instead_of": "uncataloged shipment",
+    "requirements": [
+     "REQ-OPMIS-004"
+    ]
+   },
+   {
+    "use": "weeding",
+    "instead_of": "cleanup",
+    "requirements": [
+     "REQ-LOCAP-001",
+     "REQ-PURGE-004",
+     "REQ-RPTMG-040"
+    ]
+   },
+   {
+    "use": "weeding",
+    "instead_of": "purge",
+    "requirements": [
+     "REQ-DATAQ-016",
+     "REQ-PURGE-001",
+     "REQ-PURGE-003",
+     "REQ-PURGE-005",
+     "REQ-PURGE-006",
+     "REQ-PURGE-007",
+     "REQ-PURGE-008"
+    ]
+   }
+  ],
+  "stats": {
+   "requirements": 218,
+   "discarded": 18,
+   "candidates": 580,
+   "covered_candidates": 580
+  }
+ }
+}

@@ -1,0 +1,350 @@
+{
+ "requirements": [
+  {
+   "name": "Accessibility Compliance",
+   "description": "The system shall comply with Section 508 and applicable accessibility standards so that staff and patrons with disabilities can use it. It shall work with screen-reading software, including JAWS and NVDA, screen-magnification software, including ZoomText, and other assistive technologies. Accessibility shall be supported across the system's user-facing functions.",
+   "type": "non-functional",
+   "priority": "P1",
+   "priority_rationale": "Section 508 is identified as mandatory and a legal requirement, with additional accessibility requests from multiple sources.",
+   "candidate_ids": [
+    "C-395",
+    "C-480",
+    "C-428",
+    "C-444",
+    "C-445",
+    "C-446"
+   ]
+  },
+  {
+   "name": "Privacy Protected Transaction Archive",
+   "description": "The system shall archive transaction data in a form that protects patron privacy as defined by State Law. The archive shall retain data suitable for producing useful demographic statistics while protecting patron identities. This shall support lawful historical analysis without exposing personally identifiable patron information.",
+   "type": "non-functional",
+   "priority": "P1",
+   "priority_rationale": "The source marks this as high priority and cites State Law and privacy officers as evidence of a legal and privacy obligation.",
+   "candidate_ids": [
+    "C-159"
+   ]
+  },
+  {
+   "name": "Background Report Processing",
+   "description": "The system shall queue and process complex and long-running reports in the background, separately from interactive sessions. Report execution shall not directly block users' interactive operations or tie up the production database. The system shall cache results for the inactive patrons report to avoid slow interactive performance on large datasets.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Background processing is agreed or requested in three sources, with database contention and performance identified as major concerns; reports can otherwise be run interactively as a workaround.",
+   "candidate_ids": [
+    "C-116",
+    "C-332",
+    "C-429"
+   ]
+  },
+  {
+   "name": "Client Platform Compatibility",
+   "description": "The system shall be accessible through a web browser or a Windows-compatible client. When accessed through a browser, it shall support Microsoft Internet Explorer version 6.0 and later and Mozilla Firefox version 2.0 and later. This compatibility shall allow staff to use existing client platforms without requiring costly computer upgrades.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "Client access is explicitly marked high priority, and the browser versions are agreed across sources; one source cites the cost of upgrading more than 200 computers.",
+   "candidate_ids": [
+    "C-131",
+    "C-482",
+    "C-430"
+   ]
+  },
+  {
+   "name": "Environment Configuration Migration",
+   "description": "The system shall provide separate development, training, and production environments so that developers and trainers can work without affecting production. It shall support migration of report configurations between environments, including report templates, permission settings, and other configuration. Configuration shall be exportable from development or training and importable into production.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Environment separation and migration are requested across multiple sources, including an agreed description of existing environments; a manual configuration transfer is a possible temporary workaround.",
+   "candidate_ids": [
+    "C-347",
+    "C-431",
+    "C-135",
+    "C-348",
+    "C-396",
+    "C-432",
+    "C-536"
+   ]
+  },
+  {
+   "name": "Consortium Capacity",
+   "description": "The system shall support consortium operations across at least 286 locations. It shall handle 17 million annual circulations and the purchasing and processing of more than 900,000 items per year. This capacity shall support the stated scale of consortium reporting and operations.",
+   "type": "non-functional",
+   "priority": "P1",
+   "priority_rationale": "The source explicitly marks this capacity requirement high priority and gives concrete consortium scale figures.",
+   "candidate_ids": [
+    "C-133"
+   ]
+  },
+  {
+   "name": "Record Data Specifications",
+   "description": "The developer shall provide complete data specifications for records maintained or accessed by Management Processes. These specifications shall cover authority, bibliographic, order, item, and hold/request records, as well as other relevant records. The specifications shall support developers, integrators, and data architects who need to understand the system's data.",
+   "type": "documentation",
+   "priority": "P1",
+   "priority_rationale": "The source explicitly marks these specifications high priority and identifies developers, integrators, and data architects as relying on them.",
+   "candidate_ids": [
+    "C-134"
+   ]
+  },
+  {
+   "name": "Deletion Audit Logging",
+   "description": "The system shall record database deletions in a deletion audit table. It shall implement database-triggered logging so that deletions are captured when they occur. The audit record shall support administrators who need to review deletion activity.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This was agreed in one source, but no legal mandate, high-priority marker, or broader stakeholder agreement is stated.",
+   "candidate_ids": [
+    "C-094"
+   ]
+  },
+  {
+   "name": "OPAC Non-Interference",
+   "description": "The system shall be architected and operated so that reporting activity does not constrain OPAC functionality or degrade catalog responsiveness for patrons. Heavy reporting queries shall not slow down the OPAC. Reporting shall preserve the OPAC's ability to provide its existing features.",
+   "type": "non-functional",
+   "priority": "P1",
+   "priority_rationale": "The requirement is supported by multiple sources, including an agreed statement that reporting absolutely cannot constrain the OPAC and a source marking OPAC protection high priority.",
+   "candidate_ids": [
+    "C-519",
+    "C-143",
+    "C-496",
+    "C-437"
+   ]
+  },
+  {
+   "name": "Enterprise Deployment Assumptions",
+   "description": "The system shall operate as part of an enterprise-level Library Automation System and use the enterprise infrastructure on which it depends. The deployment shall support centralized operation across multiple locations and rely on reliable network connectivity between those locations and central servers. The enterprise infrastructure assumption includes redundant servers and backups.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "Enterprise membership is agreed or stated in three sources, and centralized connectivity and infrastructure assumptions are documented for IT operations.",
+   "candidate_ids": [
+    "C-171",
+    "C-521",
+    "C-489",
+    "C-495"
+   ]
+  },
+  {
+   "name": "Administrative Error Feedback",
+   "description": "The system shall provide users with clear, high-level error reporting and feedback when operations or reports fail. For administrators, it shall also provide query-specific details, including the table, field, and kind of error when available. This feedback shall help users understand failures and help administrators diagnose and resolve them.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Error feedback is requested in multiple sources, including an agreed source with concrete diagnostic details; the source material also identifies staff need when reports fail.",
+   "candidate_ids": [
+    "C-136",
+    "C-526",
+    "C-528"
+   ]
+  },
+  {
+   "name": "Historical Reporting Warehouse",
+   "description": "The system shall provide historical reporting through a reporting warehouse. Users shall be able to acquire data for a specified date or date range. This capability shall support analysis of historical states rather than only current data.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Historical reporting is a useful capability requested in one source, with no high-priority marker or evidence that it blocks core use.",
+   "candidate_ids": [
+    "C-249"
+   ]
+  },
+  {
+   "name": "Enterprise ILS Data Integration",
+   "description": "The system shall rely on and read the data structures and functionality of the enterprise Library Automation System, including its Acquisitions and Cataloging modules. It shall interoperate with those modules without replacing them. This integration shall provide the reporting system with the enterprise data it needs.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Integration with the enterprise ILS and its Acquisitions and Cataloging modules is described across three sources, including an agreed assumption.",
+   "candidate_ids": [
+    "C-509",
+    "C-140",
+    "C-533",
+    "C-146"
+   ]
+  },
+  {
+   "name": "Server Platform Compatibility",
+   "description": "The system shall be deployable and operable on Linux or Solaris servers. It shall support Red Hat Enterprise Linux 5 and Solaris 10 running on SPARC hardware. Both Linux and Solaris are acceptable deployment platforms.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "Linux and Solaris support is agreed as acceptable in one source and requested in another, with specific platform versions and hardware stated by the technical stakeholder.",
+   "candidate_ids": [
+    "C-493",
+    "C-436"
+   ]
+  },
+  {
+   "name": "Online-Hours Workload Continuity",
+   "description": "The system shall allow searches and reports to run during open hours without disrupting other system functions, including circulation and OPAC responsiveness. It shall execute reports with acceptable performance during busy periods and minimize long run-times under peak load. These behaviors shall support operational staff and other users during normal service hours.",
+   "type": "non-functional",
+   "priority": "P1",
+   "priority_rationale": "Open-hours processing is marked high priority in one source and identified as a key requirement in another; survey feedback also reports slow reports during busy hours.",
+   "candidate_ids": [
+    "C-498",
+    "C-149",
+    "C-439",
+    "C-569"
+   ]
+  },
+  {
+   "name": "Relational Database Backend",
+   "description": "The system shall use a fully relational database backend and operate against a fully relational database schema. It shall be compatible with PostgreSQL, including the stated current environment of PostgreSQL 8.3. This constraint shall align the reporting system with the existing database environment.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "The relational backend is explicitly marked high priority and mandatory in a source, and PostgreSQL compatibility is supported by the stated existing environment.",
+   "candidate_ids": [
+    "C-440",
+    "C-148"
+   ]
+  },
+  {
+   "name": "Large-Scale Batch Updates",
+   "description": "The system shall process large batch updates in smaller chunks to limit database locking. It shall scale to batch transfer operations in collections containing millions of items without excessive locking or performance degradation. The stated environment includes 9.6 million items.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "The need is based on a concrete 9.6-million-item collection and technical staff concern, but is supported by one source and has no explicit high-priority marker.",
+   "candidate_ids": [
+    "C-054",
+    "C-059"
+   ]
+  },
+  {
+   "name": "Read-Only Reporting Isolation",
+   "description": "The system shall separate reporting operations from production transactional operations to prevent reporting workloads from affecting production performance. It shall support a separate reporting database or a read-only reporting replica for report execution. This isolation shall protect the production database from reporting load.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "A separate reporting database, replica, or reporting/production separation is requested in multiple sources, with database impact identified as a major concern.",
+   "candidate_ids": [
+    "C-441",
+    "C-385",
+    "C-403"
+   ]
+  },
+  {
+   "name": "Real-Time Reporting",
+   "description": "The system shall provide real-time reporting capabilities so users can obtain up-to-date data on demand. It shall support real-time reporting during busy periods. This capability shall serve managers, decision makers, and operational staff who need current information.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "Real-time reporting is requested in two sources, but neither provides a high-priority marker or a concrete threshold.",
+   "candidate_ids": [
+    "C-378",
+    "C-567"
+   ]
+  },
+  {
+   "name": "Reporting Denormalization Constraint",
+   "description": "The system shall avoid denormalized reporting approaches that require maintaining synchronization between a reporting store and the live database. Such an approach may be used only when explicitly justified. This constraint shall limit the ongoing synchronization burden identified by the systems administrator.",
+   "type": "constraint",
+   "priority": "P3",
+   "priority_rationale": "This is a conditional architectural recommendation from one systems administrator, with no stated mandate or wider agreement.",
+   "candidate_ids": [
+    "C-515"
+   ]
+  },
+  {
+   "name": "Management Reporting Scope",
+   "description": "The system's reporting scope shall focus on Management Processes: reports and analysis tools used by managers, administrators, and staff for planning, evaluation, and oversight. It shall exclude day-to-day patron-facing OPAC and circulation client functions. Acquisitions and Cataloging shall be specified separately rather than within the Management Processes reports specification.",
+   "type": "constraint",
+   "priority": "P2",
+   "priority_rationale": "The scope boundary is established in agreed meeting material and defines which system functions belong in this reporting effort.",
+   "candidate_ids": [
+    "C-451",
+    "C-462",
+    "C-469"
+   ]
+  },
+  {
+   "name": "Read-Only OPAC Data Access",
+   "description": "The system shall query OPAC-related data for patron-created holds and circulation transactions when needed for reporting. It shall not modify OPAC data. This read-only access shall allow reporting to use relevant patron activity data while preserving the OPAC as the source of that data.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The read-only boundary is agreed in one source and provides a clear integration constraint for reporting on OPAC-related data.",
+   "candidate_ids": [
+    "C-534"
+   ]
+  },
+  {
+   "name": "Process Flow Documentation",
+   "description": "The software developer shall provide a thorough high-level description of major processes. The documentation shall cover bibliographic record import and export, validation of bibliographic records against internal and external authority sources, and standard reports. This documentation shall help staff and developers understand how data and processes flow through the system.",
+   "type": "documentation",
+   "priority": "P3",
+   "priority_rationale": "Process documentation is requested in two sources and is useful to staff and developers, but it has no high-priority marker.",
+   "candidate_ids": [
+    "C-139",
+    "C-500"
+   ]
+  }
+ ],
+ "discarded": [
+  {
+   "name": "Library Terminology Assumption",
+   "candidate_ids": [
+    "C-452"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This states an assumption about the readers of the specification rather than a system obligation.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Circulate Reference Draft",
+   "candidate_ids": [
+    "C-454"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This is a project communication task to circulate a draft document, not a requirement for the software system.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Defer UI Specification",
+   "candidate_ids": [
+    "C-459"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This describes when the project should produce UI specifications rather than system behavior.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Reports Specification Project Task",
+   "candidate_ids": [
+    "C-460"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This is a project documentation deliverable about a future release rather than a requirement for the system.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Iterative Prototype Methodology",
+   "candidate_ids": [
+    "C-465"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This specifies a development and review methodology rather than a system requirement.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Member Interview Assignment",
+   "candidate_ids": [
+    "C-467"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This assigns project members an interview task and deadline rather than specifying system behavior.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Follow-Up Meeting Schedule",
+   "candidate_ids": [
+    "C-472"
+   ],
+   "category": "not-a-requirement",
+   "reason": "This schedules a project meeting and does not impose a software system requirement.",
+   "conflicts_with": []
+  },
+  {
+   "name": "Patron OPAC Interaction",
+   "candidate_ids": [
+    "C-180",
+    "C-144"
+   ],
+   "category": "conflict",
+   "reason": "These candidates describe patron-facing interaction through the OPAC, which is excluded from the Management Processes reporting scope; the retained read-only data-access requirement covers reporting queries without enabling patron-facing OPAC functions.",
+   "conflicts_with": [
+    "Management Reporting Scope",
+    "Read-Only OPAC Data Access"
+   ]
+  }
+ ]
+}

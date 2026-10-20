@@ -1,0 +1,217 @@
+{
+ "requirements": [
+  {
+   "name": "Activity And Circulation Metrics",
+   "description": "The system shall provide reports of activity for directors, boards, and other report users, including checkouts, check-ins, holds placed, and holds filled. It shall report total circulation with separate counts for checkouts, renewals, and non-cataloged circulations. These metrics shall support monitoring library use and comparing circulation activity.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "The activity metrics were agreed and requested for directors and boards; circulation breakdowns are also identified as useful reporting data.",
+   "candidate_ids": [
+    "C-284",
+    "C-267"
+   ]
+  },
+  {
+   "name": "Strategic Planning Reports",
+   "description": "The system shall provide library administrators, managers, and directors with aggregated, high-level reports for strategic planning, planning and evaluation, and directing library services and priorities. It shall support analysis of operations and collections so these users can make data-driven decisions. The reports shall be suitable for board presentations.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The need is described across several proposed statements, but no explicit priority or agreement marker is provided.",
+   "candidate_ids": [
+    "C-127",
+    "C-142",
+    "C-150",
+    "C-476"
+   ]
+  },
+  {
+   "name": "Anonymized Demographic Reporting",
+   "description": "The system shall anonymize demographic statistics in reports and shall not expose personally identifiable information. This constraint shall apply whenever demographic reporting is provided. It shall allow privacy and compliance officers to use aggregated demographic results without revealing individual identities.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "The source explicitly requires anonymization and prohibits personally identifiable information in demographic reports, establishing a hard privacy constraint.",
+   "candidate_ids": [
+    "C-544"
+   ]
+  },
+  {
+   "name": "Collection Composition Reporting",
+   "description": "The system shall report collection and circulation metrics by genre and material format for collection managers and report users. It shall compute item counts by genre and format to show each category's percentage of the collection, and checkout totals by genre and format to show each category's percentage of total circulations. For the Shelf Space Report, users shall be able to group and aggregate results by genre, format, library, or system.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The breakdown was repeatedly requested and agreed in the source thread, and its counts and circulation totals were identified as required report data.",
+   "candidate_ids": [
+    "C-029",
+    "C-032",
+    "C-033",
+    "C-041"
+   ]
+  },
+  {
+   "name": "Comparative Period Analysis",
+   "description": "The system shall allow users to filter the Shelf Space Report by an arbitrary date range, including quarters such as Q1 and Q2. It shall support comparing report results across selected date ranges to reveal changes over time. Comparative output shall be able to include last month's circulation, the previous month's circulation, the corresponding month of the previous year, and percentage differences between the periods.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Date-range filtering and comparisons were requested by collection planners and managers, and comparative circulation columns are specified in a separate reporting source.",
+   "candidate_ids": [
+    "C-243",
+    "C-030",
+    "C-037"
+   ]
+  },
+  {
+   "name": "Library Comparison View",
+   "description": "The system shall provide a comparison view that displays each library's report breakdown side by side. Directors and branch managers shall be able to use this view to compare libraries and identify outliers. The view shall present comparable results together rather than requiring users to inspect separate reports.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The side-by-side view is a specific proposed request from one source, with no explicit high-priority marker.",
+   "candidate_ids": [
+    "C-031"
+   ]
+  },
+  {
+   "name": "Transaction Cross Tabulation",
+   "description": "The system shall allow analysts and staff to group and cross-tabulate transaction reports by terminal, branch, library system, hour, patron age range, patron type, and patron location. Users shall be able to query all transaction types or filter by transaction type, including check-ins, checkouts, fines collected, and patron registrations. These dimensions shall support analysis of transaction activity at different operational and patron levels.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Cross-tabulation is agreed in one source and explicitly marked high priority in another; transaction grouping is also requested in a survey.",
+   "candidate_ids": [
+    "C-290",
+    "C-170",
+    "C-557",
+    "C-234"
+   ]
+  },
+  {
+   "name": "Data Quality Reports",
+   "description": "The system shall provide reports that help administrators and managers identify data quality issues. The reports shall present findings in a form that supports review of the underlying data. This capability shall help users detect and address problems that could affect reporting and operational analysis.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The need is stated in meeting minutes as necessary, but appears in only one source and has no explicit priority marker.",
+   "candidate_ids": [
+    "C-485"
+   ]
+  },
+  {
+   "name": "Historical Reporting Data",
+   "description": "The system shall support historical reporting using retained historical data, such as a reporting warehouse or historical snapshots. Users shall be able to retrieve billing data as of a past date, including a snapshot of bill amounts on a specified date. Transaction history retention shall be configurable by number of days, while monthly and annual aggregates shall be retained indefinitely.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "Historical reporting is raised in multiple sources, including a missing-feature reference and a later meeting action; the survey also specifies retention periods and aggregates.",
+   "candidate_ids": [
+    "C-355",
+    "C-539",
+    "C-576",
+    "C-579"
+   ]
+  },
+  {
+   "name": "Edited Item Counts",
+   "description": "The system shall provide a report that counts items edited within a specified period. Cataloging staff shall be able to use the count to review editing activity over that period. The report shall distinguish this measure from other item activity where relevant.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report is identified as missing in one reference source, with no explicit priority marker or additional source agreement.",
+   "candidate_ids": [
+    "C-361"
+   ]
+  },
+  {
+   "name": "Independent Item Dates",
+   "description": "The system shall provide last edit date and last circulation date as separate reportable item fields. The last edit date shall reflect the most recent bibliographic or item-record edit and shall not be updated by circulation events. Collection managers and catalogers shall be able to review editing and circulation activity independently.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "Separate edit and circulation dates are requested in the reference document and a stakeholder interview, with agreement on the need to exclude circulation from edit dates.",
+   "candidate_ids": [
+    "C-363",
+    "C-416",
+    "C-364"
+   ]
+  },
+  {
+   "name": "Pivot Table Output",
+   "description": "The system shall provide report data in pivot-table-style output. The output shall support cross-tabulation and aggregation of report data and shall be available in a pivot-table-compatible format. Report users shall be able to use this format to examine and rearrange analytical results.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Pivot-table output is requested in three separate sources, including a reference document identifying it as a missing feature.",
+   "candidate_ids": [
+    "C-255",
+    "C-375",
+    "C-564"
+   ]
+  },
+  {
+   "name": "Real Time Reporting",
+   "description": "The system shall provide real-time reports that reflect the current system state when a report requires current data. Users shall be able to run reports on current conditions, such as items overdue today. This capability shall support operational decisions that depend on up-to-date information.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Real-time reporting is proposed in one source and specifically agreed for current-state reports in another.",
+   "candidate_ids": [
+    "C-256",
+    "C-540"
+   ]
+  },
+  {
+   "name": "Hold Placement Reporting",
+   "description": "The system shall report the method used to place each hold. The reported methods shall include staff desk, public computer, and remote placement. Library staff shall be able to use this detail to analyze how patrons place holds.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The detail is an agreed survey request from one source, with no explicit priority marker.",
+   "candidate_ids": [
+    "C-568"
+   ]
+  },
+  {
+   "name": "Separate Circulation Timestamps",
+   "description": "The system shall record and expose check-in date and time separately from renewal date and time. Reports shall distinguish check-in events from renewals rather than combining their timestamps. Circulation staff and analysts shall be able to use the separate values for accurate event reporting.",
+   "type": "data",
+   "priority": "P3",
+   "priority_rationale": "The unmet timestamp detail is listed in one reference source and has no explicit priority marker.",
+   "candidate_ids": [
+    "C-384"
+   ]
+  },
+  {
+   "name": "Staff Workflow Analysis",
+   "description": "The system shall provide reports and analysis tools for library managers and other authorized users to analyze staff productivity and workflow. The results shall support review of how work is performed. Managers shall be able to use this analysis to inform operational decisions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The same analysis need appears in a draft specification and meeting minutes, although neither source assigns an explicit priority.",
+   "candidate_ids": [
+    "C-153",
+    "C-474"
+   ]
+  },
+  {
+   "name": "Operational Trend Reporting",
+   "description": "The system shall present trends over selectable time ranges to support planning and collection-management decisions. Trend reports shall show whether branches are growing or shrinking and shall support trending missing and damaged items. Users shall be able to use these results to identify changes over time and inform collection decisions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Trend reporting is agreed for branch planning in one source and separately requested for collection decisions in another.",
+   "candidate_ids": [
+    "C-026",
+    "C-081"
+   ]
+  },
+  {
+   "name": "Transaction Scope Reports",
+   "description": "The system shall generate transaction reports for holds placed, holds filled, and checkouts. Users shall be able to scope these reports by patron, individual library, selected group of libraries, library system, or county. These scopes shall support analysis at both individual and broader organizational levels.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report scopes are specified in one draft source and have no explicit priority or additional source agreement.",
+   "candidate_ids": [
+    "C-236"
+   ]
+  },
+  {
+   "name": "Voter Survey Reporting",
+   "description": "The system shall provide a report that collects and presents voter survey responses. Community engagement users shall be able to review the responses in report form. The report shall support the presentation of survey results for analysis.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report is listed as a missing type in one reference source, with no explicit priority marker.",
+   "candidate_ids": [
+    "C-392"
+   ]
+  }
+ ],
+ "discarded": []
+}

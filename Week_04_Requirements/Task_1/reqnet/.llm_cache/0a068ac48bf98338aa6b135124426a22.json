@@ -1,0 +1,128 @@
+{
+ "requirements": [
+  {
+   "name": "Assistive Technology Accessibility",
+   "description": "The system shall make the reporting interface and online help usable with screen-reading software, screen-magnification software, and other assistive technology. It shall support accessibility standards applicable to the report interface and help content. The web interface and HTML output shall remain compatible with different browsers and assistive technologies so users with disabilities can access and use reporting functions.",
+   "type": "non-functional",
+   "priority": "P1",
+   "priority_rationale": "C-128 is explicitly marked High Priority, C-514 is an agreed accessibility requirement, and C-328 and C-524 reinforce the need across multiple sources.",
+   "candidate_ids": [
+    "C-328",
+    "C-514",
+    "C-128",
+    "C-524"
+   ]
+  },
+  {
+   "name": "Standards Compliant HTML",
+   "description": "The system shall produce valid, standards-compliant HTML for the web interface, online help, and report output. The HTML shall validate against applicable W3C standards. It shall use semantic structure and provide alt attributes and ARIA labels where appropriate, supporting accessible use of the web-based components.",
+   "type": "constraint",
+   "priority": "P1",
+   "priority_rationale": "C-154 is marked High Priority, C-449 calls accessibility non-negotiable, and agreed requirements in C-504 and C-537 specify standards validation across multiple sources.",
+   "candidate_ids": [
+    "C-154",
+    "C-449",
+    "C-504",
+    "C-537"
+   ]
+  },
+  {
+   "name": "Integrated Online Help",
+   "description": "The system shall provide an online, HTML-based help system integrated with the reporting interface. Help shall be hierarchical, cross-linked, searchable, and easy to navigate, and shall describe and illustrate all system functions. The system shall provide context-sensitive help so users can understand the reporting functions relevant to their current task and reduce the need to contact IT for routine guidance.",
+   "type": "documentation",
+   "priority": "P1",
+   "priority_rationale": "C-145 is marked High Priority, C-497 identifies context-sensitive help as critical, and agreed requirements in C-530 and C-497 plus C-360, C-438, and C-145 show broad support across sources.",
+   "candidate_ids": [
+    "C-360",
+    "C-530",
+    "C-438",
+    "C-497",
+    "C-145"
+   ]
+  },
+  {
+   "name": "Report Title Tooltips",
+   "description": "The system shall display a brief pop-up description when a user hovers over the title of a canned report or template. The description shall help users understand the report or template before selecting it. This behavior shall be available for report titles throughout the report-selection interface.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The same usability improvement appears in two sources, but neither supplies a high-priority marker or evidence that it blocks core reporting use.",
+   "candidate_ids": [
+    "C-250",
+    "C-358"
+   ]
+  },
+  {
+   "name": "Staff Report Authoring",
+   "description": "The system shall provide library staff with a web-based report writer for creating custom reports. It shall allow staff to create and edit report content, recognizing staff as the primary report creators. This capability shall let staff develop reports through the web application rather than requiring a separate authoring interface.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Custom report authoring is requested for staff in two candidates and supports a significant user group, though no source marks it mandatory or high priority.",
+   "candidate_ids": [
+    "C-461",
+    "C-393"
+   ]
+  },
+  {
+   "name": "Reporting Interface Options",
+   "description": "The system shall provide three reporting interfaces: canned reports, on-demand reports, and open-template reporting. The open-template interface shall support ad-hoc reporting by advanced users. Providing these options shall support both users who need ready-made reports and users who need more flexible report creation.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "C-389 identifies the three interfaces as an unmet need, and C-370 separately supports open-template reporting for advanced users; both are proposals from the same source rather than explicit mandatory requirements.",
+   "candidate_ids": [
+    "C-370",
+    "C-389"
+   ]
+  },
+  {
+   "name": "Expanded Report Types",
+   "description": "The system shall expand the available report types to cover all gaps identified for the reporting system. The available types shall enable users to select a report suited to their reporting needs. The specific gaps to be covered shall be the gaps identified by the project.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "This is a proposed improvement from one source, with no priority marker or additional evidence establishing it as a core-use blocker.",
+   "candidate_ids": [
+    "C-397"
+   ]
+  },
+  {
+   "name": "Quick Access Descriptions",
+   "description": "The system shall provide a quick-access interface for users selecting reports and options. The interface shall display pop-up descriptions for reports and options to help users identify appropriate choices. This shall make common reporting choices easier to locate and understand.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The feature is identified as missing in one source, with no explicit priority marker or evidence of a workaround-free need.",
+   "candidate_ids": [
+    "C-377"
+   ]
+  },
+  {
+   "name": "Large Location Usability",
+   "description": "The system shall remain usable when displaying hundreds of locations, including a set of approximately 286 locations. It shall provide mechanisms such as grouping or filtering, or other suitable interface techniques, to prevent the display from becoming overcrowded. These mechanisms shall help users work with location information at the stated scale.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "One source identifies a concrete scale concern of 286 locations, but the request is a proposed consideration rather than an agreed or explicitly high-priority requirement.",
+   "candidate_ids": [
+    "C-027"
+   ]
+  },
+  {
+   "name": "Usable Reports Interface",
+   "description": "The system shall provide an intuitive reports interface that helps staff find and run the reports they need. The interface shall make report choices and the steps to run a selected report understandable to users. This shall address reported difficulty locating needed reports and support staff in completing routine reporting tasks.",
+   "type": "non-functional",
+   "priority": "P3",
+   "priority_rationale": "The need is grounded in a staff survey but appears in only one candidate and has no reported survey percentage or explicit priority marker.",
+   "candidate_ids": [
+    "C-580"
+   ]
+  }
+ ],
+ "discarded": [
+  {
+   "name": "Compile Executive Reports List",
+   "candidate_ids": [
+    "C-456"
+   ],
+   "category": "not-a-requirement",
+   "reason": "The source records a meeting action to compile a list of reports needed for an Executive Reports Interface, rather than specifying behavior the software itself shall provide.",
+   "conflicts_with": []
+  }
+ ]
+}

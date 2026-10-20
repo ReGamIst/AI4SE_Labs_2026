@@ -1,0 +1,180 @@
+{
+ "candidates": [
+  {
+   "title": "Value of items report",
+   "statement": "The system shall generate a value-of-items report that computes the monetary value of items based on the purchase price data in item records for the entire collection or any portion of the collection.",
+   "type": "functional",
+   "source_quote": "Value of items report - staff should be able to get the value of items based on data in item records.",
+   "stakeholder": "Finance department, staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Value report filter options",
+   "statement": "The system shall allow the value-of-items report to be filtered by item attributes and statuses such as item status (e.g., \"longoverdue\"), material type (e.g., DVDs), and collection membership (e.g., children's collection).",
+   "type": "functional",
+   "source_quote": "For example, they want to be able to get: - Value of all items with status \"longoverdue\" - Value of all DVDs in children's collection",
+   "stakeholder": "Finance department, staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Aggregate purchase price field",
+   "statement": "The system shall be able to query and aggregate the purchase price field from item records to support value calculations and reports.",
+   "type": "functional",
+   "source_quote": "The data is already in the item records (purchase price field). We just need the system to be able to query and aggregate this.",
+   "stakeholder": "Finance department, staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Patron account balances report",
+   "statement": "The system shall provide reports of patron account balances, with grouping and filtering by individual patron, home library (branch), and the entire system.",
+   "type": "functional",
+   "source_quote": "Patron account balances by patron, home library, and system",
+   "stakeholder": "Finance department, branch staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Fines and charges by time period and type",
+   "statement": "The system shall provide reports of fines and charges accrued per specified time periods (e.g., last 12 months, year-to-date, last month) and optionally broken down by type of charge (e.g., overdue fines, damaged item charges, lost item charges).",
+   "type": "functional",
+   "source_quote": "Fines and charges accrued per time period (last 12 months, YTD, last month) ... and per type of charge (overdue fines, damaged item charges, lost item charges, etc.)",
+   "stakeholder": "Finance department, staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Fines waived by time period and branch",
+   "statement": "The system shall report fines waived, with the ability to group and filter by time period and by branch/library.",
+   "type": "functional",
+   "source_quote": "Fines waived per time period and per branch",
+   "stakeholder": "Finance department, branch managers",
+   "priority_signals": "Each library has its own budget for waived fines.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Payments by time period and collection channel",
+   "statement": "The system shall report payments made per specified time period and by collection channel (e.g., staff desk, self-check station, OPAC) to support reconciliation and reporting.",
+   "type": "functional",
+   "source_quote": "Payments made per time period and per payment method (staff desk, self-check, OPAC)",
+   "stakeholder": "Finance department, branch staff",
+   "priority_signals": "This helps with daily reconciliation.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Payments by payment instrument",
+   "statement": "The system shall report payments grouped by payment instrument/type (e.g., cash, credit card, check, ecommerce) to assist with daily and monthly reconciliation.",
+   "type": "functional",
+   "source_quote": "The financial reports need to show payments by method - cash, credit card, check, etc.",
+   "stakeholder": "Finance department, branch staff",
+   "priority_signals": "Helps with daily reconciliation.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Audit trail ledger for payments",
+   "statement": "The system shall maintain an auditable ledger of patron payments that records each payment and the specific charges to which the payment was applied, enabling full traceability for reconciliation.",
+   "type": "functional",
+   "source_quote": "The financial audit trail is CRITICAL ... trace every payment back to the specific charge it was applied to.",
+   "stakeholder": "Finance department, auditors",
+   "priority_signals": "CRITICAL; needed to reconcile accounts properly.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Compliance with accounting and auditing requirements",
+   "statement": "The system shall ensure that all reports and data archiving comply with standard accounting practices and state, county, and municipal auditing requirements.",
+   "type": "constraint",
+   "source_quote": "All reports and data archiving must comply with standard accounting practice and state, county, and municipal auditing requirements.",
+   "stakeholder": "Finance department, auditors, legal",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Data retention policy enforcement",
+   "statement": "The system shall enforce data retention policies required by law and policy, including retaining specified financial data for required periods (e.g., seven years) for audit purposes.",
+   "type": "constraint",
+   "source_quote": "Some data needs to be retained for 7 years for audit purposes. The system needs to enforce retention policies.",
+   "stakeholder": "Finance department, auditors, compliance officers",
+   "priority_signals": "retain for 7 years; enforce retention policies",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Join patron and item financial data",
+   "statement": "The system shall support joining financial data attached to patron records and to item records so that financial reports can combine or correlate those data sources.",
+   "type": "functional",
+   "source_quote": "The financial data is attached to patron records AND item records. So when we query for financial reports, we need to be able to join these data sources.",
+   "stakeholder": "Finance department, reporting staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Query accounts above balance threshold",
+   "statement": "The system shall allow staff users to query and retrieve patron accounts with balances greater than a specified threshold value (e.g., greater than X dollars).",
+   "type": "functional",
+   "source_quote": "Staff should be able to query patron accounts with balances greater than X dollars.",
+   "stakeholder": "Front desk staff, finance staff",
+   "priority_signals": "Repeatedly requested; currently takes forever manually.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Immediate update of financial information",
+   "statement": "The system shall update and reflect financial transactions (such as payments made at the front desk) immediately so that reports and account balances are current in real time or near-real time.",
+   "type": "non-functional",
+   "source_quote": "When a patron makes a payment at the front desk, we need the system to reflect that immediately.",
+   "stakeholder": "Front desk staff, finance staff",
+   "priority_signals": "Staff need immediate reflection; 'takes forever' currently.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Branch-level payment tracking and visibility",
+   "statement": "The system shall track payments by collection location/library and provide branch-level visibility so each branch can see payments collected at their location for end-of-month and other reports.",
+   "type": "functional",
+   "source_quote": "Payments tracking by library is important for our end-of-month reports. Each branch needs to be able to see what payments were collected at their location.",
+   "stakeholder": "Branch managers, finance department",
+   "priority_signals": "Important for end-of-month reports.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Attach financial transactions to records",
+   "statement": "The system shall record fines, charges, waivers, and ecommerce transactions as data elements attached to patron records and to item records.",
+   "type": "data",
+   "source_quote": "Fines, charges, waivers, and ecommerce transactions are attached to patron and item records.",
+   "stakeholder": "Finance department, reporting staff",
+   "priority_signals": "",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

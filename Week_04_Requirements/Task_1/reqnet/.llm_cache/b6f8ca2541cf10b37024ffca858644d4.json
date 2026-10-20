@@ -1,0 +1,158 @@
+{
+ "candidates": [
+  {
+   "title": "Library volume point-in-time report",
+   "statement": "The system shall provide a report that shows the count of items in a specified library at a specified point in time.",
+   "type": "functional",
+   "source_quote": "how do I get a report that tells me how many items we have at Dalton-Whitman at any given moment?",
+   "stakeholder": "Maria Rodriguez, Katherine Gregory",
+   "priority_signals": "We need this for our monthly board report; \"This will be tracked as a key requirement.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Separate counts: new acquisitions",
+   "statement": "The system shall report the count of new acquisitions (items recently added) for a specified library and date or date range.",
+   "type": "functional",
+   "source_quote": "The volume should include: 1. New acquisitions (items recently added)",
+   "stakeholder": "Susan Sexton-Cooley, Katherine Gregory",
+   "priority_signals": "\"This will be tracked as a key requirement.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Separate counts: items on shelf",
+   "statement": "The system shall report the count of items on the shelf (checked in) for a specified library and date or point in time.",
+   "type": "functional",
+   "source_quote": "The volume should include: 2. Items on the shelf (checked in)",
+   "stakeholder": "Susan Sexton-Cooley, Katherine Gregory",
+   "priority_signals": "\"This will be tracked as a key requirement.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Separate counts: items out in circulation",
+   "statement": "The system shall report the count of items out in circulation (checked out) for a specified library and date or point in time.",
+   "type": "functional",
+   "source_quote": "The volume should include: 3. Items out in circulation (checked out)",
+   "stakeholder": "Susan Sexton-Cooley, Katherine Gregory",
+   "priority_signals": "\"This will be tracked as a key requirement.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Total volume includes checked-out items",
+   "statement": "The system shall include items that are checked out when calculating the total volume for a library (total counts include checked-out items).",
+   "type": "functional",
+   "source_quote": "I assume items that are checked out still count toward your total volume, right?",
+   "stakeholder": "George Tuttle, Susan Sexton-Cooley",
+   "priority_signals": "Discussion point affecting design; included in summary as part of total based on checked in/out/new acquisitions.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Breakdown by listed categories",
+   "statement": "The system shall allow breaking down volume into categories including total items, number of holds, number of adult fiction, number of board books, and other customizable categories.",
+   "type": "functional",
+   "source_quote": "The report should allow breaking down volume in categories such as: - Total items - Number of holds - Number of adult fiction - Number of board books - Other customizable categories",
+   "stakeholder": "Maria Rodriguez, Susan Sexton-Cooley, Katherine Gregory",
+   "priority_signals": "\"This will be tracked as a key requirement.\"; user examples requested for board report",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Customizable categories per library",
+   "statement": "The system shall allow each library to customize which categories are used to break down the volume report.",
+   "type": "functional",
+   "source_quote": "Can we make the categories customizable? Different libraries might want different breakdowns.",
+   "stakeholder": "Latoya Davidson, Katherine Gregory",
+   "priority_signals": "Twin Lakes needs this for their quarterly assessment; summary explicitly lists \"Other customizable categories.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Filter by library location",
+   "statement": "The system shall allow specifying a library location filter so the report counts only items whose location equals the selected library.",
+   "type": "functional",
+   "source_quote": "Counts all items with a location = your library",
+   "stakeholder": "Robert Chen, Katherine Gregory",
+   "priority_signals": "Summary: \"in a given library at any point in time.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Group by category attributes",
+   "statement": "The system shall group counts by category attributes such as fiction/non-fiction and format.",
+   "type": "functional",
+   "source_quote": "Groups by categories (fiction/non-fiction, format, etc.)",
+   "stakeholder": "Robert Chen, Katherine Gregory",
+   "priority_signals": "Requested for collection management and design considerations",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Holds count per category",
+   "statement": "The system shall show the number of holds per category in the volume breakdown.",
+   "type": "functional",
+   "source_quote": "Shows breakdowns with holds count per category",
+   "stakeholder": "Robert Chen, Susan Sexton-Cooley",
+   "priority_signals": "Users explicitly requested holds in breakdown; appears in proposed query",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Point-in-time and historical filtering",
+   "statement": "The system shall allow filtering the report by a specific date or point in time to produce historical volume counts, not just current values.",
+   "type": "functional",
+   "source_quote": "We can also add date filters - volume at any point in time, not just current.",
+   "stakeholder": "Robert Chen, Katherine Gregory",
+   "priority_signals": "\"This will be tracked as a key requirement.\"; useful for historical comparisons",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Report volume changes over time and recent additions",
+   "statement": "The system shall provide reports of volume changes over time and support reporting how much volume was added in configurable recent intervals (e.g., last 30, 60, 90 days).",
+   "type": "functional",
+   "source_quote": "It would be helpful to see how much volume has been added in the last 30/60/90 days.",
+   "stakeholder": "Latoya Davidson, Robert Chen",
+   "priority_signals": "Latoya requested for assessment; Robert: \"We can definitely build reports that show volume changes over time.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Consolidated single-report output",
+   "statement": "The system shall provide a consolidated material volume report that aggregates counts so users do not need to manually gather data from multiple screens.",
+   "type": "functional",
+   "source_quote": "I'm currently pulling it manually from three different screens.",
+   "stakeholder": "Maria Rodriguez, Katherine Gregory",
+   "priority_signals": "User currently does manual aggregation for monthly board report; request marked as a key requirement",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Use acquisition date field for acquisition reports",
+   "statement": "The system shall use the item acquisition date tracked in the database when generating acquisition-related and time-range volume reports.",
+   "type": "data",
+   "source_quote": "Yes, the database tracks acquisition date for items.",
+   "stakeholder": "Robert Chen, Latoya Davidson",
+   "priority_signals": "Enables reporting of additions over time and last 30/60/90 days",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

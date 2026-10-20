@@ -1,0 +1,404 @@
+{
+ "assignments": [
+  {
+   "candidate_id": "C-481",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-482",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-483",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-484",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-485",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-486",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-487",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-488",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-489",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-490",
+   "area_code": "ACCT"
+  },
+  {
+   "candidate_id": "C-491",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-492",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-493",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-494",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-495",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-496",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-497",
+   "area_code": "UIXT"
+  },
+  {
+   "candidate_id": "C-498",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-499",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-500",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-501",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-502",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-503",
+   "area_code": "AUTH"
+  },
+  {
+   "candidate_id": "C-504",
+   "area_code": "UIXT"
+  },
+  {
+   "candidate_id": "C-505",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-506",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-507",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-508",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-509",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-510",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-511",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-512",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-513",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-514",
+   "area_code": "UIXT"
+  },
+  {
+   "candidate_id": "C-515",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-516",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-517",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-518",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-519",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-520",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-521",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-522",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-523",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-524",
+   "area_code": "UIXT"
+  },
+  {
+   "candidate_id": "C-525",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-526",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-527",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-528",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-529",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-530",
+   "area_code": "UIXT"
+  },
+  {
+   "candidate_id": "C-531",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-532",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-533",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-534",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-535",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-536",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-537",
+   "area_code": "UIXT"
+  },
+  {
+   "candidate_id": "C-538",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-539",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-540",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-541",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-542",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-543",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-544",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-545",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-546",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-547",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-548",
+   "area_code": "PURGE"
+  },
+  {
+   "candidate_id": "C-549",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-550",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-551",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-552",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-553",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-554",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-555",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-556",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-557",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-558",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-559",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-560",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-561",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-562",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-563",
+   "area_code": "STKID"
+  },
+  {
+   "candidate_id": "C-564",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-565",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-566",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-567",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-568",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-569",
+   "area_code": "NFRQA"
+  },
+  {
+   "candidate_id": "C-570",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-571",
+   "area_code": "OPMIS"
+  },
+  {
+   "candidate_id": "C-572",
+   "area_code": "DATAQ"
+  },
+  {
+   "candidate_id": "C-573",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-574",
+   "area_code": "ROLE"
+  },
+  {
+   "candidate_id": "C-575",
+   "area_code": "CALCD"
+  },
+  {
+   "candidate_id": "C-576",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-577",
+   "area_code": "RPTMG"
+  },
+  {
+   "candidate_id": "C-578",
+   "area_code": "LOCAP"
+  },
+  {
+   "candidate_id": "C-579",
+   "area_code": "ANALY"
+  },
+  {
+   "candidate_id": "C-580",
+   "area_code": "UIXT"
+  }
+ ]
+}

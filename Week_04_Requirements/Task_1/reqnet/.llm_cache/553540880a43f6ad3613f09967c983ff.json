@@ -1,0 +1,284 @@
+{
+ "approved": false,
+ "summary": "Blocking issues remain: one explicit retention conflict, several overlapping or duplicate requirements, and one retained entry that explicitly states it is not a current software requirement. Traceability and uncovered-candidate checks are otherwise satisfactory.",
+ "issues": [
+  {
+   "kind": "conflict",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-ACCT-002",
+    "REQ-ACCT-011",
+    "REQ-ANALY-009"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-ACCT-002 and REQ-ACCT-011 state that de-identified aggregates follow approved policy and legal requirements and do not imply indefinite retention. REQ-ANALY-009 instead refers to a separate 'indefinite-retention rule' for de-identified monthly and annual aggregates. These retention obligations contradict one another.",
+   "suggested_fix": "Remove the indefinite-retention statement from REQ-ANALY-009 and reference REQ-ACCT-002 and REQ-ACCT-011 as the sole retention rules, or explicitly approve and reconcile a distinct indefinite-retention policy."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-NFRQA-002",
+    "REQ-NFRQA-032"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-NFRQA-002 and REQ-NFRQA-032 both require a privacy-preserving transaction archive, prohibit or constrain personally identifiable patron information, require an approved legal or policy baseline, and address retention. The differences are mostly wording and source attribution, not separate system needs.",
+   "suggested_fix": "Merge them into one privacy-preserving transaction archive requirement. Preserve the more precise retention cross-reference in REQ-NFRQA-032 and retain all applicable sources."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-NFRQA-016",
+    "REQ-NFRQA-036"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements require the system to use and remain compatible with a relational database structure. REQ-NFRQA-016 is the more complete version because it identifies PostgreSQL and the current environment; REQ-NFRQA-036 adds no distinct testable need.",
+   "suggested_fix": "Remove REQ-NFRQA-036 or merge its source into REQ-NFRQA-016."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-NFRQA-009",
+    "REQ-NFRQA-015"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements address preventing reporting workloads from degrading OPAC and circulation performance during operating hours. REQ-NFRQA-015 supplies the measurable two-second 95th-percentile target and workload test, while REQ-NFRQA-009 repeats the same need in qualitative terms.",
+   "suggested_fix": "Combine the qualitative non-interference statement with the measurable performance criteria in REQ-NFRQA-015, or make REQ-NFRQA-009 cover a separate explicitly defined performance or availability property."
+  },
+  {
+   "kind": "duplicate",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-RPTMG-031",
+    "REQ-RPTMG-039"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-RPTMG-031 requires scheduling reports hourly, daily, weekly, monthly, and yearly, while REQ-RPTMG-039 separately requires recurring report scheduling. REQ-RPTMG-039 adds no distinct behavior beyond the scheduling capability already specified in REQ-RPTMG-031.",
+   "suggested_fix": "Merge REQ-RPTMG-039 into REQ-RPTMG-031, or limit REQ-RPTMG-039 to a clearly distinct capability such as calendar exceptions, end dates, or recurrence management."
+  },
+  {
+   "kind": "blacklist",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-STKID-001"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-STKID-001 explicitly states that it is a stakeholder decision rather than a current software requirement and makes no implementation or acceptance claim. It is therefore incorrectly retained in the requirements set.",
+   "suggested_fix": "Move REQ-STKID-001 to a decisions, assumptions, or open-issues register, or discard it as a non-requirement. Add the eventual approved aged-debt field decision as a new requirement only after the decision is made."
+  },
+  {
+   "kind": "quality",
+   "severity": "blocking",
+   "requirement_ids": [
+    "REQ-CALCD-001",
+    "REQ-LOCAP-005",
+    "REQ-UIXT-010"
+   ],
+   "candidate_ids": [],
+   "description": "These requirements contain broad, difficult-to-test obligations. REQ-CALCD-001 refers to unspecified 'analysis tools' and collection usage without identifying measures or supported operations. REQ-LOCAP-005 uses undefined terms such as 'central location,' 'provide services,' and 'single source of truth.' REQ-UIXT-010 requires an 'intuitive' and 'understandable' interface without measurable usability criteria.",
+   "suggested_fix": "Define the supported measures, operations, organizational boundaries, and acceptance tests. Replace subjective terms with observable criteria such as task completion, navigation steps, supported user roles, response time, or usability-test thresholds."
+  },
+  {
+   "kind": "quality",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-NFRQA-010",
+    "REQ-ANALY-017"
+   ],
+   "candidate_ids": [],
+   "description": "REQ-NFRQA-010 mixes system requirements with external deployment assumptions and uses undefined terms such as 'reliable network connectivity,' 'enterprise infrastructure,' and 'redundant servers.' REQ-ANALY-017 requires reports to show whether branches are 'growing or shrinking' without defining the measure, comparison baseline, or calculation.",
+   "suggested_fix": "Move external assumptions to an assumptions section and define measurable availability, network, and redundancy constraints if they are binding. For REQ-ANALY-017, specify the metric, time intervals, comparison method, and acceptance examples."
+  },
+  {
+   "kind": "terminology",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-ACCT-006",
+    "REQ-ACCT-007",
+    "REQ-ANALY-001",
+    "REQ-ANALY-002",
+    "REQ-ANALY-003",
+    "REQ-ANALY-004",
+    "REQ-ANALY-005",
+    "REQ-ANALY-006",
+    "REQ-ANALY-007"
+   ],
+   "candidate_ids": [],
+   "description": "The specification alternates between 'system,' 'library system,' and 'consortium,' and the unqualified 'system' can be confused with either a library system or the entire consortium. The automatic terminology finding is not a valid patron/client correction in REQ-NFRQA-004 and REQ-NFRQA-021 because 'client' there denotes client software, not a library customer; however, organizational-scope terminology still needs clarification.",
+   "suggested_fix": "Use 'library system' for the administrative collection of libraries, 'consortium' for the broader participating group, and 'reporting system' or 'software system' for the product. Qualify every occurrence of 'system' where scope affects behavior or results."
+  },
+  {
+   "kind": "priority",
+   "severity": "minor",
+   "requirement_ids": [
+    "REQ-ANALY-003",
+    "REQ-STKID-002"
+   ],
+   "candidate_ids": [],
+   "description": "Both requirements cover privacy-protected demographic reporting. REQ-ANALY-003 rates anonymization as P1, while REQ-STKID-002 rates the same de-identification and non-exposure obligation as P2. The analytical feature may be P2, but the shared privacy constraint should not appear to have a lower priority in the later requirement.",
+   "suggested_fix": "Separate the P1 privacy constraint from the P2 demographic-reporting capability, or explicitly state that REQ-STKID-002 inherits the P1 privacy obligation from REQ-ANALY-003."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "patron",
+   "definition": "A library customer whose account, demographic information, holds, circulation activity, or financial activity may be represented in the system.",
+   "avoid": [
+    "borrower",
+    "customer",
+    "client",
+    "community user"
+   ]
+  },
+  {
+   "term": "authorized staff user",
+   "definition": "A staff member or other authorized worker permitted to log in, operate the system, or use reports according to assigned permissions.",
+   "avoid": [
+    "user",
+    "staff member",
+    "operator",
+    "employee user"
+   ]
+  },
+  {
+   "term": "report user",
+   "definition": "An authorized staff user who runs, designs, schedules, reviews, or administers reports.",
+   "avoid": [
+    "report consumer",
+    "report operator"
+   ]
+  },
+  {
+   "term": "library",
+   "definition": "An organizational or physical library unit that owns, houses, or manages items and can be used as a reporting scope.",
+   "avoid": [
+    "branch",
+    "facility"
+   ]
+  },
+  {
+   "term": "library system",
+   "definition": "An administrative collection of one or more libraries that share operational data, policies, and reporting.",
+   "avoid": [
+    "local system",
+    "system",
+    "organization"
+   ]
+  },
+  {
+   "term": "consortium",
+   "definition": "The broader group of participating library systems governed or operated together.",
+   "avoid": [
+    "network",
+    "enterprise"
+   ]
+  },
+  {
+   "term": "item",
+   "definition": "An owned or circulating physical or electronic copy that can have a location, status, circulation history, value, or transfer history.",
+   "avoid": [
+    "copy",
+    "material",
+    "volume"
+   ]
+  },
+  {
+   "term": "item location",
+   "definition": "The current physical or organizational location assigned to an item, which may differ from its owning library or transfer destination.",
+   "avoid": [
+    "location",
+    "branch location",
+    "facility location"
+   ]
+  },
+  {
+   "term": "transaction",
+   "definition": "A recorded operational or financial occurrence such as a checkout, check-in, renewal, hold placement, payment, or registration.",
+   "avoid": [
+    "activity",
+    "event",
+    "operation"
+   ]
+  },
+  {
+   "term": "hold",
+   "definition": "A patron request for an item or title, including its placement method, status, fulfillment, and pickup state.",
+   "avoid": [
+    "request",
+    "reservation",
+    "hold request"
+   ]
+  },
+  {
+   "term": "query",
+   "definition": "A set of selectable fields, filters, joins, grouping rules, and Boolean conditions used to retrieve or analyze records.",
+   "avoid": [
+    "search",
+    "report definition",
+    "filter"
+   ]
+  },
+  {
+   "term": "report",
+   "definition": "A generated presentation or export of queried, aggregated, or predefined system data.",
+   "avoid": [
+    "output",
+    "listing",
+    "analysis"
+   ]
+  },
+  {
+   "term": "report template",
+   "definition": "A saved report definition containing fields, criteria, formatting, permissions, and optionally scheduling or delivery settings.",
+   "avoid": [
+    "canned report",
+    "report definition",
+    "saved query"
+   ]
+  },
+  {
+   "term": "reporting system",
+   "definition": "The software product specified by this document, distinct from the enterprise Library Automation System and from a library system or consortium.",
+   "avoid": [
+    "system",
+    "enterprise",
+    "client"
+   ]
+  },
+  {
+   "term": "uncataloged material",
+   "definition": "Library material tracked for inventory or circulation without a complete bibliographic record.",
+   "avoid": [
+    "non-cataloged material",
+    "uncataloged shipment",
+    "bulk material"
+   ]
+  },
+  {
+   "term": "weeding",
+   "definition": "The collection-management process of identifying items for review, withdrawal, discard, or purge; it does not itself imply deletion.",
+   "avoid": [
+    "cleanup",
+    "purge"
+   ]
+  },
+  {
+   "term": "purge",
+   "definition": "An authorized operation that permanently deletes selected records or related records from the system.",
+   "avoid": [
+    "removal",
+    "deletion when the broader audit or policy concept is intended"
+   ]
+  },
+  {
+   "term": "client application",
+   "definition": "A browser-based or Windows-compatible software interface used to access the reporting system; this term does not mean a library patron.",
+   "avoid": [
+    "client when referring to a patron",
+    "patron-facing client unless the software interface is intended"
+   ]
+  }
+ ]
+}

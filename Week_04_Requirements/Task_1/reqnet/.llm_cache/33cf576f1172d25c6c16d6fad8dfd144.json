@@ -1,0 +1,103 @@
+{
+ "candidates": [
+  {
+   "title": "Count and track deletions",
+   "statement": "The system shall count and track record deletions (for example item records and patron records) per location and per system.",
+   "type": "functional",
+   "source_quote": "We need to be able to count and track record deletions (item records, patron records) per location and per system.",
+   "stakeholder": "Maria Rodriguez / Katherine Gregory",
+   "priority_signals": "for auditing purposes; \"Requirement consolidated:\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Persist deletion audit entries",
+   "statement": "The system shall record deletion events in an audit log so that deleted records do not disappear without a trace.",
+   "type": "functional",
+   "source_quote": "Right now when something gets deleted, it just... disappears. No record.",
+   "stakeholder": "Maria Rodriguez / Robert Chen",
+   "priority_signals": "This is actually a good idea from an auditing standpoint.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Database trigger for deletions",
+   "statement": "The system shall implement a database trigger that logs deletions to a deletion audit table.",
+   "type": "functional",
+   "source_quote": "A trigger in the database that logs deletions to an audit table",
+   "stakeholder": "Robert Chen",
+   "priority_signals": "Robert will implement the database triggers.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Deletion audit table fields",
+   "statement": "The system shall store deletion audit records with fields: record_type, record_id, deleted_by, deleted_at, and location.",
+   "type": "data",
+   "source_quote": "Fields: record_type, record_id, deleted_by, deleted_at, location",
+   "stakeholder": "Robert Chen",
+   "priority_signals": "Listed as required fields for the audit table",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Record pre-deletion status/reason",
+   "statement": "The system shall (optionally) record the status before deletion or a reason for the deletion in the deletion audit record.",
+   "type": "data",
+   "source_quote": "Possibly why (status before deletion?)",
+   "stakeholder": "George Tuttle",
+   "priority_signals": "raised as a possibly useful field",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Report interface for deletion audit",
+   "statement": "The system shall provide a report interface that can query the deletion audit table and present results to users.",
+   "type": "functional",
+   "source_quote": "A report interface to query this audit table",
+   "stakeholder": "Robert Chen / Katherine Gregory",
+   "priority_signals": "Katherine will draft the report interface requirements.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Deletion reporting and aggregation",
+   "statement": "The system shall provide reports that show total deletions per period (month, quarter, year), deletions by type (item, patron, other), deletions by location, top users who delete the most records, and shall allow aggregation and filtering by date range, by user, and by record type; reports shall be available per system and per location.",
+   "type": "functional",
+   "source_quote": "The report should show deletions per location and per system. We can aggregate by date range, by user, by record type. ... Total deletions per period ... Deletions by type ... Deletions by location ... Top users",
+   "stakeholder": "Susan Sexton-Cooley / George Tuttle / Robert Chen / Katherine Gregory",
+   "priority_signals": "helps with compliance; \"absolutely need this\"; administrative requirement",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Log denied deletion attempts",
+   "statement": "The system shall log attempted deletion actions that were denied, including the attempted actor and timestamp, to support compliance and troubleshooting.",
+   "type": "functional",
+   "source_quote": "Can we also track attempted deletions that were denied?",
+   "stakeholder": "Latoya Davidson / Katherine Gregory",
+   "priority_signals": "helpful for compliance and troubleshooting; included in consolidated requirement",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Trace deletion of a specific record",
+   "statement": "The system shall allow users to retrieve audit entries for a specific record_id so administrators can trace who deleted a specific record and when.",
+   "type": "functional",
+   "source_quote": "If we accidentally delete something we shouldn't have, we need to be able to trace it.",
+   "stakeholder": "Dana Peeler / George Tuttle",
+   "priority_signals": "requested for accountability and troubleshooting",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

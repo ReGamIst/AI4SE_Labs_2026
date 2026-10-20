@@ -1,0 +1,323 @@
+{
+ "candidates": [
+  {
+   "title": "Management analysis tools",
+   "statement": "The system shall provide tools for library administrators, managers, and staff to analyze operations, manage collections, and make data-driven decisions.",
+   "type": "functional",
+   "source_quote": "provides the tools needed for library administrators, managers, and staff to analyze operations, manage collections, and make data-driven decisions.",
+   "stakeholder": "Library administrators, managers, staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Centralized multi-location operations",
+   "statement": "The system shall consolidate Management Processes at a central location and accept input from and provide services to multiple library locations.",
+   "type": "functional",
+   "source_quote": "The Management Processes are consolidated at a central location and accept input from and provide services to multiple library locations.",
+   "stakeholder": "Central library administration",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Integration with ILS modules",
+   "statement": "The system shall rely on and integrate with the data structures and functionality of the broader ILS, including Acquisitions and Cataloging modules.",
+   "type": "functional",
+   "source_quote": "They rely on the data structures and functionality of the broader ILS, including Acquisitions and Cataloging modules.",
+   "stakeholder": "ILS integrators, Cataloging/Acquisitions staff",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Collection usage analysis",
+   "statement": "The system shall provide analysis capabilities for the library collection and its use by patrons.",
+   "type": "functional",
+   "source_quote": "Analyzing the Library collection and its use by patrons.",
+   "stakeholder": "Collection managers, librarians",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Branch capacity and distribution analysis",
+   "statement": "The system shall provide analysis capabilities for branch capacity and optimal distribution of the collection.",
+   "type": "functional",
+   "source_quote": "Analyzing branch capacity and optimal distribution of the collection.",
+   "stakeholder": "Collection planners, branch managers",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Patron demographics analysis",
+   "statement": "The system shall provide analysis capabilities for the demographics and interests of patrons.",
+   "type": "functional",
+   "source_quote": "Analyzing the demographics and interests of patrons.",
+   "stakeholder": "Marketing, outreach, planners",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Staff productivity and workflow analysis",
+   "statement": "The system shall provide analysis capabilities for staff productivity and workflow.",
+   "type": "functional",
+   "source_quote": "Analyzing staff productivity and workflow.",
+   "stakeholder": "Library managers, HR",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Financial transaction tracking",
+   "statement": "The system shall track and verify financial transactions related to library operations.",
+   "type": "functional",
+   "source_quote": "Tracking and verifying financial transactions.",
+   "stakeholder": "Finance staff, auditors",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Consortium-scale capacity support",
+   "statement": "The system shall support a library consortium scale of at least 286 locations, 17 million annual circulations, and purchasing/processing over 900,000 items per year.",
+   "type": "non-functional",
+   "source_quote": "support a library consortium with 286 locations, 17 million annual circulations, and purchasing/processing over 900,000 items per year.",
+   "stakeholder": "Consortium IT and operations",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Reports and searches during open hours",
+   "statement": "The system shall allow searches and reports to be processed during open hours without disrupting other system functions.",
+   "type": "non-functional",
+   "source_quote": "highly desirable that searches and reports can be processed during open hours without disrupting other system functions.",
+   "stakeholder": "Operations staff",
+   "priority_signals": "[* High Priority] (highly desirable)",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Server OS support",
+   "statement": "The system shall operate on a Linux or Solaris server environment.",
+   "type": "constraint",
+   "source_quote": "The system must operate on a Linux or Solaris server environment.",
+   "stakeholder": "IT operations",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Client access options",
+   "statement": "The system shall be accessible through a web browser or a Windows-compatible client.",
+   "type": "non-functional",
+   "source_quote": "The system must be accessible through a web browser or a Windows-compatible client.",
+   "stakeholder": "End users",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Supported web browsers",
+   "statement": "If web-browser based, the system shall be accessible through Microsoft Internet Explorer (version 6.0 and later) and Mozilla Firefox (version 2.0 and later).",
+   "type": "non-functional",
+   "source_quote": "accessible through Microsoft Internet Explorer (version 6.0 and later) and Mozilla Firefox (version 2.0 and later).",
+   "stakeholder": "End users, UI developers",
+   "priority_signals": "[* Medium Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Assistive technology accessibility",
+   "statement": "The system shall be accessible with screen-reading software, screen-magnification software, and other assistive technology programs.",
+   "type": "non-functional",
+   "source_quote": "accessible with screen-reading software, screen-magnification software, and other assistive technology programs",
+   "stakeholder": "Users with disabilities, accessibility officers",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Relational database backend",
+   "statement": "The system shall use a fully relational database back-end.",
+   "type": "constraint",
+   "source_quote": "The system must use a fully relational database back-end.",
+   "stakeholder": "Database administrators, developers",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Standards-compliant HTML output",
+   "statement": "The system shall produce standards-compliant HTML output for web-based components.",
+   "type": "constraint",
+   "source_quote": "The system must produce standards-compliant HTML output for web-based components.",
+   "stakeholder": "Web developers, accessibility",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Development and training environment",
+   "statement": "The system shall provide a development and training environment with the ability to migrate configurations to a production environment.",
+   "type": "non-functional",
+   "source_quote": "provide a development and training environment with the ability to migrate configurations to a production environment.",
+   "stakeholder": "Developers, trainers, administrators",
+   "priority_signals": "[* Medium Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Role-based access control",
+   "statement": "The system shall control user rights and privileges through security groups and/or roles that allow access control for individuals, workgroups, and arbitrary staff groups.",
+   "type": "functional",
+   "source_quote": "User rights and privileges will be controlled through security groups and or \"roles\" that allow access control for individuals, workgroups, and arbitrary staff groups.",
+   "stakeholder": "System administrators, security officers",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Non-constraint of OPAC",
+   "statement": "The system shall not constrain functionality or features of the Online Public Access Catalog (OPAC) module.",
+   "type": "constraint",
+   "source_quote": "These requirements must not constrain functionality or features of the Online Public Access Catalog (OPAC) module.",
+   "stakeholder": "OPAC module owners",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Data specifications for records",
+   "statement": "The developer shall provide complete data specifications for authority records, bibliographic records, order records, item records, hold/request records, and other records maintained or accessed by the Management Processes.",
+   "type": "documentation",
+   "source_quote": "The developer must provide complete data specifications for authority records, bibliographic records, order records, item records, hold/request records, and other records maintained or accessed by the Management Processes.",
+   "stakeholder": "Developers, integrators, data architects",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "High-level process descriptions",
+   "statement": "The developer shall provide a thorough high-level description of major processes, including bibliographic record import and export, validation of bibliographic records against internal and external authority sources, and standard reports.",
+   "type": "documentation",
+   "source_quote": "provide a thorough high-level description of major processes, including bibliographic record import and export, validation of bibliographic records against internal and external authority sources, and standard reports.",
+   "stakeholder": "Operations staff, developers",
+   "priority_signals": "[* Medium Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Online hierarchical HTML help",
+   "statement": "The system shall provide an online, hierarchical, and cross-linked help system in HTML that describes and illustrates all system functions.",
+   "type": "documentation",
+   "source_quote": "The system must provide an online, hierarchical, and cross-linked help system in HTML that describes and illustrates all system functions.",
+   "stakeholder": "End users, trainers",
+   "priority_signals": "[* High Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Error reporting and admin feedback",
+   "statement": "The system shall provide thorough high-level error reporting and feedback, and shall allow low-level query-specific feedback for Local and Global System Administrators from the front-end interface.",
+   "type": "documentation",
+   "source_quote": "provide thorough high-level error reporting and feedback, and shall allow low-level query-specific feedback for Local and Global System Administrators from the front-end interface.",
+   "stakeholder": "Local and Global System Administrators",
+   "priority_signals": "[* Medium Priority]",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "OPAC patron access",
+   "statement": "The system shall support patron interaction with library resources through the Online Public Access Catalog (OPAC).",
+   "type": "functional",
+   "source_quote": "Patrons may interact with the system through the OPAC.",
+   "stakeholder": "Patrons",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Local admin configuration and reporting",
+   "statement": "The system shall allow Local System Administrators to configure local settings and run system reports.",
+   "type": "functional",
+   "source_quote": "Local System Administrators: ... They can configure local settings and run system reports.",
+   "stakeholder": "Local System Administrators",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Reports for managers' planning",
+   "statement": "The system shall provide reports suitable for planning and evaluation to Library Managers.",
+   "type": "functional",
+   "source_quote": "Library Managers: ... They use reports for planning and evaluation.",
+   "stakeholder": "Library Managers",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Aggregated high-level reports",
+   "statement": "The system shall produce aggregated, high-level reports suitable for strategic planning and board presentations for Library Administrators.",
+   "type": "functional",
+   "source_quote": "They require aggregated, high-level reports for strategic planning and board presentations.",
+   "stakeholder": "Library Administrators, executives",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Global admin system management and reporting",
+   "statement": "The system shall provide Global System Administrators with capabilities to implement software changes and configurations and to generate statistical reports for the entire system/consortium.",
+   "type": "functional",
+   "source_quote": "Global System Administrator: ... implementing software changes and configurations, and generating statistical reports for the entire system.",
+   "stakeholder": "Global System Administrator, consortium IT",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Operate within enterprise library automation",
+   "statement": "The Management Processes component shall operate as part of a larger enterprise-level Library Automation System and interoperate with other modules.",
+   "type": "functional",
+   "source_quote": "This component operates as part of a larger enterprise-level Library Automation System.",
+   "stakeholder": "Enterprise IT, module owners",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

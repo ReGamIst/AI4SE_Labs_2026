@@ -1,0 +1,136 @@
+{
+ "candidates": [
+  {
+   "title": "Generate inactive patrons list",
+   "statement": "The system shall generate a list of patrons who have had no circulation or electronic activity in the last X days.",
+   "type": "functional",
+   "source_quote": "We need a report that shows patrons with no circulation or electronic activity in the last X days.",
+   "stakeholder": "Maria Rodriguez / Pines reports working group",
+   "priority_signals": "Multiple participants requested; consolidated in summary by Katherine",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Configurable inactivity threshold",
+   "statement": "The system shall allow the inactivity threshold X (days) to be configurable, providing common presets (30, 90, 180, 365) and allowing any custom number of days.",
+   "type": "functional",
+   "source_quote": "X should be configurable - we usually use 365 days ... Can we make it fully customizable? Like any number of days?",
+   "stakeholder": "Maria Rodriguez; Susan Sexton-Cooley",
+   "priority_signals": "Users typically use 365 days; suggested presets (30, 90, 180, 365)",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Electronic activity definitions",
+   "statement": "The system shall treat electronic activity for inactivity determination to include: OPAC/patron account logins, placing holds online, renewing items online, and accessing digital collections (if integrated).",
+   "type": "data",
+   "source_quote": "\"Electronic activity\" should include: 1. Logging into OPAC/patron account 2. Placing holds online 3. Renewing items online 4. Accessing digital collections (if integrated)",
+   "stakeholder": "Susan Sexton-Cooley; George Tuttle; Dana Peeler",
+   "priority_signals": "Multiple participants asked to include electronic activity (not just checkouts)",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Configurable report scope levels",
+   "statement": "The system shall allow the inactive patrons list to be generated/configured at multiple organizational levels such as System, Home Library, County, and other levels as needed.",
+   "type": "functional",
+   "source_quote": "The list should be configurable to different levels - System, Home Library, County, etc.",
+   "stakeholder": "Maria Rodriguez; George Tuttle",
+   "priority_signals": "Requested by multiple libraries; consolidated in summary",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Aggregate counts and branch drilldown",
+   "statement": "The system shall aggregate and display counts of inactive patrons by branch (home library) at the system level and allow drilldown to branch-level lists so branches can be assigned cleanup tasks.",
+   "type": "functional",
+   "source_quote": "At the system level, I can see which branches have the most inactive patrons. At the home library level, I can assign cleanup tasks to specific branches.",
+   "stakeholder": "George Tuttle",
+   "priority_signals": "User needs to identify branches with most inactive patrons and delegate cleanup",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Include current mailing addresses",
+   "statement": "The system shall include each patron's current mailing address in the inactive patrons report for outreach purposes.",
+   "type": "data",
+   "source_quote": "We mail postcards to inactive patrons, so the report needs to include current mailing addresses.",
+   "stakeholder": "Dana Peeler; outreach staff",
+   "priority_signals": "Used for outreach (mail postcards); explicitly requested",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Separate handling of patrons with outstanding fines",
+   "statement": "The system shall identify and flag inactive patrons who have outstanding fines so those accounts can be handled differently.",
+   "type": "functional",
+   "source_quote": "Also, should we flag patrons who are inactive but still owe fines? We should probably handle those differently.",
+   "stakeholder": "Dana Peeler; Susan Sexton-Cooley",
+   "priority_signals": "Explicit request to treat these accounts differently",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Exclude patrons by flags or types",
+   "statement": "The system shall allow the inactive patrons report to exclude patrons based on configurable criteria, including 'do not disturb' flags, VIP status, staff members, and patrons who have opted out of communications.",
+   "type": "functional",
+   "source_quote": "we should be able to EXCLUDE certain patrons ... Patrons with \"do not disturb\" flags - VIP patrons - Staff members - Patrons who have opted out of communications",
+   "stakeholder": "Latoya Davidson; report users",
+   "priority_signals": "Explicit list given of patron categories to exclude",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Export report as CSV",
+   "statement": "The system shall provide the inactive patrons report in an exportable format, specifically CSV, for upload to outreach systems.",
+   "type": "functional",
+   "source_quote": "Exportable format (CSV) ... The report should be exportable. We upload it to our outreach system.",
+   "stakeholder": "Latoya Davidson; Katherine Gregory",
+   "priority_signals": "Explicit export requirement; integration with outreach workflow",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Background processing and caching",
+   "statement": "The system shall run the inactive patrons report as a background job and cache results to avoid slow interactive performance on large datasets.",
+   "type": "non-functional",
+   "source_quote": "We should run it as a background report and cache results. ... Background processing for performance",
+   "stakeholder": "Robert Chen; system administrators",
+   "priority_signals": "Performance concern called out; included in summary",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Compute last activity by combining tables",
+   "statement": "The system shall compute each patron's most recent activity date by combining data from circulation transactions and electronic-activity sources (OPAC logins, online holds, renewals, digital resource access) across multiple tables.",
+   "type": "data",
+   "source_quote": "We query the transaction table for the most recent activity per patron ... These are stored in different tables, so we'd need a combined query.",
+   "stakeholder": "Robert Chen; report implementers",
+   "priority_signals": "Technical note from implementer; action item to optimize query",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Support large patron dataset",
+   "statement": "The system shall support generating the inactive patrons report on large datasets (e.g., databases with millions of patrons) without degrading interactive system performance.",
+   "type": "non-functional",
+   "source_quote": "One performance note: for 3.5 million patrons, this query could be slow.",
+   "stakeholder": "Robert Chen; IT operations",
+   "priority_signals": "Scale example: 3.5 million patrons; explicit performance concern",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

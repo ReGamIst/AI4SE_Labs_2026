@@ -1,0 +1,147 @@
+{
+ "candidates": [
+  {
+   "title": "System-wide capacity overview",
+   "statement": "The system shall provide an interface showing the capacity of all branches at once.",
+   "type": "functional",
+   "source_quote": "As a branch manager, I need to see the capacity of all branches in our system, not just my own.",
+   "stakeholder": "Maria Rodriguez (branch manager)",
+   "priority_signals": "Initial request from branch manager; summary: 'The system should provide an interface showing the capacity of all branches.'",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "High-level summary view with key metrics",
+   "statement": "The system shall provide a high-level summary view showing all branches and key capacity metrics in a single overview.",
+   "type": "functional",
+   "source_quote": "1. A high-level summary view (all branches, key metrics)",
+   "stakeholder": "Chris Sharp / Working group",
+   "priority_signals": "Listed in proposed features; included in Katherine's summary as agreed.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Drill-down to branch details",
+   "statement": "The system shall allow users to drill down from the high-level overview into an individual branch's detailed capacity view.",
+   "type": "functional",
+   "source_quote": "2. Ability to drill down into individual branches",
+   "stakeholder": "Chris Sharp / Working group",
+   "priority_signals": "Included in proposed list and Katherine's summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Display branch key metrics in overview",
+   "statement": "The system shall display key capacity metrics for each branch in the overview (for example: current load, capacity percentage, and other chosen metrics).",
+   "type": "data",
+   "source_quote": "A high-level summary view (all branches, key metrics)",
+   "stakeholder": "Chris Sharp / Working group",
+   "priority_signals": "Part of the high-level summary requirement; needed for decision-making when allocating resources.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Sorting and filtering options",
+   "statement": "The system shall provide sorting and filtering of branches by region, by library type, and by current load.",
+   "type": "functional",
+   "source_quote": "I'd want to be able to sort and filter. By region, by library type, by current load...",
+   "stakeholder": "Jennifer Durham / Directors (CSV mention)",
+   "priority_signals": "Explicit user request; included in Katherine's summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Export capacity data to CSV",
+   "statement": "The system shall provide the ability to export capacity data and views to a CSV file.",
+   "type": "functional",
+   "source_quote": "And export to CSV for the directors who want spreadsheets.",
+   "stakeholder": "Jennifer Durham / Directors",
+   "priority_signals": "User request; included in Katherine's summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Trend data (growth/shrink)",
+   "statement": "The system shall present trend data for branches showing growth or shrink patterns over time.",
+   "type": "functional",
+   "source_quote": "One more thing - can the capacity interface also show trends? Like, is this branch growing or shrinking?",
+   "stakeholder": "Jennifer Durham / Planning staff",
+   "priority_signals": "User request for long-term planning; included in Katherine's summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Color-coded capacity status",
+   "statement": "The system shall offer color-coding of branch capacity status (for example: green for under capacity, yellow for getting full, red for at/over capacity).",
+   "type": "functional",
+   "source_quote": "Maybe color-coding - green for under capacity, yellow for getting full, red for at/over capacity",
+   "stakeholder": "Chris Sharp",
+   "priority_signals": "Suggested as a usability enhancement; example color mapping provided.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Grouping branches by region/system",
+   "statement": "The system shall allow branches to be grouped by system or region to reduce visual crowding in the overview.",
+   "type": "functional",
+   "source_quote": "Maybe we should group by system/region? Or allow filtering?",
+   "stakeholder": "Robert Chen / Working group",
+   "priority_signals": "Raised as a solution to overcrowding when many locations exist (286 locations noted).",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Aggregate capacity data from central database",
+   "statement": "The system shall aggregate capacity data across all branches by querying the centralized database.",
+   "type": "functional",
+   "source_quote": "The data is centralized in our database, so we can build queries that aggregate across all branches.",
+   "stakeholder": "Robert Chen / Technical",
+   "priority_signals": "Technical feasibility noted by developer; supports implementation.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Configurable capacity metrics",
+   "statement": "The system shall allow definition and configuration of what metrics constitute 'capacity' (e.g., number of items vs shelf space, number of physical items vs configured limit, circulation volume vs processing capacity).",
+   "type": "data",
+   "source_quote": "Also, what specific metrics define \"capacity\"? Is it: - Number of items vs. shelf space? - Number of physical items vs. a configured limit? - Circulation volume vs. processing capacity?",
+   "stakeholder": "Robert Chen / Working group",
+   "priority_signals": "Question raised as necessary input before building the interface; needs to be nailed down.",
+   "status": "questioned",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Usability with large number of locations",
+   "statement": "The system shall remain usable when displaying hundreds of locations (e.g., 286) by providing mechanisms such as grouping, filtering, or other UI techniques to avoid overcrowding.",
+   "type": "non-functional",
+   "source_quote": "One consideration: with 286 locations, the overview might get crowded.",
+   "stakeholder": "Robert Chen / Working group",
+   "priority_signals": "Specific scale value (286 locations) called out as a constraint to address.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Cross-branch visibility for branch managers",
+   "statement": "The system shall allow branch managers (and other authorized roles) to view capacity information for all branches, not limited to their own branch only.",
+   "type": "functional",
+   "source_quote": "As a branch manager, I need to see the capacity of all branches in our system, not just my own.",
+   "stakeholder": "Branch managers",
+   "priority_signals": "User request motivated by operational needs when reallocating items/resources.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

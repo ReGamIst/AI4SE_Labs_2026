@@ -1,0 +1,158 @@
+{
+ "candidates": [
+  {
+   "title": "Missing/Damaged report per branch",
+   "statement": "The system shall provide reports of missing and damaged items per branch.",
+   "type": "functional",
+   "source_quote": "System provides reports of missing and damaged items per branch.",
+   "stakeholder": "branch staff (Maria, Latoya)",
+   "priority_signals": "Maria: \"I need this for my inventory audit and for collection management.\" Latoya: \"That's crucial for accountability.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "In-transit items report (threshold)",
+   "statement": "The system shall generate a list of items that have been in-transit for more than X days, available per branch and per system.",
+   "type": "functional",
+   "source_quote": "System generates a list of items in-transit for more than X days (X configurable), per branch and per system.",
+   "stakeholder": "branch staff / delivery staff (Dana, Susan)",
+   "priority_signals": "Dana: \"Oh, we definitely need the in-transit report too.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Configurable in-transit threshold",
+   "statement": "The system shall allow the threshold X (number of days used to flag items as in-transit for more than X days) to be configurable.",
+   "type": "functional",
+   "source_quote": "X configurable",
+   "stakeholder": "reports working group / branch staff",
+   "priority_signals": "Susan: \"X configurable\"; Dana: \"X should be configurable\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Default in-transit threshold 7 days",
+   "statement": "The system shall default the in-transit threshold X to 7 days unless a user changes the configuration.",
+   "type": "non-functional",
+   "source_quote": "X should be configurable, probably 7 days default.",
+   "stakeholder": "Dana (front-line staff)",
+   "priority_signals": "Dana proposed a 7-day default.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Merge transit-to and transit-from",
+   "statement": "The system shall merge transit-to and transit-from records into a single in-transit report so front-line staff do not have to run two reports.",
+   "type": "functional",
+   "source_quote": "the report should merge transit-to and transit-from so front-line staff don't have to run two reports.",
+   "stakeholder": "front-line staff (Dana)",
+   "priority_signals": "Dana: \"so front-line staff don't have to run two reports.\" Susan and Katherine reiterated merged report in summary.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Sort in-transit report by due date",
+   "statement": "The system shall allow the in-transit report to be sorted by due date so staff can chase the oldest items first.",
+   "type": "functional",
+   "source_quote": "can we sort by due date? Front-line staff need to chase the oldest items first.",
+   "stakeholder": "front-line staff (Susan)",
+   "priority_signals": "Susan explicitly: \"Front-line staff need to chase the oldest items first.\"",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Date range filters for missing/damaged report",
+   "statement": "The system shall allow date-range selection (for example, last 30 days or last quarter) when generating missing and damaged items reports to support trending.",
+   "type": "functional",
+   "source_quote": "The missing/damaged report can include date ranges (e.g., last 30 days, last quarter, etc.) which would be useful for trending.",
+   "stakeholder": "reports working group (Robert, Maria)",
+   "priority_signals": "Robert: \"which would be useful for trending.\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Include item condition notes",
+   "statement": "The system shall include item condition notes (for example \"water damage\" or \"vandalism\") in the missing and damaged items report.",
+   "type": "data",
+   "source_quote": "Can the report include item condition notes? Like \"water damage\" or \"vandalism\"?",
+   "stakeholder": "branch staff (Latoya)",
+   "priority_signals": "Latoya: \"That helps us understand root causes.\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Filter by item status",
+   "statement": "The system shall allow the missing/damaged report to include or filter items by item status values such as \"missing\", \"lost\", or \"long overdue\".",
+   "type": "functional",
+   "source_quote": "we can query for items with status \"missing\" or \"lost\" and group by branch.",
+   "stakeholder": "technical/reporting (Robert)",
+   "priority_signals": "Robert: technical note about available statuses.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Counts and grouping by branch for auditing",
+   "statement": "The system shall provide counts of missing and damaged items grouped by branch to support auditing and accountability.",
+   "type": "functional",
+   "source_quote": "Auditing - showing how many items went missing/were damaged",
+   "stakeholder": "auditors / managers (George, Latoya)",
+   "priority_signals": "George: auditing purpose; Latoya: \"crucial for accountability.\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Trending capability for reports",
+   "statement": "The system shall provide trending capabilities for missing and damaged items over selectable time ranges to inform collection management decisions.",
+   "type": "functional",
+   "source_quote": "which would be useful for trending... for collection decisions - if we keep losing the same titles",
+   "stakeholder": "collection managers (George, Maria)",
+   "priority_signals": "George: use for collection decisions; Robert: trending useful.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Identify repeat-lost titles",
+   "statement": "The system shall identify titles that have repeated missing or damage incidents to support collection decisions such as replacing copies or moving locations.",
+   "type": "functional",
+   "source_quote": "if we keep losing the same titles, maybe we need different copies or to move them to a different location",
+   "stakeholder": "collection managers (George)",
+   "priority_signals": "George: explicit use-case for collection decisions.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "In-transit detection rule (data constraint)",
+   "statement": "The system shall identify in-transit items by checking the transit table for records where arrival date is null and the departure date is more than X days ago.",
+   "type": "constraint",
+   "source_quote": "check the transit table for items where the arrival date is null and the departure date is more than X days ago.",
+   "stakeholder": "technical (Robert)",
+   "priority_signals": "Robert provided this as the technical method to detect in-transit items.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Document reports separately",
+   "statement": "The system documentation shall record the Missing and Damaged Items report and the In-Transit Items report as two separate requirements/entries.",
+   "type": "documentation",
+   "source_quote": "These are two separate but related requirements. Let's track them separately in our documentation.",
+   "stakeholder": "reports working group (Susan, Katherine)",
+   "priority_signals": "Katherine: \"Both will be added to the requirements list.\" Susan: asked to track separately.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

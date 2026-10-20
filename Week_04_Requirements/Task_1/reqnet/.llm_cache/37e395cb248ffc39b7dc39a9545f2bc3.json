@@ -1,0 +1,300 @@
+{
+ "requirements": [
+  {
+   "name": "Filter And Sort Reports",
+   "description": "The system shall allow report authors and users to filter and sort report definitions and results. Filtering shall be available on relevant report fields, including fields that are not currently filterable. This shall let users create and refine reports using the data they need.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Basic filtering and sorting are identified as needed, and a survey reports that some relevant fields are not currently available for filtering.",
+   "candidate_ids": [
+    "C-333",
+    "C-556"
+   ]
+  },
+  {
+   "name": "Select Report Fields",
+   "description": "The system shall allow staff to choose fields to query and fields to display in a report. Report authors shall be able to select fields using drag-and-drop. The system shall expose a comprehensive set of database fields rather than a limited subset so users can build reports with the data they need.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Field selection is explicitly marked high priority in a draft specification, appears in an agreed request, and limited field availability is identified as a current limitation.",
+   "candidate_ids": [
+    "C-350",
+    "C-354",
+    "C-195",
+    "C-306",
+    "C-262"
+   ]
+  },
+  {
+   "name": "Query Across Record Types",
+   "description": "The system shall allow users to design and run queries against all record types available to the system. Open report templates shall expose attributes associated with circulation, items, patrons, bills, and bibliographic records for both filtering and display. This shall allow staff to build queries across the record domains needed for reporting.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Access to all record types and the named open-template attributes are requested in multiple candidates, including an agreed request.",
+   "candidate_ids": [
+    "C-254",
+    "C-228",
+    "C-297"
+   ]
+  },
+  {
+   "name": "Combine Query Criteria",
+   "description": "The system shall let staff combine query clauses and filters using Boolean operators, including AND and OR, with grouping of clauses. It shall support status criteria such as missing, discard/weed, and damaged; time-in-status criteria; and activity criteria such as time since last circulation. Users shall be able to combine these criteria to construct complex report and candidate-selection queries.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Boolean operators are explicitly marked high priority and are requested in several sources, including an agreed multi-participant request; customizable status, time, and activity criteria are also agreed.",
+   "candidate_ids": [
+    "C-338",
+    "C-160",
+    "C-288",
+    "C-112",
+    "C-092"
+   ]
+  },
+  {
+   "name": "Support Relational Queries",
+   "description": "The system shall support complex queries and joins against the main relational database structure. It shall allow complex analytical queries to be executed without requiring a denormalized reporting schema. This shall enable report authors to query related data while avoiding a separate denormalized schema as a prerequisite.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Complex queries are identified as a limitation, and relational querying is requested by a systems administrator; the source also explains the preference to avoid denormalized schemas.",
+   "candidate_ids": [
+    "C-346",
+    "C-442",
+    "C-538"
+   ]
+  },
+  {
+   "name": "Filter Patron Characteristics",
+   "description": "The system shall allow users to limit reports by patron age range, ZIP code, county of residence, home branch, patron type, and preferred language. Users shall be able to apply these characteristics as report filters. This shall support reports targeted to defined patron groups.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The request is agreed and provides concrete patron filter fields, but evidence is from one source.",
+   "candidate_ids": [
+    "C-105"
+   ]
+  },
+  {
+   "name": "Group Patron Results",
+   "description": "The system shall allow users to group report results by patron age range, ZIP code, county of residence, home branch, patron type, and preferred language. Grouping shall support aggregates such as checkout counts by age range. This shall help staff analyze patron activity for planning purposes.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The request is agreed and described as essential for program planning by a stakeholder, but comes from one source.",
+   "candidate_ids": [
+    "C-106"
+   ]
+  },
+  {
+   "name": "Filter Transaction Details",
+   "description": "The system shall allow users to filter reports by transaction date and time, workstation, and staff member. Users shall be able to apply these criteria when running a report. This shall support investigation and reporting of transactions by when, where, and by whom they occurred.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The specific transaction filters are requested in one draft specification, with no additional priority or agreement evidence.",
+   "candidate_ids": [
+    "C-248"
+   ]
+  },
+  {
+   "name": "Filter By Survey Name",
+   "description": "The system shall allow users to filter reports by survey name rather than requiring them to enter a survey ID. The system shall resolve the selected survey name to its corresponding ID internally. This shall make survey-based filtering usable without requiring users to know internal identifiers.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The same need appears in a draft specification and meeting notes, with the latter defining the required name-to-ID resolution.",
+   "candidate_ids": [
+    "C-247",
+    "C-523"
+   ]
+  },
+  {
+   "name": "Select Picklist Values",
+   "description": "The system shall allow staff to select query values from picklists of possible values. Picklist selection shall be available while designing a query. This shall help users supply valid filter values without having to enter them manually.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Picklist selection is explicitly marked high priority in a draft specification and is also included in an agreed request.",
+   "candidate_ids": [
+    "C-295",
+    "C-184"
+   ]
+  },
+  {
+   "name": "Use Regular Expressions",
+   "description": "The system shall support regular-expression matching in query and report filters. Staff shall be able to select regular expressions from a dropdown when designing queries. This shall enable advanced matching while making available expressions discoverable to users.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Regular-expression support is explicitly marked high priority in a draft specification, identified as a current limitation, and included in an agreed request.",
+   "candidate_ids": [
+    "C-189",
+    "C-379",
+    "C-298"
+   ]
+  },
+  {
+   "name": "Include Null And Blank Values",
+   "description": "The system shall include records with null or blank field values in query and report results rather than implicitly filtering them out. This behavior shall apply regardless of the selected filters or displayed fields. This shall make records with missing data visible in reporting.",
+   "type": "data",
+   "priority": "P1",
+   "priority_rationale": "The requirement is stated as a must in agreed meeting notes and is repeated across a draft specification, reference document, and survey; a later agreed decision supersedes the earlier question about whether users should choose to exclude nulls.",
+   "candidate_ids": [
+    "C-252",
+    "C-527",
+    "C-558",
+    "C-359"
+   ]
+  },
+  {
+   "name": "Identify Data Quality Issues",
+   "description": "The system shall provide reports that identify bibliographic records missing specified MARC fields. It shall also report items with invalid item types, items with excessively long call numbers, and bibliographic records with no item records. This shall help cataloging staff find records that need data-quality review.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Specific data-quality report needs are identified in a reference document and emphasized in a stakeholder interview.",
+   "candidate_ids": [
+    "C-337",
+    "C-408"
+   ]
+  },
+  {
+   "name": "Provide Data Specifications",
+   "description": "The system developer shall provide complete data specifications for authority, bibliographic, order, item, hold/request, and other records maintained or accessed by the system. The specifications shall include field names, data types, and relationships. This documentation shall help report writers and developers understand which data can be queried and how records relate.",
+   "type": "documentation",
+   "priority": "P2",
+   "priority_rationale": "Complete data specifications are agreed and described as essential, with the requirement repeated in meeting minutes and later meeting notes.",
+   "candidate_ids": [
+    "C-486",
+    "C-532"
+   ]
+  },
+  {
+   "name": "Build Candidate Queries",
+   "description": "The system shall provide a query builder for identifying candidate materials for transfer or other targeted actions. Users shall be able to query by criteria such as item location and circulation inactivity, including items in a specified location that have not circulated for a selected period. This shall let collection and cataloging staff identify candidate records for review and action.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Candidate-material queries appear in a stakeholder interview and a survey, with 44% of respondents requesting the capability; a separate request also describes a concrete location and inactivity use case.",
+   "candidate_ids": [
+    "C-056",
+    "C-421",
+    "C-566"
+   ]
+  },
+  {
+   "name": "Identify Purge Candidates",
+   "description": "The system shall allow cataloging staff to identify item records for purging using customizable criteria. Criteria shall include item status, such as missing or discard/weed, time spent in a status, and activity such as time since last circulation. Users shall be able to combine applicable criteria to identify the items that meet their purge policy.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Cataloging staff agreed on customizable purge criteria, and the source provides concrete status, time, and activity examples.",
+   "candidate_ids": [
+    "C-086"
+   ]
+  },
+  {
+   "name": "Select Records From Results",
+   "description": "The system shall allow users to manually select individual records, titles, or items from query results. Users shall be able to select only the records they want included in a transfer or other targeted action. This shall support actions that require a narrower set than the full query result.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Manual selection is requested in an email, a stakeholder interview, and survey results, where 39% requested the capability.",
+   "candidate_ids": [
+    "C-050",
+    "C-417",
+    "C-561"
+   ]
+  },
+  {
+   "name": "Present MARC Fields Per Record",
+   "description": "The system shall allow users to select and extract specific MARC fields for reports. It shall present the selected MARC fields for each bibliographic record on a single row rather than spreading that record's fields across multiple rows. This shall make the extracted fields usable together in report results.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The need is repeated in a draft specification and a survey, with the survey identifying a concrete problem affecting cataloging and reporting staff.",
+   "candidate_ids": [
+    "C-560",
+    "C-253"
+   ]
+  },
+  {
+   "name": "Upload Identifier Filters",
+   "description": "The system shall allow users to upload a text file of identifiers and use those identifiers as report filter criteria. Supported examples shall include barcodes and TCNs. This shall let users select report records by supplying a prepared identifier list.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Identifier-file filtering is requested in a draft specification and listed as a missing feature in a reference document.",
+   "candidate_ids": [
+    "C-268",
+    "C-391"
+   ]
+  },
+  {
+   "name": "Save And Reuse Queries",
+   "description": "The system shall allow users to save queries and reuse them for repeated reporting or candidate selection. Saved queries shall support recurring work, such as monthly use, without requiring users to recreate the criteria each time. This shall reduce repeated query setup.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Survey results report 58% prioritizing saved queries and 73% prioritizing saving and reusing queries; the need is also supported by a stakeholder interview and a draft specification.",
+   "candidate_ids": [
+    "C-572",
+    "C-422",
+    "C-194"
+   ]
+  },
+  {
+   "name": "Display Query Criteria",
+   "description": "The system shall display the query selection criteria alongside the resulting records. The displayed criteria shall clearly identify the selections used to generate the report. This shall allow staff and auditors to understand how the result set was produced.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "Displaying criteria with results is marked high priority in a draft specification and appears again in an agreed request.",
+   "candidate_ids": [
+    "C-263",
+    "C-198",
+    "C-309"
+   ]
+  },
+  {
+   "name": "Provide A Usable Query Designer",
+   "description": "The system shall provide staff with a user-friendly interface for designing queries. The interface shall support query design across bibliographic, item, patron, transaction, and financial record types. This shall enable staff to use the query capabilities without relying on specialist technical skills.",
+   "type": "non-functional",
+   "priority": "P1",
+   "priority_rationale": "The need is explicitly marked high priority in a draft specification and is also included in an agreed request from library staff and directors.",
+   "candidate_ids": [
+    "C-204",
+    "C-312"
+   ]
+  },
+  {
+   "name": "Reuse Existing Query Tool",
+   "description": "The system shall support reuse or integration of the existing report query tool for candidate selection. This shall allow staff to use established query capabilities when identifying candidate records. The implementation shall preserve the ability to apply the candidate-selection queries required by the system.",
+   "type": "constraint",
+   "priority": "P3",
+   "priority_rationale": "Reuse or integration is proposed by technical staff in one source, with no evidence that it is mandatory or agreed.",
+   "candidate_ids": [
+    "C-057"
+   ]
+  },
+  {
+   "name": "Handle Optional EDI Data",
+   "description": "The system shall handle vendor-provided EDI ordering data when it is present. It shall also tolerate the absence of that data at libraries where vendors do not provide it. This shall allow queries and reports to operate across libraries with different availability of EDI data.",
+   "type": "data",
+   "priority": "P3",
+   "priority_rationale": "The need is agreed in one meeting-note source and describes a concrete variation in data availability across libraries.",
+   "candidate_ids": [
+    "C-525"
+   ]
+  }
+ ],
+ "discarded": [
+  {
+   "name": "User Choice To Exclude Nulls",
+   "candidate_ids": [
+    "C-114"
+   ],
+   "category": "superseded",
+   "reason": "This candidate raises the earlier question of whether users should exclude records with null values, but the later agreed meeting decision requires null and blank values to be included.",
+   "conflicts_with": [
+    "Include Null And Blank Values"
+   ]
+  },
+  {
+   "name": "Vendor Data Integration",
+   "candidate_ids": [
+    "C-542",
+    "C-513"
+   ],
+   "category": "out-of-scope",
+   "reason": "These candidates require interfaces with vendor websites and ingestion of standard-format data files, which are integration capabilities rather than query-building, filtering, or candidate-selection behavior.",
+   "conflicts_with": []
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "candidates": [
+  {
+   "title": "ILS data integration",
+   "statement": "The system shall obtain reporting data from the enterprise-level Library Automation System (ILS), including the Acquisitions and Cataloging modules.",
+   "type": "data",
+   "source_quote": "Management Processes rely on the data structures and functionality of an enterprise-level Library Automation System, including Acquisitions and Cataloging modules.",
+   "stakeholder": "Management Processes",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Vendor website and file interfaces",
+   "statement": "The system shall interface with vendor websites via published APIs and/or automated transfer of standard-format data files (e.g., USMARC21, EDIFACT) to ingest external data for reporting.",
+   "type": "functional",
+   "source_quote": "Management Processes interface with a variety of vendor websites, via published APIs and/or automated transfer of standard-format data files (e.g., USMARC21, EDIFACT).",
+   "stakeholder": "Management Processes / External vendors",
+   "priority_signals": "Some libraries use external vendors for certain functions. Our reporting needs to handle data from these sources too.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "OPAC patron data queries",
+   "statement": "The system shall query the Online Public Access Catalog (OPAC) to obtain patron data (including holds and circulation) for use in reports.",
+   "type": "functional",
+   "source_quote": "Patron data (holds, circulation) is created in the OPAC. Our reports need to query this data.",
+   "stakeholder": "Management Processes / Patrons",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Documented reports functionality for Evergreen",
+   "statement": "The system shall provide optimal Reports functionality that can be documented and included in a future Evergreen release, as defined by a consolidated Reports requirements list.",
+   "type": "functional",
+   "source_quote": "Document optimal Reports functionality within a future Evergreen release and develop a list of requirements.",
+   "stakeholder": "Reports Working Group / Evergreen release",
+   "priority_signals": "All members agreed the mission is still accurate and relevant.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Reports testing workflow",
+   "statement": "The system shall support a Reports testing workflow/process through which all new Reports development is filtered.",
+   "type": "functional",
+   "source_quote": "Become the Reports testing group, through which all new Reports development would be filtered.",
+   "stakeholder": "Reports Working Group",
+   "priority_signals": "All members agreed the mission is still accurate and relevant.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Executive Reports Interface",
+   "statement": "The system shall provide an Executive Reports Interface that includes the compiled list of reports needed for executive use.",
+   "type": "functional",
+   "source_quote": "Compile a list of reports needed for an Executive Reports Interface.",
+   "stakeholder": "Executive stakeholders / Reports Working Group",
+   "priority_signals": "All members agreed the mission is still accurate and relevant.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "PINES report templates",
+   "statement": "The system shall provide the ability to determine, create and deliver report templates needed for all PINES libraries.",
+   "type": "functional",
+   "source_quote": "Determine and create templates needed for all PINES libraries.",
+   "stakeholder": "PINES libraries / Reports Working Group",
+   "priority_signals": "All members agreed the mission is still accurate and relevant.",
+   "status": "agreed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

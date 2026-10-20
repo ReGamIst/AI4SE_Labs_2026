@@ -1,0 +1,257 @@
+{
+ "candidates": [
+  {
+   "title": "Multi-OS deployment",
+   "statement": "The system shall be deployable and operable on Red Hat Enterprise Linux 5 and on Solaris 10 running on SPARC hardware.",
+   "type": "constraint",
+   "source_quote": "any reporting system needs to work on both Linux and Solaris",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "PostgreSQL compatibility",
+   "statement": "The system shall be compatible with PostgreSQL (current environment: PostgreSQL 8.3) and operate against a fully relational database schema.",
+   "type": "functional",
+   "source_quote": "It runs PostgreSQL 8.3 for the database.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Relational-query support",
+   "statement": "The system shall support complex joins and queries against the main relational database structure without requiring denormalized reporting schemas.",
+   "type": "functional",
+   "source_quote": "The reporting system needs to work with the relational structure, not fight against it.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "preference expressed to avoid denormalized schemas; sync issues noted",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Background report processing",
+   "statement": "The system shall support queuing and background processing of complex reports so that report execution does not directly block interactive operations.",
+   "type": "functional",
+   "source_quote": "we need to make sure reports can be queued and processed in the background",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "\"major concern\" about tying up the database",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Read-only reporting replicas",
+   "statement": "The system shall support the use of read-only reporting replicas for running reports to avoid impacting the production database.",
+   "type": "functional",
+   "source_quote": "Or we need read-only reporting replicas.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "\"major concern\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Operational-hour performance",
+   "statement": "The system shall ensure that searches and reports can be processed during open hours without disrupting other system functions (e.g., circulation, OPAC responsiveness).",
+   "type": "non-functional",
+   "source_quote": "The key requirement is that searches and reports can be processed during open hours without disrupting other system functions.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "\"key requirement\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Browser support",
+   "statement": "The system shall support Microsoft Internet Explorer 6.0 and later and Mozilla Firefox 2.0 and later for client access.",
+   "type": "constraint",
+   "source_quote": "So we need to support IE 6.0+ and Firefox 2.0+.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "IE6 still common; upgrading 200+ computers is expensive",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Section 508 compliance",
+   "statement": "The system shall comply with Section 508 accessibility requirements.",
+   "type": "non-functional",
+   "source_quote": "we MUST comply with Section 508 accessibility requirements.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "\"non-negotiable\", \"MUST\"; accessibility is a legal requirement",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Screen reader compatibility",
+   "statement": "The system shall be usable with screen readers, including JAWS and NVDA.",
+   "type": "non-functional",
+   "source_quote": "Screen readers like JAWS and NVDA",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "accessibility compliance requirement",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Screen magnifier support",
+   "statement": "The system shall be compatible with screen magnification software such as ZoomText.",
+   "type": "non-functional",
+   "source_quote": "Screen magnification software like ZoomText",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "accessibility compliance requirement",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Assistive technology support",
+   "statement": "The system shall work with other assistive technology programs used by staff and patrons.",
+   "type": "non-functional",
+   "source_quote": "Other assistive technology programs",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "accessibility compliance requirement",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Standards-compliant HTML output",
+   "statement": "The system shall produce standards-compliant HTML output with proper semantic structure, including alt attributes and ARIA labels where appropriate.",
+   "type": "non-functional",
+   "source_quote": "The HTML output needs to be properly structured with alt tags, ARIA labels, and proper semantic HTML.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "accessibility non-negotiable",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Role-based access control",
+   "statement": "The system shall implement role-based access control supporting at least these roles: Patron, Staff, Local Admin, and Global Admin.",
+   "type": "functional",
+   "source_quote": "PINES uses a role-based system. We have different levels of access: Patron, Staff, Local Admin, Global Admin",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "role-based access control is confirmed as essential",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Local Admin capabilities",
+   "statement": "The system shall allow Local Admin (branch manager) role to run reports and configure local settings.",
+   "type": "functional",
+   "source_quote": "Local Admin (branch manager - can run reports, configure local settings)",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Global Admin capabilities",
+   "statement": "The system shall allow Global Admin (IT staff) role to have full system access.",
+   "type": "functional",
+   "source_quote": "Global Admin (IT staff - full system access)",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Security groups/roles integration",
+   "statement": "The permission system shall be controllable through security groups and/or roles and integrate with existing group management mechanisms.",
+   "type": "functional",
+   "source_quote": "The permission system needs to be controlled through security groups and/or \"roles.\"",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Granular access control",
+   "statement": "The system shall allow access control to be assigned to individuals, workgroups, and arbitrary staff groups.",
+   "type": "functional",
+   "source_quote": "This allows access control for individuals, workgroups, and arbitrary staff groups.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Simple role administration",
+   "statement": "The system shall make role administration simple and allow changing a user's permissions by changing their role assignment.",
+   "type": "non-functional",
+   "source_quote": "Changing someone's permissions should be a simple matter of changing their role assignment.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "administration usability requirement",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Developer test environment",
+   "statement": "The system shall provide a separate development/test environment where developers can test new reports without affecting production.",
+   "type": "functional",
+   "source_quote": "Developers need a place to test new reports without affecting production.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Training environment",
+   "statement": "The system shall provide a separate training environment where new staff can practice running reports without affecting production data.",
+   "type": "functional",
+   "source_quote": "new staff members need a training environment where they can practice running reports without worrying about making mistakes.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Export/import migration",
+   "statement": "The system shall provide export/import functionality for report templates, permission settings, and other configuration so configurations developed in training/dev can be migrated to production.",
+   "type": "functional",
+   "source_quote": "We need export/import functionality for report templates, permission settings, and other configuration.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "\"key is that configurations developed in training/dev need to be migratable to production\"",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "OPAC isolation",
+   "statement": "The reporting system shall be architected so that it does not constrain or slow down the OPAC; heavy reporting queries must not degrade catalog responsiveness for patrons.",
+   "type": "non-functional",
+   "source_quote": "The management reporting system must not constrain the OPAC in any way.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "\"critical\" separation of concerns noted in interviewer's notes",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  },
+  {
+   "title": "Online hierarchical help",
+   "statement": "The system shall provide an online help system that is hierarchical, cross-linked, searchable, and easy to navigate.",
+   "type": "documentation",
+   "source_quote": "the help system needs to be online, hierarchical, and cross-linked... The HTML help needs to be searchable and easy to navigate.",
+   "stakeholder": "Robert Chen, Senior Systems Administrator",
+   "priority_signals": "Staff shouldn't have to call IT every time they want to know how to run a report.",
+   "status": "proposed",
+   "suspicious": false,
+   "suspicious_reason": ""
+  }
+ ]
+}

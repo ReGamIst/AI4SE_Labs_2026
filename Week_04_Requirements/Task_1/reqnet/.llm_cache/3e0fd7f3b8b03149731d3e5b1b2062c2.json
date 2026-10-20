@@ -1,0 +1,123 @@
+{
+ "requirements": [
+  {
+   "name": "Deletion Audit Trail",
+   "description": "The system shall maintain persistent audit records for purge-related deletions and denied deletion attempts so administrators and auditors can establish what happened and who performed or attempted the action. Each deletion record shall include record_type, record_id, deleted_by, deleted_at, and location, and the audit trail shall identify the actor and timestamp for denied attempts. The system shall support optionally recording an item's status before deletion; deletion reasons shall be captured as specified in Deletion Activity Reporting.",
+   "type": "data",
+   "priority": "P2",
+   "priority_rationale": "Agreed audit needs appear in multiple stakeholder communications and support accountability and compliance, although no source marks the audit trail as critical or mandatory.",
+   "candidate_ids": [
+    "C-082",
+    "C-095",
+    "C-098",
+    "C-099",
+    "C-097"
+   ]
+  },
+  {
+   "name": "Deletion Activity Reporting",
+   "description": "The system shall provide reports and queries over deletion audit records so administrators can monitor deletion activity and investigate specific events. Reports shall show total deletions by month, quarter, or year; deletions by record type (including items, patrons, and other records); deletions by location; and the users with the most deletions, with views per system and per location. Users shall be able to filter or aggregate results by date range, user, and record type, retrieve entries for a specific record_id, and review deletion reasons; the system shall count and track deletions per location and system.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The agreed reporting request was called an administrative requirement and described as something stakeholders “absolutely need” for compliance; it is supported by several stakeholders and a survey request from 27% of respondents.",
+   "candidate_ids": [
+    "C-093",
+    "C-548",
+    "C-096",
+    "C-100",
+    "C-101",
+    "C-425"
+   ]
+  },
+  {
+   "name": "Customizable Weeding Reports",
+   "description": "The system shall provide weeding reports that identify items for review or purging using criteria configurable by authorized users. Criteria shall include an item remaining in status “missing” for more than a configurable number of months and items in status “discard/weed.” Each report shall include the date of the item's last circulation to support collection-maintenance decisions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Weeding reports are described as frequently used and as the interviewee’s most-used report type, with related needs appearing in both a draft specification and stakeholder sources.",
+   "candidate_ids": [
+    "C-407",
+    "C-174",
+    "C-394",
+    "C-506"
+   ]
+  },
+  {
+   "name": "Bulk Related Record Deletion",
+   "description": "The system shall provide an efficient utility for authorized cataloging staff and administrators to delete volume entries together with their associated copy entries. The utility shall also identify and delete bibliographic or other records that have no item records attached. These operations shall support cleanup of related and orphaned records without requiring staff to locate and delete each record through a slow manual process.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The need is agreed across an email thread and repeated in a stakeholder interview and draft specification; a manual workaround exists but is described as time-consuming.",
+   "candidate_ids": [
+    "C-162",
+    "C-409",
+    "C-410",
+    "C-085"
+   ]
+  },
+  {
+   "name": "Read-Only Purge Preview",
+   "description": "The system shall display purge candidates in a read-only preview before deletion. Users shall be able to review the candidate report without being able to delete records directly from that report. This separation shall help staff inspect proposed purge actions before proceeding to a deletion operation.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The safeguard was agreed by cataloging staff and managers and reduces the risk of accidental deletion, though only one source explicitly requests this preview.",
+   "candidate_ids": [
+    "C-089"
+   ]
+  },
+  {
+   "name": "Deletion Confirmation Step",
+   "description": "The system shall require users to complete a separate, explicit confirmation step before performing deletions identified by purge reports. The confirmation shall occur after candidate identification and review, rather than being implicit in viewing or running a report. This safeguard shall help prevent accidental execution of purge actions.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "The confirmation safeguard was agreed by cataloging staff and administrators and addresses the significant risk of unintended deletion, although it is stated in one source.",
+   "candidate_ids": [
+    "C-084"
+   ]
+  },
+  {
+   "name": "Last Copy Identification Reports",
+   "description": "The system shall provide a last-copy report that identifies and flags items that are the only copy within a selected scope. Users shall be able to view last-copy status at both the individual library and library-system or consortium level. The report shall present information in a form that helps catalogers identify items that may require external-catalog updates, such as WorldCat, before deletion.",
+   "type": "functional",
+   "priority": "P1",
+   "priority_rationale": "The agreed requirement is explicitly marked “CRITICAL,” and multiple participants requested both per-library and per-system views to avoid deleting a consortium's only copy.",
+   "candidate_ids": [
+    "C-175",
+    "C-087",
+    "C-088"
+   ]
+  },
+  {
+   "name": "Deleted Last Copy Reports",
+   "description": "The system shall provide a report listing items that have been deleted even though they were the last copy owned within the relevant library system or facility. The report shall support catalogers who need to update WorldCat or other external catalog records after deletion. Users shall be able to run the report to review the affected items.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report is requested in draft specifications to support external catalog maintenance, but the evidence is limited to one source and no critical priority marker is given.",
+   "candidate_ids": [
+    "C-244",
+    "C-257"
+   ]
+  },
+  {
+   "name": "Batch Item Status Conversion",
+   "description": "The system shall allow authorized staff to convert the status of multiple items in one batch operation. Staff shall be able to use a report to identify items for conversion and apply a selected status change, such as changing 100 items from “missing” to “discard/weed.” The system shall support this operation to reduce the time required for routine cataloging work.",
+   "type": "functional",
+   "priority": "P2",
+   "priority_rationale": "Cataloging staff described batch conversion as a major time-saving need, and the item-report specification also includes items to be converted; the sources indicate substantial operational benefit.",
+   "candidate_ids": [
+    "C-083"
+   ]
+  },
+  {
+   "name": "Predefined Item Reports",
+   "description": "The system shall provide predefined item reports for Items Added Count, List of Items Added, Items Edited Count, Items Count, Items Deleted Count, Lists by Fines Stopped Reason, Items Currently Checked Out, Items more than a configurable number of days overdue, Items marked longoverdue, Long Overdue lists, Items in Transit by sending and destination library, Claims returned, Lists by Creation Date Range, Lists with status Missing, Lists by Total Use Count thresholds, a Last Copy Report, a Weeding Report showing date of last circulation and number of circulations, Lists with a specified value in the bibliographic record, Age of collection by call number or shelving location, Price value of collection by call number or shelving location, and Items to be Converted. The reports shall support collection management and operational review, including weeding and identifying items for batch status conversion.",
+   "type": "functional",
+   "priority": "P3",
+   "priority_rationale": "The report catalogue is specified in a single draft specification and provides useful operational coverage, but no evidence marks the full catalogue as critical.",
+   "candidate_ids": [
+    "C-226"
+   ]
+  }
+ ],
+ "discarded": []
+}
