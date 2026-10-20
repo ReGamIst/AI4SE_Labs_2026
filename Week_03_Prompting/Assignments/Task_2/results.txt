@@ -1,0 +1,10 @@
+All prompts were tested on Claude Opus 5.5 medium effort.
+ICIO: 120s
+Accuracy: 0.9935 (99.35%)
+Correct: 154/155
+TRACE: 40s
+Accuracy: 0.9935 (99.35%)
+Correct: 154/155
+ReAct: 70s
+Accuracy: 0.9935 (99.35%)
+Correct: 154/155
