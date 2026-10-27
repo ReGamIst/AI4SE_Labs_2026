@@ -1,0 +1,1 @@
+The differences between having a skill and not having a skill were not big, but the coding agent worked a bit faster and gave a better explanation for the architectures, with better graphs and a more laconic structure. The conversation output files are the same in structure, since the skill defines the structure based on the first output file.
