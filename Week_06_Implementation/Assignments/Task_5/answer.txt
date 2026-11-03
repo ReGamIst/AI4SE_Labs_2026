@@ -1,0 +1,14 @@
+All unit tests have passed. The output of solve_tasks.py:
+
+Wrote: OrderStatus.is_terminal (playground/playground/enums.py)
+Wrote: InventoryLedger.__contains__ (playground/playground/inventory.py)
+Wrote: Warehouse.stock_report (playground/playground/inventory.py)
+Wrote: OrderStateMachine.transition (playground/playground/orders.py)
+Wrote: OrderLog.by_status (playground/playground/orders.py)
+Wrote: Customer.can_afford (playground/playground/models.py)
+Wrote: Order.__len__ (playground/playground/orders.py)
+Wrote: BulkDiscountPricing.price (playground/playground/pricing.py)
+Wrote: EventBus.__contains__ (playground/playground/events.py)
+Wrote: Money.__bool__ (playground/playground/models.py)
+Unit tests: 481 tests run, OK
+Done. All tests pass. Model: gpt-6-luna. Tokens used: 17715.
