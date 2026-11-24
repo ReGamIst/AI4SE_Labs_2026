@@ -1,0 +1,21 @@
+# Assessment by mimo-2.6-flash
+
+# Week 03 Prompting
+- Awarded: 3.5b out of 5b
+- Commentary: Task 1 is an exemplary submission: three well-sourced frameworks (ICIO, TRACE, ReAct), explicitly excluding ROSES and zero-shot, with prompts carefully engineered against the evaluator's actual scoring rules. Tasks 2 and 3 are only partially delivered - prediction files and inference times exist, and a sensible new metric (token usage) is proposed, but Task 2 lacks the required comparison report with visualization and Task 3 lacks any implemented metric code or report. Task 4 delivers a genuinely detailed and statistically literate report with tables and five figures, but it does not exploit the per-item prediction CSVs actually present in the repo and relies on approximate, single-run cost data. Several submitted files (results.txt, all three prediction CSVs) contain unresolved git merge-conflict markers, which corrupts the deliverables. (Note: the .png figures could not be viewed by this model; they were judged from their generating code and the report's captions/text.)
+
+## Task 1
+- Awarded: 1b   (max 1b)
+- Commentary: Three frameworks chosen (ICIO, TRACE, ReAct), all sourced (frompting.com/frameworks, plus ReAct's paper), with ROSES and zero-shot prompting correctly excluded. The prompts are concrete, usable for Task 2, and grounded in a thorough reverse-engineering of the evaluator (output columns, join conventions, `>` vs `>=`, city vs region traps, crash-proofing, no-label-leakage guards), including a regex baseline (151/155) and an estimated ceiling. Each framework's rationale, expected strengths/risks, rejected alternatives, and cross-framework comparison are explained clearly. Fully meets the deliverables.
+
+## Task 2
+- Awarded: 0.5b   (max 1b)
+- Commentary: Delivered per-prompt prediction CSVs (ICIO, TRACE, ReAct), the dataset/grader files, and measured inference times with accuracies in results.txt (120s/40s/70s; all 154/155), satisfying the data and timing parts. However, the required brief comparison report with a visualization is missing entirely (no report or figure exists in Task_2), model/prompt metadata is only partially embedded (filename carries the prompt, the model is named only in results.txt), and all key output files carry unresolved `<<<<<<< HEAD / ======= / >>>>>>>` merge-conflict markers, so the CSVs are duplicated and not runnable by the grader as committed. Half credit for partial completion.
+
+## Task 3
+- Awarded: 0.5b   (max 1b)
+- Commentary: The proposed metric - token usage per prompt - is a reasonable, applicable complement to execution accuracy (it captures the cost dimension where the prompts actually differ), and approximate values are given (TRACE 1x, ReAct ~2.5x, ICIO ~5x) along with a sound suggestion to log exact counts via an API. However, there is no source code implementing the metric, no calculation applied to the Task 2 predictions, no report comparing metric values across prompts, and no discussion of whether the metric complements or replaces the original metric. The metric is calculable, so the "guide instead of implementation" alternative does not apply. Partial credit for the proposal and its defence.
+
+## Task 4
+- Awarded: 1.5b   (max 2b)
+- Commentary: The report is detailed and well structured: many tables, five figures (present as PNGs with reproducible generation code; images could not be viewed by this grader, so they were judged from captions, code, and text), Wilson/Clopper-Pearson intervals, exact McNemar, Cochran's Q, Fisher, a Bayesian posterior comparison and a power/MDE analysis, correctly concluding no significant accuracy difference and that the benchmark is saturated. The required factor analysis is explicitly covered (prompts x model x coding agent x benchmark), with a useful ablation showing which conventions drive the score. Deductions: the report states that no prediction CSVs were provided even though all three exist in Task_2/data, so per-item significance was inferred from an assumed failure pattern instead of computed from real data; the token/time comparisons rest on single runs with estimated token figures; and supporting artifacts (ablation.json/features.json) and figure paths do not match the shipped layout. Strong but not flawless, hence 1.5b.
