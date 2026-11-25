@@ -1,0 +1,176 @@
+ ▐▛███▛█   Claude Code v2.1.332
+▝▜██████▀  Opus 5.5 · Claude Pro
+ ▝▝   ▝▝   ~\OneDrive\Documents\University\ProgrSAI\AI4SE_Labs_2026
+
+
+> Use the summarizer subagent, one per file and in parallel, to summarize       
+  Task_1.md through Task_5.md in Week_08_Dissecting/Assignments. Spawn at most  
+  5 subagents. Then combine their answers into one table.                       
+
+● I'll spawn 5 summarizer subagents in parallel, one per task file.
+
+● 5 background agents launched (↓ to manage)
+   ├ Summarize Task_1.md
+   ├ Summarize Task_2.md
+   ├ Summarize Task_3.md
+   ├ Summarize Task_4.md
+   └ Summarize Task_5.md
+
+● I started 5 summarizer subagents in parallel, one for each of Task_1.md to
+  Task_5.md in Week_08_Dissecting/Assignments/. They're still running. When all
+  five finish, I'll combine their summaries into one table with the task, a
+  summary, the deliverable and the points.
+
+  I haven't changed any files.
+
+✻ Churned for 10s · done 4:58 PM
+
+› Message from summarizer
+  Summary (2 sentences): Task 4 asks you to create a new profile or mode in your
+  coding assistant (or its equivalent), then keep it until the end of the
+  assignment. If the assistant does not support profiles, you should instead
+  submit a short text naming the assistant, explaining why it lacks the feature,
+  and listing similar alternatives it does support.
+
+  Required OUTPUT: A screenshot of you editing the new profile's properties
+  (e.g., system prompt, model, temperature), OR a short report on why this is
+  not possible and what alternatives your coding assistant has.
+
+  Points: 0.5b, as written in the file (likely meant as 0.5 points, but the typo
+  is in the source).
+
+  File: C:\Users\sasha\OneDrive\Documents\University\ProgrSAI\AI4SE_Labs_2026\We
+  ek_08_Dissecting\Assignments\Task_4\Task_4.md
+
+● Task 4's summary is in. The summaries for Tasks 1, 2, 3 and 5 are still
+  running. I'll put everything into one table once the last one finishes.
+
+✻ Cooked for 1s · done 4:58 PM
+
+● Agent "Summarize Task_4.md" finished · 4s
+
+● Agent "Summarize Task_1.md" finished · 5s
+
+● Agent "Summarize Task_5.md" finished · 5s
+
+● Agent "Summarize Task_3.md" finished · 5s
+
+› Message from summarizer
+  Summary (2 sentences): Inspect your coding assistant's configuration and make
+  a small edit to its system prompt (a minor change is acceptable), then take a
+  screenshot with the change highlighted and keep the edit until the end of the
+  assignment. If your assistant does not support this, submit a short text
+  naming the assistant, explaining why it lacks the feature, and listing similar
+  alternatives it does support.
+
+  Required OUTPUT: A screenshot with the highlighted change in the coding
+  assistant's system prompt, OR a short report explaining why that is not
+  possible and what alternatives the assistant has.
+
+  Points: 0.5 (written as "0.5b" in the file).
+
+  Source: C:\Users\sasha\OneDrive\Documents\University\ProgrSAI\AI4SE_Labs_2026\
+  Week_08_Dissecting\Assignments\Task_1\Task_1.md. I did not change any files.
+
+› Message from summarizer
+  Summary: Task 5 asks you to create a simple new skill for your coding
+  assistant and place it correctly in the repository (e.g. a .kilo/ folder in
+  the root), after looking up the recommended skill folder and file structure
+  for that assistant. If the assistant does not support skills, write a short
+  report instead on which assistant you use, why it lacks the feature, and what
+  similar alternatives it supports.
+
+  Points: 0.5b
+
+  Required OUTPUT: A properly positioned new simple skill in this repository, or
+  a short report explaining why that is not possible and what alternatives your
+  coding assistant has.
+
+  File: C:\Users\sasha\OneDrive\Documents\University\ProgrSAI\AI4SE_Labs_2026\We
+  ek_08_Dissecting\Assignments\Task_5\Task_5.md
+
+  No files were modified.
+
+› Message from summarizer
+  Summary (2 sentences): Task 3 asks you to research how your coding assistant
+  creates and supports AGENTS.md files (whether it needs a built-in slash
+  command or just a prompt), then create AGENTS.md files for the repository and
+  submit a super short explanation of how you initiated and possibly reiterated
+  their creation. If the assistant does not support the feature, you instead
+  submit a super short text naming the assistant, why you think it lacks the
+  feature, and what similar alternatives it offers.
+
+  Points: 0.5b (0.5 points) for successful completion.
+
+  Required OUTPUT: AGENTS.md files for the repository plus a short explanation
+  of how you created them, OR a short report explaining why that is not possible
+  and what alternatives your coding assistant has.
+
+  Source file: C:\Users\sasha\OneDrive\Documents\University\ProgrSAI\AI4SE_Labs_
+  2026\Week_08_Dissecting\Assignments\Task_3\Task_3.md
+
+  No files were changed.
+
+● I have summaries for Tasks 1, 3, 4 and 5. The Task 2 summarizer is still
+  running, and I'll post the full table once it finishes.
+
+✻ Baked for 1s · done 4:58 PM
+
+› Message from summarizer
+  Task_2.md asks you to define a new slash command in your coding assistant and
+  keep it until the end of the assignment. If your assistant does not support
+  slash commands, you should instead write a short text on which assistant you
+  use, why it lacks the feature, and what similar alternatives it offers.
+
+  Required OUTPUT: a screenshot of yourself creating the new slash command, or a
+  short report on why that is not possible and what alternatives your assistant
+  has. Points awarded for successful completion: 0.5b.
+
+  File read: C:\Users\sasha\OneDrive\Documents\University\ProgrSAI\AI4SE_Labs_20
+  26\Week_08_Dissecting\Assignments\Task_2\Task_2.md. No files were changed.
+
+● All five summaries are back:
+
+  Task: 1
+  What it asks: Find your coding assistant's configuration and make a small
+    edit to its system prompt. Keep the edit until the end of the assignment.
+  Required output: Screenshot with the system-prompt change highlighted
+  Points: 0.5
+  ────────────────────────────────────────
+  Task: 2
+  What it asks: Define a new slash command and keep it until the end of the
+    assignment.
+  Required output: Screenshot of you creating the slash command
+  Points: 0.5
+  ────────────────────────────────────────
+  Task: 3
+  What it asks: Find out how your assistant creates AGENTS.md files (built-in
+    slash command or a plain prompt), then create them for the repository.
+  Required output: AGENTS.md file(s) plus a very short note on how you started
+    (and possibly repeated) their creation
+  Points: 0.5
+  ────────────────────────────────────────
+  Task: 4
+  What it asks: Create a new profile or mode and keep it until the end of the
+    assignment.
+  Required output: Screenshot of you editing the profile's properties (system
+    prompt, model, temperature, etc.)
+  Points: 0.5
+  ────────────────────────────────────────
+  Task: 5
+  What it asks: Look up the recommended skill folder and file structure, then
+    create a simple skill in the right place in the repo.
+  Required output: A new simple skill placed correctly in the repository
+  Points: 0.5
+
+  - Same fallback for every task: if the assistant doesn't support the feature,
+    you hand in a short report instead. It should name the assistant, say why it
+    lacks the feature and list similar alternatives it does support.
+  - Points: the briefs write "0.5b", which almost certainly means 0.5 points.
+    That makes 2.5 points in total.
+
+  I didn't change any files; the subagents only read the five briefs.
+
+✻ Worked for 6s · done 4:58 PM
+
+● Agent "Summarize Task_2.md" finished · 5s

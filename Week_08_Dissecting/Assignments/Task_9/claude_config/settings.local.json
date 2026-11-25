@@ -1,0 +1,6 @@
+{
+  "outputStyle": "ai4se",
+  "enabledMcpjsonServers": [
+    "text-tools"
+  ]
+}
